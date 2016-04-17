@@ -13,6 +13,33 @@
 <div id="templatemo_container">
 	<div id="templatemo_header">
         <div id="out_mission_section">
+        <?php 
+        
+        $servername = "bqmayq5x95g1sgr9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+        $username = "cchnflwiwmucc12k";
+        $password = "aom0shz4do0uf1bi";
+        
+        // Create connection
+        $conn = new mysqli($servername, $username, $password);
+        
+        // Check connection
+        if ($conn->connect_error) {
+        	die("Connection failed: " . $conn->connect_error);
+        }
+        echo "Connected successfully";
+        
+        $sql = "SELECT id, firstname, lastname FROM MyGuests";
+        $result = $conn->query($sql);
+        
+        if ($result->num_rows > 0) {
+        	// output data of each row
+        	while($row = $result->fetch_assoc()) {
+        		echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+        	}
+        } else {
+        	echo "0 results";
+        }
+        ?>
             <p>
            That all human beings are dead in sin and utterly lost and that the only way their sins can be forgiven is through repentance and through faith in the death and resurrection of our Lord Jesus Christ. <a href="subpage.php">more...</a>
             </p>
