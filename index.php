@@ -30,7 +30,7 @@
         
         $sql = "SELECT id, firstname, lastname FROM MyGuests";
         $result = $conn->query($sql);
-        echo $result->num_rows;
+        echo "ssss".$result->num_rows;
         
         if ($result->num_rows > 0) {
         	// output data of each row
@@ -38,7 +38,7 @@
         		echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
         	}
         } else {
-        	echo "0 results";
+        	echo "0 resultxxxxs";
         }
         ?>
             <p>
