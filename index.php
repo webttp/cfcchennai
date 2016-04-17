@@ -30,7 +30,7 @@
         
         $sql = "SELECT id, firstname, lastname FROM MyGuests";
         $result = $conn->query($sql);
-        echo "ssss".$result->num_rows;
+        echo "ssss".$result->num_rows."adasda";
         
         if ($result->num_rows > 0) {
         	// output data of each row
