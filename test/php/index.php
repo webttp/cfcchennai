@@ -12,7 +12,7 @@
 <body>
 <div id="templatemo_container">
 	<div id="templatemo_header">
-        <div id="out_mission_section"> 
+        <div id="out_mission_section">
             <p>
            That all human beings are dead in sin and utterly lost and that the only way their sins can be forgiven is through repentance and through faith in the death and resurrection of our Lord Jesus Christ. <a href="subpage.php">more...</a>
             </p>
