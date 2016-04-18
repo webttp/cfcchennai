@@ -44,7 +44,7 @@
                     <h3>Sunday : 10.30 AM - 1.00 PM</h3>
                     <p>
                     For Directions
-    <a href="locate-us.php">[Click Here]</a></p>
+    <a href="#">[Click Here]</a></p>
 				</div>
                 <div class="templatemo_news_box">
                     <h2>CFC -Tambaram</h2>
@@ -52,7 +52,7 @@
 					<h3>Thursday : 7.30 PM - 8.30 PM</h3>
 					<p>
                     For Directions
-    <a href="locate-us.php">[Click Here]</a></p>
+    <a href="#">[Click Here]</a></p>
 				</div>
             </div>
            
