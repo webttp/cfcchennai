@@ -12,7 +12,7 @@
              <div class="carousel-inner">
               <div class="item image-viewier active">
                 <img class="category_icon hidden-xs" src="http://cfcindia.org/resources/en/icon/wftw.png"> 
-                <a href="http://www.cfcindia.com/wftw/two-powerful-truths"> 
+                <a target="_blank" href="http://www.cfcindia.com/wftw/two-powerful-truths"> 
                   <img src="http://www.cfcindia.org/images/bank/dove-in-forest.jpg">
                   <div class="sRight whiteText ">
                     <mytitle> Two Powerful Truths </mytitle>
@@ -22,7 +22,7 @@
               </div>
               <div class="item image-viewier">
                 <img class="category_icon hidden-xs" src="http://cfcindia.org/resources/en/icon/page.png"> 
-                <a href="http://www.cfcindia.com/bible-study-challenge"> 
+                <a target="_blank" href="http://www.cfcindia.com/bible-study-challenge"> 
                   <img src="http://www.cfcindia.org/images/bank/bible-study-challenge.jpg">
                   <div class="c_hide">
                     <mytitle> Bible Study Challenge </mytitle>
@@ -32,7 +32,7 @@
               </div>
               <div class="item image-viewier">
                 <img class="category_icon hidden-xs" src="http://cfcindia.org/resources/en/icon/wftw.png"> 
-                <a href="http://www.cfcindia.com/wftw/freedom-from-perpetual-backsliding">
+                <a target="_blank" href="http://www.cfcindia.com/wftw/freedom-from-perpetual-backsliding">
                   <img src="http://www.cfcindia.org/images/bank/domino.jpg">
                   <div class="sLeft whiteText">
                     <mytitle> Freedom from Perpetual Backsliding </mytitle>
@@ -42,7 +42,7 @@
               </div>
               <div class="item image-viewier">
                 <img class="category_icon hidden-xs" src="http://cfcindia.org/resources/en/icon/sermon.png"> 
-                <a href="http://www.cfcindia.com/sermon/children-obey-your-parents">
+                <a target="_blank" href="http://www.cfcindia.com/sermon/children-obey-your-parents">
                   <img src="http://www.cfcindia.org/images/bank/father-son-instruction.jpg">
                   <div class="sLeft blackText ">
                     <mytitle> Children, Obey Your Parents </mytitle>
@@ -102,7 +102,7 @@
                     </ol>
                     <span>For a fuller statement of what we believe, click
                       <a
-                      href="http://www.cfcindia.com/article/the-truth-that-we-believe">here</a>.
+                      href="http://www.cfcindia.com/article/the-truth-that-we-believe" target="_blank">here</a>.
                     </span>
                   </div>
                 </div>

@@ -80,7 +80,7 @@
 </div>
 </header>
 	<div class="home-page-section">
-	   	<div data-include="templates/home.html"></div>
+	   	<div data-include="templates/home.php"></div>
 	</div>
 	<div class="content-page-section" style="display:none;">
 		<div class="container body-container bs-docs-container">
@@ -121,9 +121,9 @@
 				<div class="col-md-4 col-sm-4 hidden-xs footer-section-3">
 					<h4>Recommended Links</h4>
 					<ul>
-						<li><a href="http://www.cfcindia.com">www.cfcindia.com</a></li>
-						<li><a href="http://www.rlcf.org">www.rlcf.org</a></li>
-						<li><a href="http://www.nccf.com">www.nccf.com</a></li>
+						<li><a href="http://www.cfcindia.com" target=_blank>www.cfcindia.com</a></li>
+						<li><a href="http://www.rlcf.org" target=_blank>www.rlcf.org</a></li>
+						<li><a href="http://www.nccf.com" target=_blank>www.nccf.com</a></li>
 					</ul>
 				</div>
 			</div>
