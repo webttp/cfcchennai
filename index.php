@@ -89,7 +89,7 @@
 					<div class="col-md-8 content-section" id="content_section">
 					</div>
 					<div class="col-md-3 col-sm-12 col-xs-12 timings-section" id="timings_section">
-					   <div data-include="templates/timings.html"></div>
+					   <div data-include="templates/timings.php"></div>
 					</div>
         </div>
 			</div>
