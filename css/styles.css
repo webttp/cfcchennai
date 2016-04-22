@@ -483,7 +483,7 @@ footer{
 }
 
 @media (min-width:700px) {
- .menu-container, container, .container .row, .menu-nav-container {
+ .menu-container, .container, .container .row, .menu-nav-container {
      width: 100% !important;
     }
 }
