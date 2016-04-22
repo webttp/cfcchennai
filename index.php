@@ -104,7 +104,7 @@
 
 </div>
 	<div class="home-page-section">
-	   	<div data-include="templates/home.html"></div>
+	   	<div data-include="templates/home.php"></div>
 	</div>
 	<div class="content-page-section" style="display:none;">
 		<div class="container-fluid body-container bs-docs-container">
