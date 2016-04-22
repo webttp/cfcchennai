@@ -486,4 +486,8 @@ footer{
  .menu-container, .container, .container .row, .menu-nav-container {
      width: 100% !important;
     }
+    #featured-home-page-image.row{
+    	margin-right:0;
+    	margin-left:0;
+    }
 }
