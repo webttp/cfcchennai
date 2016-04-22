@@ -58,7 +58,7 @@
 								</div>
 							</nav>
 						</div>
-						<div class="col-md-1 col-md-offset-1 col-xs-offset-0 col-sm-1 col-xs-1">
+						<div class="col-md-1 col-sm-1 col-xs-1">
               <a class="fb-share-button" href="https://www.facebook.com/groups/1419135528352392/"></a>
             </div>
 					</div>
