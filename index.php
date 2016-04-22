@@ -11,7 +11,6 @@
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/csi.min.js"></script>
 <script type="text/javascript" src="js/angular.min.js"></script>
-<script type="text/javascript" src="js/sermonController.js"></script>
 <script type="text/javascript" src="js/lightbox.js"></script>
 
   <!-- CSS files  -->
@@ -114,7 +113,7 @@
 					<div class="col-md-8 content-section" id="content_section">
 					</div>
 					<div class="col-md-3 col-sm-12 col-xs-12 timings-section" id="timings_section">
-					   <div data-include="templates/timings.html"></div>
+					   <div data-include="templates/timings.php"></div>
 					</div>
         </div>
 			</div>
