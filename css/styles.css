@@ -30,6 +30,8 @@ ul li{
 a:hover {
 	cursor: pointer;
 }
+
+
 .main-content-container, .footer-container{
 	margin-left: 20px;
 }
@@ -171,7 +173,7 @@ a:hover {
   display: inline-block;
   font: Bold 16px Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif;
   line-height: 28px;
-  padding: 5px 40px;
+  padding: 5px 50px;
   text-decoration: none;
 }
 #menu_items_bar ul {
@@ -341,6 +343,7 @@ border-top: 1px solid #e7e7e7;
 	font: normal 16px Arial;
 	color: #585d60;
 	margin-bottom: 10px;
+	clear: both;
 }
 .directions{
 	width: 180px;
@@ -439,7 +442,7 @@ footer{
 	line-height: 1.8;
 }
 .footer-section-2,.footer-section-3{
-	  margin: 10px 20px 0 0;
+	  margin-top: 10px;
     line-height: 1.8;
 } 
 .footer-section-3 a {
@@ -449,7 +452,7 @@ footer{
 }
 .cfcc-bottom-footer{
   min-height: 30px;
-  padding-top: 30px;
+  padding-top: 15px;
   width: 100%;
   text-align: center;
   color: #bababa;
@@ -475,5 +478,12 @@ footer{
 @media (min-width:992px){
 	.footer-area{
      min-width: 1100px; 
+    }
+	
 }
+
+@media (min-width:700px) {
+ .menu-container, container, .container .row, .menu-nav-container {
+     width: 100% !important;
+    }
 }
