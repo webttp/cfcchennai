@@ -3,7 +3,7 @@
 body{
   font-family: 'HelveticaNeueLT-Light';
   font-weight: 100;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.42857143;
   overflow-x: hidden!important;
   margin: 0!important;
@@ -26,6 +26,10 @@ ul{
 ul li{
 	list-style: none;
 }
+
+a:hover {
+	cursor: pointer;
+}
 .main-content-container, .footer-container{
 	margin-left: 20px;
 }
@@ -39,10 +43,10 @@ ul li{
   z-index: 50;
 }
 .menu-container {
-	background: url("../images/Chennai_Cfc_Header.png") repeat scroll 0% 0% #A84041;
+	background: url("../images/Chennai_Cfc_Header.png") repeat scroll 0% 0% #A74040;
 	width: 100%;
-	height: 115px;
-	/* background: #A84041; */
+	height: 90px;
+	/* background: #A74040; */
 }
 .cfcc-verse{
 	text-align: center;
@@ -51,10 +55,8 @@ ul li{
   float: left;
   width: 100%;
   color: #ffffff;
-  font-family: 'Bookman Old Style'!important;
-  font-size: 26px;
-  font-weight: bold;
-  margin: 15px 0 0 20px;
+  font: Bold 30px Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif;
+  margin: 25px 0 0 20px;
   }
 .verse-text {
 	width: 100%;
@@ -73,8 +75,7 @@ ul li{
 }
 
 .col-xs-10.xs-banner-text {
-	bottom: 70px;
-	margin-left: 30%;
+	top: 10px;
 	color: #ffffff;
 }
 .section2{
@@ -112,7 +113,7 @@ ul li{
 	display: table;
 }
 .menu-nav-container {
-	height: 48px;
+	height: 43px;
 }
 #menu_items_bar ul,
 #menu_items_bar li,
@@ -125,12 +126,11 @@ ul li{
 }
 #menu_items_bar {
   position: relative;
-  height: 45px;
+  height: 42px !important;
   width: 120%;
   margin: 0px 5px 0;
   padding-left: 80px;
   border-top: 1px solid #e7e7e7;
-  border-bottom: 1px solid #e7e7e7;
 }
 #menu_items_bar ul {
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.15);
@@ -167,12 +167,11 @@ ul li{
   background: -o-linear-gradient(top, #ffffff 0%, #ffffff 100%);
   background: -ms-linear-gradient(top, #ffffff 0%, #ffffff 100%);
   background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
-  color: #A84041;
+  color: #A74040;
   display: inline-block;
-  font-family: Arial, Verdana, sans-serif;
-  font-size: 15px;
-  line-height: 44px;
-  padding: 0 40px;
+  font: Bold 16px Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif;
+  line-height: 28px;
+  padding: 5px 40px;
   text-decoration: none;
 }
 #menu_items_bar ul {
@@ -184,15 +183,14 @@ ul li{
 #menu_items_bar > ul, #menu_items_bar > ul > li {
   float: left;
 }
- 
+
 #menu_items_bar > ul > li.active a,
 #menu_items_bar > ul > li:hover > a {
-   box-shadow: 0 0 9px rgba(0,0,0,0.2) inset; 
-  -moz-box-shadow: inset 0 0 9px rgba(0,0,0,0.2);
-  -webkit-box-shadow: inset 0 0 9px rgba(0,0,0,0.2);
+   border: 1px solid #A54040;
+   cursor: pointer;
 }
-#menu_items_bar > ul > li:hover > a {
-	color: #83CFCB;
+#menu_items_bar > ul > li.has-sub:hover > a{
+	 border-bottom: 0 !important;
 }
 #menu_items_bar > ul > li.active a{
 	border: 1px solid #f8f8f8;
@@ -204,22 +202,16 @@ ul li{
   display: block;
 }
 #menu_items_bar .has-sub ul {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   display: none;
   position: absolute;
   width: 200px;
   top: 100%;
   left: 0;
+  border: 1px solid #A54040;
 }
 #menu_items_bar .has-sub ul li a {
-  background: #fffffd;
-  border-bottom: 1px solid #fffff5;
-  box-shadow:0 0 2px rgba(0,0,0,0.2) inset; 
-  -moz-box-shadow: inset 0 0 2px rgba(0,0,0,0.2);
-  -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.2);
-  color: #A84041;
+  border-bottom: 1px solid #333;
+  color: #333;
   display: block;
   line-height: 160%;
   padding: 15px 10px;
@@ -230,18 +222,22 @@ ul li{
 }
 
 #menu_items_bar .has-sub ul li:hover a {
-  background:#f8f8f8;
-  color: #83CFCB; 
-  /* box-shadow:0 0 8px rgba(0,0,0,0.2) inset; 
-  -moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
-  -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.2); */
-  padding-bottom:8px;
-  background-image: -webkit-linear-gradient(top, #f0f0f0, #f8f8f8 90%, #f8f8f8);
+  color: #A54040;
+  cursor: pointer; 
+  /* background-image: -webkit-linear-gradient(top, #f0f0f0, #f8f8f8 90%, #f8f8f8);
   background-image: -moz-linear-gradient(top, #f0f0f0, #f8f8f8 90%, #f8f8f8);
   background-image: -o-linear-gradient(top, #f0f0f0, #f8f8f8 90%, #f8f8f8);
   background-image: -ms-linear-gradient(top, #f0f0f0, #f8f8f8 90%, #f8f8f8);
-  background-image: linear-gradient(to bottom, #f0f0f0, #f8f8f8 90%, #f8f8f8);
+  background-image: linear-gradient(to bottom, #f0f0f0, #f8f8f8 90%, #f8f8f8); */
 }
+.menu-item-hover{
+	border: 0 !important;
+	border-bottom: 0 !important;
+	border-right: 1px solid #A54040 !important;
+	border-left: 1px solid #A54040 !important;
+	border-top: 1px solid #A54040 !important;
+}
+
 #menu_items_bar .has-sub .has-sub:hover > ul {
   display: block;
 }
@@ -265,9 +261,7 @@ ul li{
 }
 #menu_items_bar .has-sub .has-sub ul li a:hover {
   background: #f8f8f8;
-  box-shadow:0 0 8px rgba(0,0,0,0.2) inset; 
-  -moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
-  -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+  cursor: pointer;
 }
 .fb-share-button{
 	width: 40px;
@@ -279,24 +273,32 @@ ul li{
     left: 120px;
 }
 /* Main content stylings */
+.content-page-section{
+	min-height: 600px;
+}
+.content-page-section, .home-page-section
+{
+border-top: 1px solid #e7e7e7;
+}
 
 .image-slider-container{
 	width: 100% !important;
 }
 .content .field-items{
 	line-height: 1.5;	
+	font: regular 16px Arial;
+	color: #4d4d4d; 
 }
-.content .field-items .coming{
-	position: absolute;
-    top: 85px;
-    left: 175px;
-	
-}
+.field-item {
+	line-height: 1.6;
+} 
 .body-container {
 	margin: 0 0 20px 5% !important;
 }
 .body-container h3 {
-	color: #A84041;
+	color: #A74040;
+	font: Bold 24px Arial;
+	
 }
 .content-section{
 	border-right: 1px solid #83CFCB;
@@ -313,31 +315,113 @@ ul li{
 	border-bottom: 2px dotted #83CFCB;
 	margin-bottom: 20px;
 }
+.cfcc-meetings-place {
+	margin-bottom: 10px;
+}
+.thirumullai-cfc a {
+	color: #007e73;
+}
+.tambaram-cfc a {
+	color: #ab2a3c;
+}
 .cfcc-meetings-place a{
-	color: #A84046;
-	font-size: 18px;
+	font: Bold 18px Arial;
 }
 .cfcc-meetings-place a:hover {
 	text-decoration: none;
 	color: #83CFCB !important;
+	cursor: pointer;
 }
 .meeting-heading{
 	width: 100%;
+	font: bold 24px Arial;
+	color: #494949;
 }
-.cfcc-directions{
+.cfcc-timings{
+	font: normal 16px Arial;
+	color: #585d60;
+	margin-bottom: 10px;
+}
+.directions{
 	width: 180px;
 	height: 50px;
-	background: url("../images/cfcc_direction.jpg");
+	display: block;
 }
+.cfcc-thirumullai-directions{
+	background: url("../images/cfcc_thirumullai_direction.jpg");
+}
+.cfcc-tambaram-directions{
+  background: url("../images/cfcc_tambaram_direction.jpg");
+}
+
+
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+}
+ 
+@-webkit-keyframes spinner {
+    to {-webkit-transform: rotate(360deg);}
+}
+ 
+.loading-spinner {
+    min-width: 24px;
+    min-height: 24px;
+}
+ 
+.loading-spinner:before {
+    content: 'Loading…';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+ 
+.loading-spinner:not(:required):before {
+    content: '';
+    border-radius: 50%;
+    border-top: 2px solid #03ade0;
+    border-right: 2px solid transparent;
+    animation: spinner .6s linear infinite;
+    -webkit-animation: spinner .6s linear infinite;
+}
+
+.spinner-container{
+	positionion: relative;
+	left: 25%;
+	top: 25%;
+}
+/* About brother page styles */
+figure.inner-image{
+    position: relative;
+    border: 1px solid #d5d5d5;
+    background: #fff;
+    padding: 5px;
+    display: inline-block;
+    margin: 10px !important;
+}
+
+/* sermons page stylings */
+  .sermons-table{
+    margin-top: 25%;
+  }
+ .sermons-header{
+    background: url("../images/Chennai_Cfc_Header.png") repeat scroll 0% 0% #A84041;
+    height: 30px;
+ }
+
 /* Footer Stylings */
 footer{
 	background: #333333;
 }
 .footer-container{
 	width: 100%;
-	background: #333333;
+	background: #303030;
 	min-height: 150px;
 	position: relative;
+	height: 215pt;
 	margin: 0 auto;
 	border-top: 1px solid #333333;
 	z-index: 3;
@@ -351,13 +435,11 @@ footer{
 	font-size: 16px;
 }
 .footer-section-1{
-	width: 35% !important;
 	margin-top: 10px;
 	line-height: 1.8;
 }
 .footer-section-2,.footer-section-3{
-	width: 30% !important;
-    margin: 10px 20px 0 0;
+	  margin: 10px 20px 0 0;
     line-height: 1.8;
 } 
 .footer-section-3 a {
@@ -367,7 +449,7 @@ footer{
 }
 .cfcc-bottom-footer{
   min-height: 30px;
-  padding-top: 3px;
+  padding-top: 30px;
   width: 100%;
   text-align: center;
   color: #bababa;
@@ -380,7 +462,18 @@ footer{
 	.main-logo{
 	  margin-top: 0px !important;
     margin-left: 0px;
-    margin: 5px;
-    max-width: 51px !important;
+    margin: 0px;
+    max-width: 40px !important;
 	}
+	.content-section {
+   border-right: none;
+  }
+  .footer-container{
+     height: 350pt;
+  }
+}
+@media (min-width:992px){
+	.footer-area{
+     min-width: 1100px; 
+}
 }
