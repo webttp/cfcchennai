@@ -78,7 +78,7 @@
 			<div class="row-fluid" id="full-width">
 				<div class="col-md-12 home-page">
 					<div class="col-md-8 content-section" id="content_section">
-						We are Coming Soon ..
+						<div class="coming-soon">We are Coming Soon ..</div>
 					</div>
 					<div class="col-md-3 col-sm-12 col-xs-12 timings-section" id="timings_section">
 					   <div data-include="templates/timings.php"></div>
