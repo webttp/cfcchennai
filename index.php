@@ -114,9 +114,9 @@
 					<div class="col-md-4 col-sm-4 col-xs-12 footer-section-3">
 						<h4>Recommended Links</h4>
 						<ul>
-							<li><a href="http://www.cfcindia.com">www.cfcindia.com</a></li>
-							<li><a href="http://www.rlcf.org">www.rlcf.org</a></li>
-							<li><a href="http://www.nccf.com">www.nccf.com</a></li>
+							<li><a href="http://www.cfcindia.com" target="_blank">www.cfcindia.com</a></li>
+							<li><a href="http://rlcfchurch.org" target="_blank">www.rlcfchurch.org</a></li>
+							<li><a href="http://www.newcovenantcf.org/" target="_blank">www.newcovenantcf.org</a></li>
 						</ul>
 					</div>
 				</div>
