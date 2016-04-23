@@ -1,5 +1,5 @@
 <?php
-include("../../resources/connection.Php");
+
 $hostname = 'bqmayq5x95g1sgr9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
 $username = "cchnflwiwmucc12k";
 $password = "aom0shz4do0uf1bi";
