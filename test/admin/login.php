@@ -109,7 +109,7 @@ include("../config/Class.Crud.Php");
 <?php if(isset($_POST['btnLogin']))
 {
 			$tablename="user";
-			echo $usermailid=$_POST['user']['emailid'];
+		        $usermailid=$_POST['user']['emailid'];
 			$userpassword=md5($_POST['user']['userpassword']);
 			$userMailid = array("user_email"=>$usermailid);
 			$fetch=$obj->fetch($tablename, $userMailid);
