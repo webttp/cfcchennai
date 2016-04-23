@@ -112,10 +112,7 @@ include("../config/Class.Crud.Php");
 			echo $usermailid=$_POST['user']['emailid'];
 			$userpassword=md5($_POST['user']['userpassword']);
 			$userMailid = array("user_email"=>$usermailid);
-			print_r($obj);
 			$fetch=$obj->fetch($tablename, $userMailid);
-			
-			echo count($fetch); 
 			if(count($fetch)>0)
 			{
 				
