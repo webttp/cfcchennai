@@ -276,7 +276,12 @@ a:hover {
 }
 /* Main content stylings */
 .content-page-section{
-	min-height: 600px;
+	min-height: 400px;
+}
+.coming-soon{
+   margin: 20% 30%;    
+   color: #A74040;
+  font: Bold 24px Arial;
 }
 .content-page-section, .home-page-section
 {
@@ -428,6 +433,9 @@ footer{
 	margin: 0 auto;
 	border-top: 1px solid #333333;
 	z-index: 3;
+}  
+.footer-menu{
+ margin-left: 3%;
 }
 .footer-menu h4{
 	color: #ffffff;
@@ -482,12 +490,13 @@ footer{
 	
 }
 
-@media (min-width:700px) {
- .menu-container, .container, .container .row, .menu-nav-container {
+@media (min-width:800px) {
+ .menu-container, .container, .container .row, .menu-nav-container, .footer-menu {
      width: 100% !important;
     }
     #featured-home-page-image.row{
     	margin-right:0;
     	margin-left:0;
     }
+    
 }
