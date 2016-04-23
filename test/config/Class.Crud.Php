@@ -8,7 +8,7 @@ $dbname   = 'chennaicfc';
 $hostname = 'bqmayq5x95g1sgr9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
 $username = "cchnflwiwmucc12k";
 $password = "aom0shz4do0uf1bi";
-$dbname   = '`rrbnvpvpvc79aytz`';
+$dbname   = 'rrbnvpvpvc79aytz';
 
 class Database
 {
