@@ -351,6 +351,7 @@ border-top: 1px solid #e7e7e7;
 	font: normal 16px Arial;
 	color: #585d60;
 	margin-bottom: 10px;
+	clear: both;
 }
 .directions{
 	width: 180px;
