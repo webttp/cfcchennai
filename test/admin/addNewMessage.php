@@ -140,3 +140,10 @@
 	}				
 ?>
 <script src="../js/angular.min.js"></script>
+<script src="../js/app.js"></script>
+<script type="text/javascript">
+var myApp = angular.module('myApp',[]);
+function MyCtrl($scope) {
+	
+}
+</script>
