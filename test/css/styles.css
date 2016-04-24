@@ -222,7 +222,7 @@ a:hover {
   display: block;
   line-height: 160%;
   padding: 15px 10px;
-  font-size: 12px;
+  font-size: 16px;
 }
 #menu_items_bar .has-sub .has-sub a{
   border-right: 1px solid #f8f8f8;	
