@@ -143,7 +143,6 @@
 <script src="../js/app.js"></script>
 <script type="text/javascript">
 var myApp = angular.module('myApp',[]);
-function MyCtrl($scope) {
-	
-}
+	myApp.controller("MyCtrl",function ($scope) {
+});
 </script>
