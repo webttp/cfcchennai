@@ -19,7 +19,7 @@ $(function(){
 	$("#menu_items_bar > ul > li a").on("click",function(e){
 		var self = $(this);	
 		var title = self.attr("title");
-		var pageName= "templates/"+ title +".html";
+		var pageName= "templates/"+ title +".php";
 		if(title == "home"){
 			$(".content-page-section").css("display","none");
 			$(".home-page-section").css("display","block");
