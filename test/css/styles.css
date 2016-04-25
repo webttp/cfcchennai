@@ -73,7 +73,6 @@ a:hover {
 	margin-top: 10px;
 }
 .main-logo {
-	/* background-image: url("../images/Cfc_Chennai_Logo.png"); */
 	margin: 10px 20px 0;
 }
 .cfcc-verse{
@@ -84,6 +83,9 @@ a:hover {
 	top: 10px;
 	color: #ffffff;
 	font-size: 14px;
+}
+.carousel-inner {
+	height: 350px;
 }
 .section2{
 	margin-top: 20px;
@@ -271,10 +273,10 @@ a:hover {
   cursor: pointer;
 }
 .fb-share-button{
-	width: 40px;
+   width: 40px;
     height: 40px;
     z-index: 1030;
-    background-image: url("../images/facebook_logo.jpg");
+    background-image: url("../images/FB-Logo.png");
     position: absolute;
     top: 23px;
  }
