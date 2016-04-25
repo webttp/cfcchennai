@@ -62,11 +62,12 @@ churches in india,churches in chennai, church in india,christian,chrisrtian indi
 						<div class="hidden-md hidden-lg hidden-sm col-xs-10 xs-banner-text">
 							 Christian Fellowship Church, Chennai</div>
 						<div class="navbar-header toggle-bar">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu_items_bar">
+							<input type="checkbox" id="menu_btn" class="navbar-toggle" data-toggle="collapse" data-target="#menu_items_bar">
 								<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-							</button>
+							</input>
 						</div>
-				    	<div id="menu_items_bar" class="collapse navbar-collapse">
+				    	<div id="menu_items_bar" class="overlay-container collapse navbar-collapse">
+						<label for="menu_btn"></label>
 							<ul class="nav navbar-main">
 								<li class='active dropdown parent_menu'>
 								  <a href='#' title="home" class='home dropdown-toggle' data-toggle='dropdown'>
@@ -115,7 +116,7 @@ churches in india,churches in chennai, church in india,christian,chrisrtian indi
       <div class="col-md-12 hidden-xs">
         <nav class="navbar navbar-default navbar-inverse menu" role="navigation">
           <div id="menu_items_bar" class="collapse navbar-collapse">
-            <ul class="nav navbar-main">
+		    <ul class="nav navbar-main">
               <li class='active dropdown parent_menu'>
                 <a href='#' title="home" class='home dropdown-toggle' data-toggle='dropdown'><span>Home</span></a>
               </li>
