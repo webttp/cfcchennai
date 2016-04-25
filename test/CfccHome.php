@@ -62,9 +62,9 @@ churches in india,churches in chennai, church in india,christian,chrisrtian indi
 						<div class="hidden-md hidden-lg hidden-sm col-xs-10 xs-banner-text">
 							 Christian Fellowship Church, Chennai</div>
 						<div class="navbar-header toggle-bar">
-							<input type="checkbox" id="menu_btn" class="navbar-toggle" data-toggle="collapse" data-target="#menu_items_bar">
+							<button type="button" id="menu_btn" class="navbar-toggle" data-toggle="collapse" data-target="#menu_items_bar">
 								<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-							</input>
+							</button>
 						</div>
 				    	<div id="menu_items_bar" class="overlay-container collapse navbar-collapse">
 						<label for="menu_btn"></label>
