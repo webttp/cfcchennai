@@ -34,7 +34,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-1 col-sm-1 col-xs-1 cfcc-logo">
-					<a href="http://www.cfcindia.com/"> <img alt="Logo" class="img-responsive main-logo" src="images/Cfc_Chennai_Logo.png" alt="Chennai-CFC">
+					<a href="http://www.cfcindia.com/"> 
+					<img class="img-responsive main-logo" src="images/Logo.png" alt="Chennai-CFC-Image">
 					</a>
 				</div>
 				<div class="col-md-11 col-sm-11 col-xs-11 cfcc-verse">
