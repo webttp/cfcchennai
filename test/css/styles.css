@@ -445,7 +445,7 @@ footer{
 }
 .footer-section-1{
 	margin-top: 10px;
-	line-height: 1.8;
+	line-height: 1.5;
 }
 .footer-section-2,.footer-section-3{
 	  margin-top: 10px;
@@ -497,14 +497,12 @@ footer{
     top: 0;
 	right: 0;
 	z-index: 1000;
-	background: #F4EFF1;
+	background: rgba(0,0,0,0.5);
   }
   
   #menu_items_bar a{
-    font-size: 14px;
     background: none;
-	font-size: 14px;
-    padding: 0; 
+	padding-top: 20px; 
     background: none;
     line-height: 16px;
     border: none;
@@ -537,6 +535,7 @@ footer{
     float: right;
     display: inline-block;
     height: 50%;
+	width: 100%;
     position: relative;
     background: none;
   }
