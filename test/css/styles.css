@@ -506,13 +506,13 @@ footer{
      
   }
   
-  #menu_items_bar {
+  #menu_items_bar label{
 	width: 58px;
 	height:58px;
 	position: absolute;
 	right: 20px;
 	top: 20px;
-	background: url('');
+	background: url('../images/close.png');
 	z-index: 100;
     cursor:pointer;
  }
