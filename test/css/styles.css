@@ -491,20 +491,33 @@ footer{
   	height: auto;
   }
   #menu_items_bar {
-  	height: 100% !important;
-    width: 50%;
+  	position: fixed;
+	height: 100% !important;
+    width: 60%;
     font-size: 12px;
     top: 0;
 	right: 0;
 	z-index: 1000;
-	background: rgba(0,0,0,2.5);
+	background: #F4EFF1;
   }
   
   #menu_items_bar a{
      font-size: 14px;
      
   }
-  #menu_items_bar nav {
+  
+  #menu_items_bar {
+	width: 58px;
+	height:58px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	background: url('');
+	z-index: 100;
+    cursor:pointer;
+ }
+ 
+ #menu_items_bar nav {
 	text-align: center;
 	position: relative;
 	height: 60%;
@@ -516,16 +529,18 @@ footer{
   
   #menu_items_bar  ul {
 	padding: 0;
-	margin: 0 auto;
-	display: inline-block;
-	height: 100%;
-	position: relative;
+    float: right;
+    display: inline-block;
+    height: 50%;
+    position: relative;
+    background: none;
   }
-  #menu_items_bar ul li {
+  #menu_items_bar > ul > li {
 	display: block;
-	height: 20%;
 	height: calc(100% / 5);
 	min-height: 54px;
+	clear: both;
+	float: right;
   }
   
   #menu_items_bar > ul > li.active a,
@@ -538,14 +553,31 @@ footer{
   		color: #84cbe2;
   }
   #menu_items_bar .has-sub ul {
-  	position: relative;
-    top: 0;
-    right: 0;
-    left: inherit;
-    width: 100%;
-    border: 0;
+  	padding: 0;
+    float: right;
+    display: inline-block;
+    height: 50%;
+    position: relative;
+    background: none;
     border-top: 1px solid #A74140;
   }
+  #menu_btn:checked~.overlay-container{
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+  }
+  #menu_btn:checked~.overlay-container nav ul {
+	opacity: 1;
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+ }
+
+  #menu_btn:not(:checked)~.overlay-container nav ul {
+	-webkit-transform: translateY(25%) rotateX(-35deg);
+	transform: translateY(25%) rotateX(-35deg);
+  }
+
   .fb-share-button{
 		top: 7px;
   }
