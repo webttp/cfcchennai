@@ -273,8 +273,8 @@ a:hover {
   cursor: pointer;
 }
 .fb-share-button{
-   width: 40px;
-    height: 40px;
+   width: 37px;
+    height: 37px;
     z-index: 1030;
     background-image: url("../images/FB-Logo.png");
     position: absolute;
@@ -337,7 +337,7 @@ border-top: 1px solid #e7e7e7;
 	color: #ab2a3c;
 }
 .cfcc-meetings-place a{
-	font: Bold 18px Arial;
+	font: Bold 20px Arial;
 }
 .cfcc-meetings-place a:hover {
 	text-decoration: none;
@@ -350,7 +350,7 @@ border-top: 1px solid #e7e7e7;
 	color: #494949;
 }
 .cfcc-timings{
-	font: normal 16px Arial;
+	font: normal 18px Arial;
 	color: #585d60;
 	margin-bottom: 10px;
 	clear: both;
@@ -359,6 +359,7 @@ border-top: 1px solid #e7e7e7;
 	width: 180px;
 	height: 50px;
 	display: block;
+	clear: both;
 }
 .cfcc-thirumullai-directions{
 	background: url("../images/cfcc_thirumullai_direction.jpg");
