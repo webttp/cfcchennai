@@ -41,9 +41,8 @@
     <div class="content-page-section">
       <div class="container-fluid body-container bs-docs-container">
         <div class="row-fluid" id="full-width">
-          <div class="col-md-12 home-page">
-            <div class="col-md-8 content-section" id="content_section">
-              <div class="row-fluid home-page-slider">
+          <div class="col-md-12 content-section home-page">
+			<div class="row-fluid home-page-slider">
                 <div id="featured-home-page-image" class="row">
                   <div id="featured-home-carousel-image">
                     <div id="homeCarousel" class="carousel slide" data-ride="carousel">
@@ -105,7 +104,6 @@
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
