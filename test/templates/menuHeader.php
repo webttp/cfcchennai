@@ -34,7 +34,7 @@
               <label for="menu_btn"></label>
               <ul class="nav navbar-main">
                 <li class='active dropdown parent_menu'>
-                  <a href='#' title="home" class='home dropdown-toggle' data-toggle='dropdown'>
+                  <a href='#' title="CfccHome" class='home dropdown-toggle' data-toggle='dropdown'>
                   <span>Home</span></a>
                 </li>
                 <li class='dropdown parent_menu'>
@@ -79,7 +79,7 @@
           <div id="menu_items_bar" class="collapse navbar-collapse">
         <ul class="nav navbar-main">
               <li class='active dropdown parent_menu'>
-                <a href='#' title="home" class='home dropdown-toggle' data-toggle='dropdown'><span>Home</span></a>
+                <a href='#' title="CfccHome" class='home dropdown-toggle' data-toggle='dropdown'><span>Home</span></a>
               </li>
               <li class='dropdown parent_menu'>
                 <a href="#" title="aboutUs" class='aboutUs dropdown-toggle' data-toggle='dropdown'><span>About us</span></a>
