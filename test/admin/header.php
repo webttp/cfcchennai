@@ -34,7 +34,7 @@ if($_SESSION['loginid']=="")
     <ul class="nav navbar-nav">
       <li class="active"><a href="dashboard.php">Home</a></li>
       <li><a href="listmessages.php">Messages</a></li>
-	  <li><a href="#">Images - Upload</a></li>
+	  <li><a href="listimages.php">Images - Upload</a></li>
     </ul>
 	</div>
 	</nav>
