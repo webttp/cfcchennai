@@ -19,7 +19,7 @@ $(function(){
 	$("#menu_items_bar > ul > li a").on("click",function(e){
 		var self = $(this);	
 		var title = self.attr("title");
-		var pageName= "templates/"+ title +".php";
+		var pageName= "templates/"+ title +".html";
 		if(title == "home"){
 			$(".content-page-section").css("display","none");
 			$(".home-page-section").css("display","block");
@@ -40,7 +40,7 @@ $(function(){
 	
 	// Menu toggle bar functionalities
 	$(".navbar-toggle").click(function(e){
-		$("#menu_items_bar").toggle();
+		$(".mobile-menu-items").toggle();
 	});
 	$("#menu_items_bar a").click(function(e){
 		$("#menu_items_bar").hide();
