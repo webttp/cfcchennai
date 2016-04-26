@@ -311,7 +311,9 @@ a:hover {
 	position: absolute;
 	top: 23px;
 }
-
+#featured-home-page-image {
+	margin-top: 10px;
+}
 #featured-home-page-image.row {
 	margin-left: 0;
 	margin-right: 0;
