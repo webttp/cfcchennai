@@ -38,7 +38,7 @@
          <div data-include="templates/menuHeader.php"></div>
       </header>
       <div class="spinner-container" style="display:none;"></div>
-      <div class="content-page-section" style="display:none;">
+      <div class="content-page-section">
          <div class="container body-container bs-docs-container">
             <div class="row-fluid" id="full-width">
                <div class="col-md-12 home-page">
