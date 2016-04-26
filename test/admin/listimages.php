@@ -7,7 +7,7 @@ include("header.php");
 <br/>
 <nav class= "navbar navbar-default" role= "navigation" style="margin-top:20px;">
 				<div class= "navbar-header" >
-					<a class="btn btn-lg btn-success" href="addimage.php"><i class="glyphicon glyphicon-plus"></i>&nbsp;Add new Image</a>
+					<a class="btn btn-lg btn-success" href="addImage.php"><i class="glyphicon glyphicon-plus"></i>&nbsp;Add new Image</a>
 				</div>
 			</nav>
 <div ng-show="!loaded"> <center style="text-align:center !important;"><i class="fa fa-spinner fa-spin fa-3x fa-fw margin-bottom"></i>
