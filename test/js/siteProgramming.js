@@ -40,7 +40,10 @@ $(function(){
 	
 	// Menu toggle bar functionalities
 	$(".navbar-toggle").click(function(e){
-		$(".mobile-menu-items").toggle();
+		var self = $(this);
+		if(!self.hasClass(".has-sub")){
+			$(".mobile-menu-items").toggle();
+		}
 	});
 	$("#menu_items_bar a").click(function(e){
 		$("#menu_items_bar").hide();
