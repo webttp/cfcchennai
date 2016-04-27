@@ -12,18 +12,18 @@ $(function(){
 	
 	/*$("#menu_items_bar > ul > li.has-sub:hover a").mouseenter(function(e){
 		$("#menu_items_bar > ul > li.has-sub:hover").addClass("menu-item-hover");
-		/*$("#menu_items_bar > ul > li.has-sub ul").addClass("menu-sub-list-hover");*/
-	});*/
+		$("#menu_items_bar > ul > li.has-sub ul").addClass("menu-sub-list-hover");
+	}); */
 	
 	// to load the html pages dynamically using class names
 	$("#menu_items_bar > ul > li a").on("click",function(e){
 		var self = $(this);	
 		var title = self.attr("title");
-		var pageName= "templates/"+ title +".php";
+		var pageName= "templates/"+ title +".html";
 		if(title == "home"){
-			$(".content-page-section").css("display","none");
 			$(".home-page-section").css("display","block");
 			$(".home-page-section").load(pageName);
+			$(".content-page-section").css("display","block");
 		}else {
 			$(".home-page-section").css("display","none");
 			$(".content-page-section").css("display","block");
@@ -42,11 +42,12 @@ $(function(){
 	$(".navbar-toggle").click(function(e){
 		var self = $(this);
 		if(!self.hasClass(".has-sub")){
-			$(".mobile-menu-items").toggle();
+			$(".mobile-menu-items").show();
 		}
 	});
-	$("#menu_items_bar a").click(function(e){
-		$("#menu_items_bar").hide();
+	
+	$("#menu_items_bar.mobile-menu-items a").click(function(e){
+		$(".mobile-menu-items").hide();
 	});
 	
 });
