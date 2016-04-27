@@ -10,13 +10,13 @@ $(function(){
 			$(this).addClass("active");
 	});
 	
-	$("#menu_items_bar > ul > li.has-sub:hover a").mouseenter(function(e){
+	/*$("#menu_items_bar > ul > li.has-sub:hover a").mouseenter(function(e){
 		$("#menu_items_bar > ul > li.has-sub:hover").addClass("menu-item-hover");
 		/*$("#menu_items_bar > ul > li.has-sub ul").addClass("menu-sub-list-hover");*/
-	});
+	});*/
 	
 	// to load the html pages dynamically using class names
-	/*$("#menu_items_bar > ul > li a").on("click",function(e){
+	$("#menu_items_bar > ul > li a").on("click",function(e){
 		var self = $(this);	
 		var title = self.attr("title");
 		var pageName= "templates/"+ title +".php";
@@ -30,7 +30,7 @@ $(function(){
 			$(".content-section").html("");
 			$(".content-section").load(pageName);
 		}
-	});*/
+	});
 	
 	lightbox.option({
 	      'resizeDuration': 200,
