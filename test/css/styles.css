@@ -1,15 +1,15 @@
 @CHARSET "ISO-8859-1";
 
-body {
-	font-family: 'HelveticaNeueLT-Light';
-	font-weight: 100;
-	font-size: 12px;
-	line-height: 1.42857143;
-	overflow-x: hidden !important;
-	margin: 0 !important;
-	padding: 0 !important;
-	background: #E0ECF8;
-	color: #FFFFFF;
+body{
+  font-family: 'HelveticaNeueLT-Light';
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 1.42857143;
+  overflow-x: hidden!important;
+  margin: 0!important;
+  padding: 0!important;
+  background: #E0ECF8;
+  color: #FFFFFF;
 }
 
 * {
@@ -135,7 +135,7 @@ a:hover {
 }
 
 .toggle-bar {
-	right: 0;
+	right: 10px;
 	position: absolute;
 }
 
@@ -194,15 +194,9 @@ a:hover {
 }
 
 #menu_items_bar a {
-	/*background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #ffffff));
-  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%);
-  background: -o-linear-gradient(top, #ffffff 0%, #ffffff 100%);
-  background: -ms-linear-gradient(top, #ffffff 0%, #ffffff 100%);
-  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);*/
 	color: #A74040;
 	display: inline-block;
-	font: Bold 16px Arial Rounded MT Bold, Helvetica Rounded, Arial,
+	font: Bold 18px Arial Rounded MT Bold, Helvetica Rounded, Arial,
 		sans-serif;
 	line-height: 28px;
 	padding: 5px 50px;
@@ -244,15 +238,16 @@ a:hover {
 #menu_items_bar .has-sub ul {
 	display: none;
 	position: absolute;
-	width: 200px;
+	width: 120%;
 	top: 100%;
 	left: 0;
 	border: 1px solid #A54040;
+	border-radius: 0;
 }
 
 #menu_items_bar .has-sub ul li a {
 	border-bottom: 1px solid #333;
-	color: #333;
+	color: #A74041;
 	display: block;
 	line-height: 160%;
 	padding: 15px 10px;
@@ -264,13 +259,8 @@ a:hover {
 }
 
 #menu_items_bar .has-sub ul li:hover a {
-	color: #A54040;
+	color: #84cbe2;
 	cursor: pointer;
-	/* background-image: -webkit-linear-gradient(top, #f0f0f0, #f8f8f8 90%, #f8f8f8);
-  background-image: -moz-linear-gradient(top, #f0f0f0, #f8f8f8 90%, #f8f8f8);
-  background-image: -o-linear-gradient(top, #f0f0f0, #f8f8f8 90%, #f8f8f8);
-  background-image: -ms-linear-gradient(top, #f0f0f0, #f8f8f8 90%, #f8f8f8);
-  background-image: linear-gradient(to bottom, #f0f0f0, #f8f8f8 90%, #f8f8f8); */
 }
 
 #menu_items_bar .has-sub .has-sub:hover>ul {
@@ -297,11 +287,6 @@ a:hover {
 
 #menu_items_bar .has-sub .has-sub .fa {
 	float: right;
-}
-
-#menu_items_bar .has-sub .has-sub ul li a:hover {
-	background: #f8f8f8;
-	cursor: pointer;
 }
 
 .fb-share-button {
@@ -340,6 +325,10 @@ a:hover {
 .field-item {
 	line-height: 1.6;
 }
+.region-content .field-items p{
+	margin: 10px 0 10px;
+    line-height: 1.6;
+}
 
 .body-container {
 	margin: 0 0 20px 5% !important;
@@ -353,6 +342,7 @@ a:hover {
 .content-section {
 	border-right: 1px solid #83CFCB;
 	min-height: 220px;
+	margin: 10px 0;
 }
 
 .timings-section {
@@ -361,7 +351,6 @@ a:hover {
 	line-height: 30px;
 	height: 100%;
 }
-
 .meeting-heading,.meeting-timings {
 	border-bottom: 1px solid #83CFCB;
 	margin-bottom: 20px;
@@ -520,7 +509,7 @@ footer {
 
 .footer-section-2,.footer-section-3 {
 	margin-top: 10px;
-	line-height: 1.8;
+	line-height: 1.5;
 }
 
 .footer-section-3 a {
