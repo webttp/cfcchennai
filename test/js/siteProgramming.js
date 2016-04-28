@@ -16,9 +16,18 @@ $(function(){
 	}); */
 	
 	/* Lazy loadin of timings section */
-	$(".timings-section").lazy();
-	$(".content-section").lazy();
-	$(".footer-menu").lazy();
+	$(".timings-section").lazy({
+		placeholder: "data:image/gif;base64,R0lGODlhEALAPQAPzl5uLr9Nrl8e7...",
+		delay: 1000
+	});
+	$(".content-section").lazy({
+		placeholder: "data:image/gif;base64,R0lGODlhEALAPQAPzl5uLr9Nrl8e7...",
+		delay: 1000
+	});
+	$(".footer-menu").lazy({
+		placeholder: "data:image/gif;base64,R0lGODlhEALAPQAPzl5uLr9Nrl8e7...",
+		delay: 1000
+	});
 	
 	// to load the html pages dynamically using class names
 	$("#menu_items_bar > ul > li a").on("click",function(e){
