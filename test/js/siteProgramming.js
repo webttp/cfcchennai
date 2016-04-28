@@ -41,11 +41,11 @@ $(function(){
 				asyncLoader: function(element) {
 					setTimeout(function() {
 						$(".home-page-section").css("display","block");
-						$(".home-page-section").removeClass("lazy");
 						$(".home-page-section").load(pageName);
 						$(".content-page-section").css("display","block");
 					}, 5000);
 				}
+				$(".home-page-section").removeClass("lazy");
 			});
 			
 		}else {
@@ -53,13 +53,13 @@ $(function(){
 				asyncLoader: function(element) {
 					setTimeout(function() {
 						$(".home-page-section").css("display","none");
-						$(".content-section").removeClass("lazy");
 						$(".content-page-section").css("display","block");
 						$(".content-section").html("");
 						$(".content-section").load(pageName);					
 					}, 5000);
 					
 				}
+				$(".content-section").removeClass("lazy");
 			});
 		}
 	});
