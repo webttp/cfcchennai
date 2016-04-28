@@ -315,8 +315,9 @@ a:hover {
 
 .content-section {
 	border-right: 1px solid #83CFCB;
-	min-height: 450px;
+	min-height: 450px !important;
 	height: auto;
+	margin-top: 10px;
 }
 
 .timings-section {
