@@ -36,25 +36,25 @@ $(function(){
 		var title = self.attr("title");
 		var pageName= "templates/"+ title +".html";
 		if(title == "home"){
+			$(".home-page-section").css("display","block");
 			$(".home-page-section").addClass("lazy");
 			$(".home-page-section").lazy({
 				// loads with a five seconds delay
 				asyncLoader: function(element) {
 					setTimeout(function() {
-						$(".home-page-section").css("display","block");
 						$(".home-page-section").load(pageName);
-						$(".content-page-section").css("display","block");
+						$(".content-page-section").css("display","none");
 					}, 5000);
 				}
 			});
 				$(".home-page-section").removeClass("lazy");
 		}else {
+			$(".content-page-section").css("display","block");
 			$(".content-section").addClass("lazy");
 			$(".content-section").lazy({
 				asyncLoader: function(element) {
 					setTimeout(function() {
 						$(".home-page-section").css("display","none");
-						$(".content-page-section").css("display","block");
 						$(".content-section").html("");
 						$(".content-section").load(pageName);					
 					}, 5000);
