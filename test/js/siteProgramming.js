@@ -44,8 +44,9 @@ $(function(){
 						$(".home-page-section").load(pageName);
 						$(".content-page-section").css("display","block");
 					}, 5000);
-				}
 				$(".home-page-section").removeClass("lazy");
+				}
+				
 			});
 			
 		}else {
@@ -57,9 +58,9 @@ $(function(){
 						$(".content-section").html("");
 						$(".content-section").load(pageName);					
 					}, 5000);
-					
+					$(".content-section").removeClass("lazy");		
 				}
-				$(".content-section").removeClass("lazy");
+			
 			});
 		}
 	});
