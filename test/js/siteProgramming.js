@@ -36,7 +36,7 @@ $(function(){
 		var title = self.attr("title");
 		var pageName= "templates/"+ title +".html";
 		if(title == "home"){
-			$(".content-section").lazy({
+			$(".home-page-section").lazy({
 				// loads with a five seconds delay
 				asyncLoader: function(element) {
 					setTimeout(function() {
@@ -49,7 +49,8 @@ $(function(){
 			});
 			
 		}else {
-			asyncLoader: function(element) {
+			$(".content-section").lazy({
+				asyncLoader: function(element) {
 					setTimeout(function() {
 						$(".home-page-section").css("display","none");
 						$(".content-section").removeClass("lazy");
@@ -59,7 +60,7 @@ $(function(){
 					}, 5000);
 					
 				}
-			
+			});
 		}
 	});
 	
