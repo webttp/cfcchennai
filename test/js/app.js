@@ -44,7 +44,7 @@ app.controller('customersCrtl', function ($scope, $http, $timeout,$location) {
     };
 });
 app.controller('imgCrtl', function ($scope, $http, $timeout,$location) {
-	$http.get('getImages.php').success(function(data){
+	$http.get('get.php').success(function(data){
 		$scope.loaded = true;
 		$scope.list = data;
         $scope.currentPage = 1; //current page
