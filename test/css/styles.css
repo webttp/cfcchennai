@@ -341,7 +341,8 @@ a:hover {
 
 .content-section {
 	border-right: 1px solid #83CFCB;
-	min-height: 220px;
+	min-height: 450px;
+	height: auto;
 	margin: 10px 0;
 }
 
