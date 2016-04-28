@@ -268,7 +268,9 @@ a:hover {
 #menu_items_bar .has-sub .has-sub ul li a:hover {
 	cursor: pointer;
 }
-
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+	background-color: #fffff1 !important;
+}
 .fb-share-button {
 	width: 37px;
 	height: 37px;
