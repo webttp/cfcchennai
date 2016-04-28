@@ -36,6 +36,7 @@ $(function(){
 		var title = self.attr("title");
 		var pageName= "templates/"+ title +".html";
 		if(title == "home"){
+			$(".home-page-section").addClass("lazy");
 			$(".home-page-section").lazy({
 				// loads with a five seconds delay
 				asyncLoader: function(element) {
@@ -44,12 +45,11 @@ $(function(){
 						$(".home-page-section").load(pageName);
 						$(".content-page-section").css("display","block");
 					}, 5000);
-				$(".home-page-section").removeClass("lazy");
 				}
-				
 			});
-			
+				$(".home-page-section").removeClass("lazy");
 		}else {
+			$(".content-section").addClass("lazy");
 			$(".content-section").lazy({
 				asyncLoader: function(element) {
 					setTimeout(function() {
@@ -58,10 +58,9 @@ $(function(){
 						$(".content-section").html("");
 						$(".content-section").load(pageName);					
 					}, 5000);
-					$(".content-section").removeClass("lazy");		
 				}
-			
 			});
+			$(".content-section").removeClass("lazy");
 		}
 	});
 	
