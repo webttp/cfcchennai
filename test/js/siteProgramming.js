@@ -15,21 +15,6 @@ $(function(){
 		$("#menu_items_bar > ul > li.has-sub ul").addClass("menu-sub-list-hover");
 	}); */
 	
-	/* Lazy loadin of timings section */
-	$(".timings-section").lazy({
-		asyncLoader: function(element) {
-					setTimeout(function() {
-						$(".timings-section").load();
-						$(".timings-section").removeClass("lazy");
-					}, 5000);
-				}
-	});
-	
-	$(".footer-menu").lazy({
-		placeholder: "data:image/gif;base64,R0lGODlhEALAPQAPzl5uLr9Nrl8e7...",
-		delay: 1000
-	});
-	
 	// to load the html pages dynamically using class names
 	$("#menu_items_bar > ul > li a").on("click",function(e){
 		var self = $(this);	
@@ -53,6 +38,7 @@ $(function(){
 			$(".content-section").addClass("lazy");
 			$(".content-section").lazy({
 				asyncLoader: function(element) {
+						consoloe.log(element);
 					setTimeout(function() {
 						$(".home-page-section").css("display","none");
 						$(".content-section").html("");
@@ -60,7 +46,18 @@ $(function(){
 					}, 5000);
 				}
 			});
-			$(".content-section").removeClass("lazy");
+			/* Lazy loadin of timings section */
+			$(".timings-section").addClass("lazy");
+			$(".timings-section").lazy({
+				asyncLoader: function(element) {
+					consoloe.log(element);
+					setTimeout(function() {
+						$(".timings-section").load();
+					}, 5000);
+				}
+			});
+	
+			$(".timings-section").removeClass("lazy");
 		}
 	});
 	
