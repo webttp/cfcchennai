@@ -18,6 +18,7 @@ $(function(){
 	/* Lazy loadin of timings section */
 	$(".timings-section").lazy();
 	$(".content-section").lazy();
+	$(".footer-menu").lazy();
 	
 	// to load the html pages dynamically using class names
 	$("#menu_items_bar > ul > li a").on("click",function(e){
