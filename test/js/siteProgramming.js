@@ -17,13 +17,14 @@ $(function(){
 	
 	/* Lazy loadin of timings section */
 	$(".timings-section").lazy({
-		placeholder: "data:image/gif;base64,R0lGODlhEALAPQAPzl5uLr9Nrl8e7...",
-		delay: 1000
+		asyncLoader: function(element) {
+					setTimeout(function() {
+						$(".timings-section").load();
+						$(".timings-section").removeClass("lazy");
+					, 5000);
+				}
 	});
-	$(".content-section").lazy({
-		placeholder: "data:image/gif;base64,R0lGODlhEALAPQAPzl5uLr9Nrl8e7...",
-		delay: 1000
-	});
+	
 	$(".footer-menu").lazy({
 		placeholder: "data:image/gif;base64,R0lGODlhEALAPQAPzl5uLr9Nrl8e7...",
 		delay: 1000
@@ -35,14 +36,30 @@ $(function(){
 		var title = self.attr("title");
 		var pageName= "templates/"+ title +".html";
 		if(title == "home"){
-			$(".home-page-section").css("display","block");
-			$(".home-page-section").load(pageName);
-			$(".content-page-section").css("display","block");
+			$(".content-section").lazy({
+				// loads with a five seconds delay
+				asyncLoader: function(element) {
+					setTimeout(function() {
+						$(".home-page-section").css("display","block");
+						$(".home-page-section").removeClass("lazy");
+						$(".home-page-section").load(pageName);
+						$(".content-page-section").css("display","block");
+					}, 5000);
+				}
+			});
+			
 		}else {
-			$(".home-page-section").css("display","none");
-			$(".content-page-section").css("display","block");
-			$(".content-section").html("");
-			$(".content-section").load(pageName);
+			asyncLoader: function(element) {
+					setTimeout(function() {
+						$(".home-page-section").css("display","none");
+						$(".content-section").removeClass("lazy");
+						$(".content-page-section").css("display","block");
+						$(".content-section").html("");
+						$(".content-section").load(pageName);					
+					}, 5000);
+					
+				}
+			
 		}
 	});
 	
