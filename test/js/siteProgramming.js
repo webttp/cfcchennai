@@ -21,7 +21,7 @@ $(function(){
 					setTimeout(function() {
 						$(".timings-section").load();
 						$(".timings-section").removeClass("lazy");
-					, 5000);
+					}, 5000);
 				}
 	});
 	
