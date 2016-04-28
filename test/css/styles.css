@@ -206,6 +206,7 @@ a:hover {
 
 #menu_items_bar>ul>li.active a {
 	border: 1px solid #f8f8f8;
+	background: none;
 }
 
 #menu_items_bar .has-sub {
