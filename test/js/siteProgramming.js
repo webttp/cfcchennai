@@ -35,10 +35,10 @@ $(function(){
 				$(".home-page-section").removeClass("lazy");
 		}else {
 			$(".content-page-section").css("display","block");
+			$(".content-section").css("display","block");
 			$(".content-section").addClass("lazy");
 			$(".content-section").lazy({
 				asyncLoader: function(element) {
-						consoloe.log(element);
 					setTimeout(function() {
 						$(".home-page-section").css("display","none");
 						$(".content-section").html("");
@@ -46,11 +46,11 @@ $(function(){
 					}, 5000);
 				}
 			});
+			$(".content-section").removeClass("lazy");
 			/* Lazy loadin of timings section */
 			$(".timings-section").addClass("lazy");
 			$(".timings-section").lazy({
 				asyncLoader: function(element) {
-					consoloe.log(element);
 					setTimeout(function() {
 						$(".timings-section").load();
 					}, 5000);
