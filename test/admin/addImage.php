@@ -59,8 +59,8 @@
 				$imagealttext=$_POST['imagealttext'];
 				include("imageUpload.php");
 				$upd = new imageUpload("uploadedfile");
-				$upd->setUploadPath("./imagebank/");
-				$upd->setThumbPath("./imagebank/thumbnail/");
+				$upd->setUploadPath("imagebank/");
+				$upd->setThumbPath("imagebank/thumbnail/");
 				$upd->setCreateThumbnail(true);
 				$upd->setThumbDimension(100, 100);
 				$upd->setMaxFileSize(5242880); //in bytes, around 5mb
