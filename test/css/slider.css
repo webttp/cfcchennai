@@ -164,7 +164,7 @@ body .carousel-inner .item {
 }
 
 .carousel-control {
-	display: none;
+	display: block !important;
 }
 
 #featured-header-home-page a img {
