@@ -43,8 +43,7 @@ class imageUpload
         $this->set_name = "";
     }
     function uploadImg($fieldname = ''){
-    	return $fieldname;
-    	exit;
+    	
         //check if another fieldname is specified, or get fieldname that is assigned on initialization
         if($fieldname == "") $fieldname = $this->fieldname;
 
