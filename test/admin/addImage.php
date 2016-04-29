@@ -81,10 +81,12 @@
         
         if($thumb == TRUE)
         {
+           
             $thumbnail = $thumb_path.$fileName;
+            return "from".$file_ext.$thumbnail;	
             list($width,$height) = getimagesize($upload_image);
             $thumb_create = imagecreatetruecolor($thumb_width,$thumb_height);
-            return $file_ext;
+            return "to".$file_ext;
             switch($file_ext){
                 case 'jpg':
                     $source = imagecreatefromjpeg($upload_image);
