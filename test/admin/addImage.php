@@ -57,16 +57,21 @@
 				$tablename='imagegallery';
 				$imagename=$_POST['imagename'];
 				$imagealttext=$_POST['imagealttext'];
+				echo "sssss";
 				include("imageUpload.php");
 				$upd = new imageUpload("uploadedfile");
+				echo "22222222222222222222222222222222222";
 				$upd->setUploadPath("./imagebank/");
 				$upd->setThumbPath("./imagebank/thumbnail/");
+				echo "11111111111111111111111111111";
 				$upd->setCreateThumbnail(true);
+				echo "rrrrrrrrrrrrrr";
 				$upd->setThumbDimension(100, 100);
 				$upd->setMaxFileSize(5242880); //in bytes, around 5mb
 				$upd->setThumbMode("crop");
+				echo "55555555555555555555555555";
 				$image_uploaded = $upd->uploadImg();
-				print_r($image_uploaded);
+				echo "qqqqqqqq";
 				
 				if($image_uploaded !== false){     
 				echo("File uploaded");
