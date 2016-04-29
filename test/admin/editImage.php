@@ -1,217 +1,169 @@
 <?php 
-	  error_reporting('0');
-
 	  include("../config/Class.Crud.Php"); 
 	  include("header.php");
-	  $tablename='imagegallery';
+	  $tablename='messagelist';
 	  if(isset($_GET['id'])){
-		$imgid=$_GET['id'];
+		$messageid=$_GET['id'];
 	  }
-	  $imgid = array("imgid"=>$imgid);
-	  $fetch=$obj->fetch($tablename, $imgid);
+	  $messageid = array("id"=>$messageid);
+	  $fetch=$obj->fetch($tablename, $messageid);
 	  if(count($fetch)>0)
 	  {
-?>		<div class="container">
+?>
+		 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+    $( "#messagedate" ).datepicker({
+      showOn: "button",
+      buttonImage: "../../images/calendar.gif",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    });
+  });
+  </script>
+
+    
+	    <div class="container" ng-app="myApp" >
 			<div class="row" style="margin-top:20px;">
 				<div class="col-md-12">
-					<a class= "navbar-brand" href= "listimages.php"><i class="glyphicon glyphicon-th-large"></i> Image Gallery </a>
+					<a class= "navbar-brand" href= "listmessages.php"><i class="glyphicon glyphicon-th-large"></i> Messages List </a>
 				</div>	
 			</div>	
-            <div class="row">
+            <div class="row" ng-controller="MyCtrl">
 				<div class="col-md-12">
-					<form role="form" enctype="multipart/form-data" name="myForm" method="post" class="form-horizontal" action="editImage.php">
+					<form role="form" name="myForm" method="post" class="form-horizontal" action="editMessage.php">
 					<div class= "form-group" ng-class="{error: myForm.name.$invalid}">
-					<label class= "col-md-2"> Image Name</label>
+					<label class= "col-md-2"> Date</label>
 					<div class="col-md-4">
-					<input name="imagename"  type= "text" class= "form-control" value="<?php echo $fetch['0']['imagename']?>" id="imagename" placeholder="Image Name" required/>
+					<?php
+			$spartstext = explode('-', $fetch['0']['date']);
+			$sdatetext  = "$spartstext[1]/$spartstext[2]/$spartstext[0]";
+?>					
+					<input name="messagedate"  value="<?php echo $sdatetext?>" type= "text" class= "form-control" id="messagedate" placeholder="Message Date" required/>
 					</div>
 					</div>
+					
 					<div class= "form-group" ng-class="{error: myForm.name.$invalid}">
-					<label class= "col-md-2"> Choose a Image to upload: </label>
+					<label class= "col-md-2">Location</label>
 					<div class="col-md-4">
-					<input name="uploadedfile" value="<?php echo $fetch['0']['imgsrc']?>" type="file" id="uploadImage" class="target" /> <img src="imagebank/thumbnail/<?php echo $fetch['0']['imgsrc']?>">
-					<input type="hidden" name="hiddenupload" value="<?php echo $fetch['0']['imgsrc']?>" id="hiddenupload" >
-					<input type="hidden" name="hiddenimgid" value="<?php echo $fetch['0']['imgid']?>" id="hiddenimgid" >
+					<select class="form-control" id="location" name="location"  required>
+						<option value="">Select CFC - Location</option>
+						<option <?php if($fetch['0']['location']=='CFC-Thirumullaivoyal'){echo "selected=selected";} ?> value="CFC-Thirumullaivoyal">CFC-Thirumullaivoyal</option>
+						<option <?php if($fetch['0']['location']=='CFC-Tambaram'){echo "selected=selected";} ?> value="CFC-Tambaram">CFC-Tambaram</option>
+					</select>
 					</div>
-					</div>
-					<div class= "form-group" ng-class="{error: myForm.name.$invalid}">
-					<label class= "col-md-2">Image Alt Text</label>
+					</div> 
+					
+					<div class= "form-group">
+					<label class= "col-md-2">Message Title </label>
 					<div class="col-md-4">
-					<input name="imagealttext"  type= "text"  required class= "form-control" value="<?php echo $fetch['0']['imgalttext']?>" id="imagealttext" placeholder="Image Alt Text" />
+					<input name="messagetitle" value="<?php echo $fetch['0']['title']?>" type= "text" class= "form-control" id="messagetitle" placeholder="Message Title" required/>
 					</div>
 					</div>
 					<div class= "form-group">
-					<label class= "col-md-2">Redirect Url </label>
+					<label class= "col-md-2">Speaker</label>
+					<div class="col-md-4"><?php 
+					$speaker=array("Prakasam","Micheal","Jesudoss","Johnrajan");
+					?>
+					<select class="form-control"  id="speaker" ng-model="speaker.type" name="speaker" required>
+						<option ng-option value="">Select Speaker</option>
+						<option ng-option <?php if(in_array($fetch['0']['speaker'],$speaker)){echo "selected=selected";} ?> value="Prakasam">Prakasam</option>
+						<option ng-option <?php if(in_array($fetch['0']['speaker'],$speaker)){echo "selected=selected";} ?> value="Micheal">Micheal</option>
+						<option ng-option <?php if(in_array($fetch['0']['speaker'],$speaker)){echo "selected=selected";} ?> value="Jesudoss">Jesudoss</option>
+						<option <?php if(in_array($fetch['0']['speaker'],$speaker)){echo "selected=selected";} ?> ng-option value="Johnrajan">Johnrajan</option>
+						<option <?php if(!in_array($fetch['0']['speaker'],$speaker)){echo "selected=selected";} ?> ng-option value="others">others</option>
+					</select>
+					</div>
+					</div>
+					<div class= "form-group" id="video" ng-if="speaker.type == 'others'">
+					<label class= "col-md-2">enter the other speaker</label>
 					<div class="col-md-4">
-					<input name="imageredirect"  type= "text" class= "form-control" value="<?php echo $fetch['0']['redirectlink']?>" id="imageredirect" placeholder="Redirect Link" />
+					<input name="otherspeaker" value="<?php echo $fetch['0']['speaker']?>" type= "text" class= "form-control" id="otherspeaker" placeholder="Enter the other speaker" required/></div>
+					</div>
+					<div class= "form-group">
+					<label class= "col-md-2">Message Type</label>
+					<div class="col-md-4">
+					<select class="form-control"  id="messtype" ng-change="changeme()" ng-model="message.type" name="messtype" required>
+						<option   value="">Select Message Type</option>
+						<option   <?php if($fetch['0']['messagetype']=='video'){echo "selected=selected";} ?> value="video">Video</option>
+						<option   <?php if($fetch['0']['messagetype']=='audio'){echo "selected=selected";} ?> value="audio">Audio</option>
+						<option   <?php if($fetch['0']['messagetype']=='both'){echo "selected=selected";} ?>  value="both">Both</option>
+					</select>
 					</div>
 					</div>
+					<div class= "form-group" id="video" ng-if="message.type == 'video' || message.type == 'both'">
+					<label class= "col-md-2">Video Key</label>
+					<div class="col-md-4">
+					<input name="videokey"  value="<?php echo $fetch['0']['videokey']?>" type= "text" class= "form-control" id="videokey" placeholder="Enter the Video Key" required/></div>
+					</div>
+					<div class= "form-group" id="audio" ng-if="message.type == 'audio' || message.type == 'both'">
+					<label class= "col-md-2">Audio Key</label>
+					<div class="col-md-4">
+					<input name="audiokey" value="<?php echo $fetch['0']['audiokey']?>" type= "text" class= "form-control" id="audiokey" placeholder="Enter the Audio Key" required/></div>
+					
+					</div>
+						<input type="hidden" value="<?php echo $fetch['0']['id'];?>" name="hiddenmesageid">
+					
 					<div class= "form-group">
 					<label class= "col-md-2"></label>
 					<div class="col-md-4">
-					<button name="submit" class="btn btn-primary" id="upload">Submit</button>
-					<a href="listimages.php" class="btn">Cancel</a> 
+					<button name="submit" class="btn btn-primary">Submit</button>
+					<a href="listmessages.php" class="btn">Cancel</a> 
 					</div>
 					</div>
 					</form>
 				</div>
             </div>
         </div>
+		
+       
     </body>
 </html>
 <?php 
-	  }
+		}
 	if(isset($_POST['submit'])!=""){
-		function cwUpload($field_name = '', $target_folder = '', $file_name = '', $thumb = FALSE, $thumb_folder = '', $thumb_width = '', $thumb_height = ''){
-
-    //folder path setup
-    $target_path = $target_folder;
-    $thumb_path = $thumb_folder;
-    
-    //file name setup
-    $filename_err = explode(".",$_FILES[$field_name]['name']);
-    $filename_err_count = count($filename_err);
-    $file_ext = $filename_err[$filename_err_count-1];
-    if($file_name != ''){
-        $fileName = $file_name.'.'.$file_ext;
-    }else{
-        $fileName = $_FILES[$field_name]['name'];
-    }
-    
-    //upload image path
-    $upload_image = $target_path.basename($fileName);
-    
-    //upload image
-    if(move_uploaded_file($_FILES[$field_name]['tmp_name'],$upload_image))
-    {
-        //thumbnail creation
-        if($thumb == TRUE)
-        {
-            $thumbnail = $thumb_path.$fileName;
-            list($width,$height) = getimagesize($upload_image);
-            $thumb_create = imagecreatetruecolor($thumb_width,$thumb_height);
-            switch($file_ext){
-                case 'jpg':
-                    $source = imagecreatefromjpeg($upload_image);
-                    break;
-                case 'jpeg':
-                    $source = imagecreatefromjpeg($upload_image);
-                    break;
-
-                case 'png':
-                    $source = imagecreatefrompng($upload_image);
-                    break;
-                case 'gif':
-                    $source = imagecreatefromgif($upload_image);
-                    break;
-                default:
-                    $source = imagecreatefromjpeg($upload_image);
-            }
-
-            imagecopyresized($thumb_create,$source,0,0,0,0,$thumb_width,$thumb_height,$width,$height);
-            switch($file_ext){
-                case 'jpg' || 'jpeg':
-                    imagejpeg($thumb_create,$thumbnail,100);
-                    break;
-                case 'png':
-                    imagepng($thumb_create,$thumbnail,100);
-                    break;
-
-                case 'gif':
-                    imagegif($thumb_create,$thumbnail,100);
-                    break;
-                default:
-                    imagejpeg($thumb_create,$thumbnail,100);
-            }
-
-        }
-
-        return $fileName;
-    }
-    else
-    {
-        return false;
-    }
-}
-				$tablename='imagegallery';
-				$imagename=$_POST['imagename'];
-				$imagealttext=$_POST['imagealttext'];
-				$hiddenimgid=$_POST['hiddenimgid'];
-				$upload_img = cwUpload('uploadedfile','imagebank/','',TRUE,'imagebank/thumbnail/','200','160');
-				$imageredirect=$_POST['imageredirect'];
-				$hiddenupload=$_POST['hiddenupload'];
-				$loginid=$_SESSION['loginid'];
-				$currentdt=date('Y-m-d H:i:s',time());
-				
-				if($upload_img=='')
+		
+	
+		
+		$loginid=$_SESSION['loginid'];
+		$currentdt=date('Y-m-d H:i:s',time());
+		
+		$msgid=$_POST['hiddenmesageid'];
+		$sparts = explode('/', $_POST['messagedate']);
+				$date  = "$sparts[2]-$sparts[0]-$sparts[1]";
+		$location=$_POST['location'];
+		$title=$_POST['messagetitle'];
+		$speaker=$_POST['speaker'];
+		$speaker=$_POST['speaker'];
+				if($speaker=="others")
 				{
-					$imgupload=$hiddenupload;
+					$speaker=$_POST['otherspeaker'];
 				}
 				else
 				{
-					$imgupload=$upload_img;
-					$hiddenimg=$_POST['hiddenupload'];
-					unlink("imagebank/".$hiddenimg);
-					unlink("imagebank/thumbnail/".$hiddenimg);
+					$speaker=$_POST['speaker'];
 				}
-				$set = array("imagename"=>$imagename,"imgalttext"=>$imagealttext,"imgsrc"=>$imgupload,"redirectlink"=>$imageredirect,"modifiedby"=>$loginid,"modifieddate"=>$currentdt);
-				
-				$condition = array("imgid"=>$hiddenimgid);
-				
-				
-				$update=$obj->update($tablename, $set,$condition);
-				
-				
-				?>
-					<script type="text/javascript">
-				window.location="listimages.php";
-				</script>
-		<?php
+		$messagetype=$_POST['messtype'];
+		$videokey=$_POST['videokey'];
+		$audiokey=$_POST['audiokey'];
+		$condition = array("id"=>$msgid);
+		$set = array("date"=>$date,"location"=>$location,"title"=>$title,"speaker"=>$speaker,
+					 "messagetype"=>$messagetype,"videokey"=>$videokey,"audiokey"=>$audiokey,
+					 "modifiedby"=>$loginid,"modifieddate"=>$currentdt);	
+		$msg=$obj->update($tablename, $set,$condition);
+		header("location:listmessages.php");
 	}				
 ?>
-<style type="text/css">
-input[type=file]{ 
-        color:transparent;
-    }
-</style>
+<script src="../js/angular.min.js"></script>
 <script type="text/javascript">
-$(document).ready(function() {
-	
-	
-    $('#upload').bind("click",function() 
-    { 
-		var imagename=$('#imagename').val();
-		var hiddenupload = $('#hiddenupload').val(); 
-		var imgVal = $('#uploadImage').val(); 
-		var imagealttext=$('#imagealttext').val();
-		var imageredirect=$('#imageredirect').val();
-		if(imagename=='')
-		{
-			alert('Please Enter the Image Name');
-			$('#imagename').focus();
-			return false;
-		}
-		else if(hiddenupload=='' && imgVal=='') 
-        { 
-            alert("Please Upload the Image "); 
-			return false; 
-        } 
-		else if(imagealttext=='')
-		{
-			alert('Please Enter the Image Alt Text');
-			$('#imagealttext').focus();
-			return false;
-	}
-		else if(imageredirect!='')
-		{
-			 var pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-			 if (!pattern.test(imageredirect)) {
-				alert("Please enter the valid url!");
-				$('#imageredirect').focus();
-				return false;
-			  } 
-		}
-        return true;
-	}); 
-});
-</script> 
+ var myApp = angular.module('myApp',[]);
+ function MyCtrl($scope) {
+	 
+	 
+	 
+ }
+</script>
