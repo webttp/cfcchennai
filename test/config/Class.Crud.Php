@@ -45,7 +45,25 @@ class Database
         //return tow dimentional array as required columns result
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-	
+	public function fetchorderby($table, array $columns,$ordercol)
+    {
+        //Append each element of val_cols associative array 
+        $i = 0;
+        foreach ($columns as $key => $value) {
+            $exp[$i] = $key . " = '" . $value . "'";
+            $i++;
+        }
+        
+        $Stexp = implode(" AND ", $exp);
+		$orderby="order by ". $ordercol." desc";
+        $result  = $this->connection->query("SELECT * FROM $table WHERE $Stexp $orderby");
+       //return "SELECT * FROM $table WHERE $Stexp $orderby";
+        if ($this->connection->errno) {
+            die("Fail Select " . $this->connection->error);
+        }
+        //return tow dimentional array as required columns result
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 	public function fetch_particular($table, array $columns)
     {
         $columns=implode(",",$columns);
