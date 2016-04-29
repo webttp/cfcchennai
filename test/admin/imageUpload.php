@@ -54,6 +54,8 @@ class imageUpload
         $pic_size = $_FILES[$fieldname]['size'];
         $pic_tmp = $_FILES[$fieldname]['tmp_name'];
         $pic_err = $_FILES[$fieldname]['error'];
+    	return $_FILES[$fieldname];
+    	exit;
     
         //check if file is uploaded, file size must exists
         if($pic_size > 0){
