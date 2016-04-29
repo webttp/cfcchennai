@@ -54,18 +54,22 @@
 					<div class= "form-group">
 					<label class= "col-md-2">Speaker</label>
 					<div class="col-md-4">
-					<select class="form-control"  id="speaker"  name="speaker" required>
+					<select class="form-control" ng-model="speaker.type" id="speaker"  name="speaker" required>
 						<option ng-option value="">Select Speaker</option>
 						<option ng-option value="Prakasam">Prakasam</option>
 						<option ng-option value="Micheal">Micheal</option>
 						<option ng-option value="Jesudoss">Jesudoss</option>
 						<option ng-option value="Johnrajan">Johnrajan</option>
+						<option ng-option value="others">others</option>
 						
 					</select>
 					</div>
 					</div>
-					
-					
+					<div class= "form-group" id="video" ng-if="speaker.type == 'others'">
+					<label class= "col-md-2">enter the other speaker</label>
+					<div class="col-md-4">
+					<input name="otherspeaker"  type= "text" class= "form-control" id="otherspeaker" placeholder="Enter the other speaker" required/></div>
+					</div>
 					<div class= "form-group">
 					<label class= "col-md-2">Message Type</label>
 					<div class="col-md-4">
@@ -109,6 +113,14 @@
 				$location=$_POST['location'];
 				$messagetitle=$_POST['messagetitle'];
 				$speaker=$_POST['speaker'];
+				if($speaker=="others")
+				{
+					$speaker=$_POST['otherspeaker'];
+				}
+				else
+				{
+					$speaker=$_POST['speaker'];
+				}
 				$messagetype=$_POST['messtype'];
 				switch($messagetype)
 				{
