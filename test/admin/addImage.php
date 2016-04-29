@@ -68,6 +68,7 @@
 				echo "uiii";
 				
 				$image_uploaded = $upd->uploadImg();
+				print_r($image_uploaded);
 				echo "aaaaa";
 				exit;
 				
