@@ -129,7 +129,7 @@
 				$imagename=$_POST['imagename'];
 				$imagealttext=$_POST['imagealttext'];
 				echo "aaaaaaaaaaaaaa";
-				$upload_img = cwUpload('uploadedfile','imagebank/','',TRUE,'imagebank/thumbnail/','200','160');  
+				$upload_img = cwUpload('uploadedfile','uploads/','',TRUE,'uploads/thumbs/','200','160');  
 				$imageredirect=$_POST['imageredirect'];
 				$loginid=$_SESSION['loginid'];
 				$currentdt=date('Y-m-d H:i:s',time());
