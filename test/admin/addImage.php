@@ -42,7 +42,7 @@
 					<label class= "col-md-2"></label>
 					<div class="col-md-4">
 					<button name="submit" class="btn btn-primary" id="upload">Submit</button>
-					<a href="listmessages.php" class="btn">Cancel</a> 
+					<a href="listimages.php" class="btn">Cancel</a> 
 					</div>
 					</div>
 					</form>
