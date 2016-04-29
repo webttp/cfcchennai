@@ -128,11 +128,15 @@
 				$tablename='imagegallery';
 				$imagename=$_POST['imagename'];
 				$imagealttext=$_POST['imagealttext'];
+				echo "aaaaaaaaaaaaaa";
 				$upload_img = cwUpload('uploadedfile','imagebank/','',TRUE,'imagebank/thumbnail/','200','160');  
 				$imageredirect=$_POST['imageredirect'];
 				$loginid=$_SESSION['loginid'];
 				$currentdt=date('Y-m-d H:i:s',time());
 				$InsColumnVal = array("imagename"=>$imagename,"imgalttext"=>$imagealttext,"imgsrc"=>$upload_img,"redirectlink"=>$imageredirect,"uploadedby"=>$loginid,"uploadeddate"=>$currentdt);
+				print_r($InsColumnVal);
+								echo "vvvvvvvvvvv";
+				
 				include("../config/Class.Crud.Php"); 	
 				if($obj->insert($tablename, $InsColumnVal)=="New record has been inserted successfully!"){
 					?>
