@@ -1,6 +1,8 @@
 <?php 
 	  include("header.php");
 	  error_reporting('0');
+	  ini_set('max_execution_time', 300); //300 seconds = 5 minutes
+
 ?>
     	<div class="container">
 			<div class="row" style="margin-top:20px;">
@@ -64,8 +66,10 @@
 				$upd->setMaxFileSize(5242880); //in bytes, around 5mb
 				$upd->setThumbMode("crop");
 				$image_uploaded = $upd->uploadImg();
+				print_r($image_uploaded);
+				
 				if($image_uploaded !== false){     
-				//echo("File uploaded");
+				echo("File uploaded");
 				//proceed database
 				}else{
 				   if($upd->isUploadError()){
@@ -79,7 +83,7 @@
 				$currentdt=date('Y-m-d H:i:s',time());
 				$InsColumnVal = array("imagename"=>$imagename,"imgalttext"=>$imagealttext,"imgsrc"=>$image_uploaded,"redirectlink"=>$imageredirect);
 				include("../config/Class.Crud.Php"); 
-				echo "sdsdssds";
+			
 				if($obj->insert($tablename, $InsColumnVal)=="New record has been inserted successfully!"){
 					?>
 					<script type="text/javascript">
