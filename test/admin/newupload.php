@@ -5,7 +5,8 @@
 <?php
 phpinfo();
 	if(!empty($_FILES['image']['name'])){
-		
+		print_r($_FILES);
+		print_r($_REQUEST);
 		function cwUpload($field_name = '', $target_folder = '', $file_name = '', $thumb = FALSE, $thumb_folder = '', $thumb_width = '', $thumb_height = ''){
 
     //folder path setup
