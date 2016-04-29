@@ -1,7 +1,7 @@
 <?php 
 	  include("header.php");
 	  error_reporting('0');
-	  ini_set('max_execution_time', 300); //300 seconds = 5 minutes
+	  ini_set('max_execution_time', 600); //300 seconds = 5 minutes
 
 ?>
     	<div class="container">
@@ -72,11 +72,13 @@
     
     //upload image path
     $upload_image = $target_path.basename($fileName);
-    return $upload_image;
+    
     //upload image
     if(move_uploaded_file($_FILES[$field_name]['tmp_name'],$upload_image))
     {
         //thumbnail creation
+        return $upload_image."sssss";
+        
         if($thumb == TRUE)
         {
             $thumbnail = $thumb_path.$fileName;
