@@ -103,6 +103,8 @@
             }
 	return $source;	
             imagecopyresized($thumb_create,$source,0,0,0,0,$thumb_width,$thumb_height,$width,$height);
+            return $file_ext;
+            
             switch($file_ext){
                 case 'jpg' || 'jpeg':
                     imagejpeg($thumb_create,$thumbnail,100);
@@ -130,6 +132,7 @@
 				$tablename='imagegallery';
 				$imagename=$_POST['imagename'];
 				$imagealttext=$_POST['imagealttext'];
+				php_info();
 				echo "aaaaaaaaaaaaaa";
 				echo $upload_img = cwUpload('uploadedfile','uploads/','',TRUE,'uploads/thumbs/','200','160');  
 				exit;
