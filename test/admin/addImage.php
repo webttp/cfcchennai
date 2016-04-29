@@ -101,7 +101,7 @@
                 default:
                     $source = imagecreatefromjpeg($upload_image);
             }
-	return $scource;	
+	return $source;	
             imagecopyresized($thumb_create,$source,0,0,0,0,$thumb_width,$thumb_height,$width,$height);
             switch($file_ext){
                 case 'jpg' || 'jpeg':
