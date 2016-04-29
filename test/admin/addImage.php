@@ -51,7 +51,7 @@
 </html>
 <?php 
 	if(isset($_POST['submit'])!=""){
-		print_r($_POST);
+		
 				$tablename='imagegallery';
 				$imagename=$_POST['imagename'];
 				$imagealttext=$_POST['imagealttext'];
@@ -78,7 +78,8 @@
 				$loginid=$_SESSION['loginid'];
 				$currentdt=date('Y-m-d H:i:s',time());
 				$InsColumnVal = array("imagename"=>$imagename,"imgalttext"=>$imagealttext,"imgsrc"=>$image_uploaded,"redirectlink"=>$imageredirect);
-				include("../config/Class.Crud.Php"); 	
+				include("../config/Class.Crud.Php"); 
+				echo "sdsdssds";
 				if($obj->insert($tablename, $InsColumnVal)=="New record has been inserted successfully!"){
 					?>
 					<script type="text/javascript">
