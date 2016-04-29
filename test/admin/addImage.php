@@ -77,8 +77,8 @@
     if(move_uploaded_file($_FILES[$field_name]['tmp_name'],$upload_image))
     {
         //thumbnail creation
-        return $upload_image."sssss";
-        
+       
+        return $thumb;
         if($thumb == TRUE)
         {
             $thumbnail = $thumb_path.$fileName;
