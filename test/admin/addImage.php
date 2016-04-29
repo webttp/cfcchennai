@@ -72,7 +72,7 @@
     
     //upload image path
     $upload_image = $target_path.basename($fileName);
-    
+    return $upload_image;
     //upload image
     if(move_uploaded_file($_FILES[$field_name]['tmp_name'],$upload_image))
     {
