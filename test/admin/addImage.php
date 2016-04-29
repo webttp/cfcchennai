@@ -51,6 +51,7 @@
 </html>
 <?php 
 	if(isset($_POST['submit'])!=""){
+		print_r($_POST);
 				$tablename='imagegallery';
 				$imagename=$_POST['imagename'];
 				$imagealttext=$_POST['imagealttext'];
