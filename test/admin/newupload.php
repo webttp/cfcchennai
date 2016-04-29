@@ -3,6 +3,7 @@
     <input type="submit" name="submit" value="Upload"/>
 </form>
 <?php
+phpinfo();
 	if(!empty($_FILES['image']['name'])){
 		
 		function cwUpload($field_name = '', $target_folder = '', $file_name = '', $thumb = FALSE, $thumb_folder = '', $thumb_width = '', $thumb_height = ''){
