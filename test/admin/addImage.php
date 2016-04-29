@@ -85,7 +85,11 @@
             $thumbnail = $thumb_path.$fileName;
             	
             list($width,$height) = getimagesize($upload_image);
+            
             $thumb_create = imagecreatetruecolor($thumb_width,$thumb_height);
+            
+            return $thumb_create;
+            
             return "to".$file_ext;
             switch($file_ext){
                 case 'jpg':
@@ -135,7 +139,7 @@
 				$tablename='imagegallery';
 				$imagename=$_POST['imagename'];
 				$imagealttext=$_POST['imagealttext'];
-				phpinfo();
+				
 				echo "aaaaaaaaaaaaaa";
 				echo $upload_img = cwUpload('uploadedfile','uploads/','',TRUE,'uploads/thumbs/','200','160');  
 				exit;
