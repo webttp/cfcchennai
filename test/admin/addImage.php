@@ -65,8 +65,10 @@
 				$upd->setThumbDimension(100, 100);
 				$upd->setMaxFileSize(5242880); //in bytes, around 5mb
 				$upd->setThumbMode("crop");
+				echo "uiii";
+				
 				$image_uploaded = $upd->uploadImg();
-				echo $image_uploaded."uiii";
+				echo "aaaaa";
 				exit;
 				
 				if($image_uploaded !== false){     
