@@ -88,7 +88,7 @@ if(!empty($_FILES['image']['name'])){
     $message = '';
 }
 ?>
-<form method="post" enctype="multipart/form-data">
+<form method="post" action="newupload.php" enctype="multipart/form-data">
     <input type="file" name="image"/>
     <input type="submit" name="submit" value="Upload"/>
 </form>
