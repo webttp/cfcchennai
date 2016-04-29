@@ -66,10 +66,10 @@
 				$upd->setMaxFileSize(5242880); //in bytes, around 5mb
 				$upd->setThumbMode("crop");
 				$image_uploaded = $upd->uploadImg();
-				echo $image_uploaded;
+				
 				
 				if($image_uploaded !== false){     
-				echo("File uploaded");
+				//echo("File uploaded");
 				//proceed database
 				}else{
 				   if($upd->isUploadError()){
