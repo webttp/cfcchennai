@@ -1,6 +1,11 @@
-
+<form method="post" action="newupload.php" enctype="multipart/form-data">
+    <input type="file" name="image"/>
+    <input type="submit" name="submit" value="Upload"/>
+</form>
 <?php
-function cwUpload($field_name = '', $target_folder = '', $file_name = '', $thumb = FALSE, $thumb_folder = '', $thumb_width = '', $thumb_height = ''){
+	if(!empty($_FILES['image']['name'])){
+		
+		function cwUpload($field_name = '', $target_folder = '', $file_name = '', $thumb = FALSE, $thumb_folder = '', $thumb_width = '', $thumb_height = ''){
 
     //folder path setup
     $target_path = $target_folder;
@@ -71,13 +76,7 @@ function cwUpload($field_name = '', $target_folder = '', $file_name = '', $thumb
         return false;
     }
 }
-?>
-<form method="post" action="newupload.php" enctype="multipart/form-data">
-    <input type="file" name="image"/>
-    <input type="submit" name="submit" value="Upload"/>
-</form>
-<?php
-	if(!empty($_FILES['image']['name'])){
+
     echo "aaaaaaaaaaaaaaaaaaaaa";
     //call thumbnail creation function and store thumbnail name
     $upload_img = cwUpload('image','uploads/','',TRUE,'uploads/thumbs/','200','160');
