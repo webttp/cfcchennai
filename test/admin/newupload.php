@@ -72,13 +72,13 @@ function cwUpload($field_name = '', $target_folder = '', $file_name = '', $thumb
     }
 }
 ?>
-<form method="post" enctype="multipart/form-data">
+<form method="post" action="newupload.php" enctype="multipart/form-data">
     <input type="file" name="image"/>
     <input type="submit" name="submit" value="Upload"/>
 </form>
 <?php
 	if(!empty($_FILES['image']['name'])){
-    
+    echo "aaaaaaaaaaaaaaaaaaaaa";
     //call thumbnail creation function and store thumbnail name
     $upload_img = cwUpload('image','uploads/','',TRUE,'uploads/thumbs/','200','160');
     
