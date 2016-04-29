@@ -22,7 +22,7 @@ $(function(){
 					$(".spinner-container").css("display","block");
 				},
 				success: function(result,status,xhr){
-					setTimeout(funtion(){
+					setTimeout(funtion(e){
 						$(".content-page-section").css("display","none");
 						$(".home-page-section").css("display","block");
 						$(".home-page-section").load(result);
@@ -42,7 +42,7 @@ $(function(){
 					$(".spinner-container").css("display","block");
 				},
 				success: function(result,status,xhr){
-					setTimeout(funtion(){
+					setTimeout(funtion(e){
 						$(".home-page-section").css("display","none");
 						$(".content-page-section").css("display","block");
 						$(".content-section").css("display","block");
@@ -65,7 +65,7 @@ $(function(){
 					$(".spinner-container").css("display","block");
 				},
 				success: function(result,status,xhr){
-					setTimeout(funtion(){
+					setTimeout(funtion(e){
 						$(".timings-section").load(result);
 					}, 3000);
 				},
