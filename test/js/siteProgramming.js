@@ -22,11 +22,10 @@ $(function(){
 					$(".spinner-container").css("display","block");
 				},
 				success: function(result,status,xhr){
-					setTimeout(funtion(e){
 						$(".content-page-section").css("display","none");
 						$(".home-page-section").css("display","block");
 						$(".home-page-section").load(result);
-					}, 3000);
+					
 				},
 				error: function(xhr,status,error){
 					$(".error-container").css("display","block");
@@ -42,13 +41,11 @@ $(function(){
 					$(".spinner-container").css("display","block");
 				},
 				success: function(result,status,xhr){
-					setTimeout(funtion(e){
 						$(".home-page-section").css("display","none");
 						$(".content-page-section").css("display","block");
 						$(".content-section").css("display","block");
 						$(".content-section").html("");
 						$(".content-section").load(result);	
-					}, 3000);
 				},
 				error: function(xhr,status,error){
 					$(".error-container").css("display","block");
@@ -65,9 +62,8 @@ $(function(){
 					$(".spinner-container").css("display","block");
 				},
 				success: function(result,status,xhr){
-					setTimeout(funtion(e){
-						$(".timings-section").load(result);
-					}, 3000);
+					(".timings-section").load(result);
+					
 				},
 				error: function(xhr,status,error){
 					$(".error-container").css("display","block");
