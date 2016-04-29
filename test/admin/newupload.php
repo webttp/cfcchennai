@@ -1,13 +1,5 @@
-<form method="post" action="newupload.php" enctype="multipart/form-data">
-    <input type="file" name="image"/>
-    <input type="submit" name="submit" value="Upload"/>
-</form>
 <?php
-phpinfo();
-	if(!empty($_FILES['image']['name'])){
-		print_r($_FILES);
-		print_r($_REQUEST);
-		function cwUpload($field_name = '', $target_folder = '', $file_name = '', $thumb = FALSE, $thumb_folder = '', $thumb_width = '', $thumb_height = ''){
+function cwUpload($field_name = '', $target_folder = '', $file_name = '', $thumb = FALSE, $thumb_folder = '', $thumb_width = '', $thumb_height = ''){
 
     //folder path setup
     $target_path = $target_folder;
@@ -78,8 +70,8 @@ phpinfo();
         return false;
     }
 }
-
-    echo "aaaaaaaaaaaaaaaaaaaaa";
+if(!empty($_FILES['image']['name'])){
+    
     //call thumbnail creation function and store thumbnail name
     $upload_img = cwUpload('image','uploads/','',TRUE,'uploads/thumbs/','200','160');
     
@@ -95,7 +87,11 @@ phpinfo();
     $thumb_src = '';
     $message = '';
 }
-
-if($thumb_src != ''){ ?>
+?>
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="image"/>
+    <input type="submit" name="submit" value="Upload"/>
+</form>
+<?php if($thumb_src != ''){ ?>
 <img src="<?php echo $thumb_src; ?>" alt="">
 <?php } ?>
