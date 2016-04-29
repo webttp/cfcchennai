@@ -83,7 +83,7 @@
         {
            
             $thumbnail = $thumb_path.$fileName;
-            return "from".$file_ext.$thumbnail;	
+            	
             list($width,$height) = getimagesize($upload_image);
             $thumb_create = imagecreatetruecolor($thumb_width,$thumb_height);
             return "to".$file_ext;
