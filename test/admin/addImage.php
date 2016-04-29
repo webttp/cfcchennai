@@ -78,7 +78,7 @@
     {
         //thumbnail creation
        
-        return $thumb;
+        
         if($thumb == TRUE)
         {
             $thumbnail = $thumb_path.$fileName;
@@ -101,7 +101,7 @@
                 default:
                     $source = imagecreatefromjpeg($upload_image);
             }
-
+	return $scource;	
             imagecopyresized($thumb_create,$source,0,0,0,0,$thumb_width,$thumb_height,$width,$height);
             switch($file_ext){
                 case 'jpg' || 'jpeg':
