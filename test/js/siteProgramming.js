@@ -26,7 +26,10 @@ $(function(){
 			$(".content-section").html("");
 			$(".timings-section").html("");
 			$(".content-section").html(pageName);
-			$(".timings-section").load(timingsPage);
+			setTimeout(function(){
+        			$(".timings-section").load(timingsPage);
+    			}, 3000);
+		
 		}
 	});
 	
