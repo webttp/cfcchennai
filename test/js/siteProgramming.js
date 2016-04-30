@@ -23,10 +23,12 @@ $(function(){
 		}else {
 			$(".home-page-section").css("display","none");
 			$(".content-section").html("");
+			$(".content-section").removeClass("content-border");
 			$(".timings-section").html("");
 			$(".content-page-section").css("display","block");
 			$(".loading-container").css("display","block");
 			setTimeout(function(){
+				$(".content-section").addClass("content-border");
 				$(".content-section").load(pageName);
 	        		$(".timings-section").load(timingsPage);
 				$(".loading-container").css("display","none");
