@@ -22,14 +22,15 @@ $(function(){
 			$(".home-page-section").load(pageName);
 		}else {
 			$(".home-page-section").css("display","none");
-			$(".content-page-section").css("display","block");
 			$(".content-section").html("");
 			$(".timings-section").html("");
-			$(".content-section").load(pageName);
+			$(".loading-container").css("display","block");
 			setTimeout(function(){
+					$(".content-page-section").css("display","block");
+				    $(".content-section").load(pageName);
         			$(".timings-section").load(timingsPage);
     			}, 2000);
-		
+			$(".loading-container").css("display","none");
 		}
 	});
 	
