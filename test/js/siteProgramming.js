@@ -28,7 +28,7 @@ $(function(){
 			$(".content-section").html(pageName);
 			setTimeout(function(){
         			$(".timings-section").load(timingsPage);
-    			}, 3000);
+    			}, 2000);
 		
 		}
 	});
