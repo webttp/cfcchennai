@@ -11,55 +11,22 @@ $(function(){
 	});
 	
 	// to load the html pages dynamically using class names
-	/*$("#menu_items_bar > ul > li a").on("click",function(e){
+	$("#menu_items_bar > ul > li a").on("click",function(e){
 		var self = $(this);	
 		var title = self.attr("title");
 		var pageName= "templates/"+ title +".html";
 		if(title == "home"){
-			$.ajax({
-				url: pageName,
-				beforeSend: function(xhr){
-					$(".spinner-container").css("display","block");
-					$(".spinner-container").addClass("loading-spinner");
-				},
-				success: function(result,status,xhr){
-						$(".content-page-section").css("display","none");
-						$(".home-page-section").css("display","block");
-						$(".home-page-section").html(result);
-					
-				},
-				error: function(xhr,status,error){
-					$(".error-container").css("display","block");
-					$(".error-container").html("<h3> We are coming soon </h3>");
-				}
-			}).done(function(){
-				$(".spinner-container").css("display","none");
-				$(".spinner-container").removeClass("loading-spinner");
-			});
+			$(".content-page-section").css("display","none");
+			$(".home-page-section").css("display","block");
+			$(".home-page-section").html(pageName);
 		}else {
-			$.ajax({
-				url: pageName,
-				beforeSend: function(xhr){
-					$(".spinner-container").css("display","block");
-					$(".spinner-container").addClass("loading-spinner");
-				},
-				success: function(result,status,xhr){
-						$(".home-page-section").css("display","none");
-						$(".content-page-section").css("display","block");
-						$(".content-page-section").html("");
-						$(".content-page-section").html(result);	
-				},
-				error: function(xhr,status,error){
-					$(".error-container").css("display","block");
-					$(".error-container").html("<h3> We are coming soon </h3>");
-				}
-			}).done(function(){
-				$(".spinner-container").css("display","none");
-				$(".spinner-container").removeClass("loading-spinner");
-			});
+			$(".home-page-section").css("display","none");
+			$(".content-page-section").css("display","block");
+			$(".content-page-section").html("");
+			$(".content-page-section").html(pageName);	
 		}
 	});
-	*/
+	
 	lightbox.option({
 	      'resizeDuration': 200,
 	      'left': '300px',
