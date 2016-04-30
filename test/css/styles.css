@@ -409,35 +409,19 @@ keyframes spinner {
 
 }
 .loading-spinner {
-	min-width: 24px;
-	min-height: 24px;
+	border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
 }
 
-.loading-spinner:before {
-	content: 'Loadingâ¦';
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 16px;
-	height: 16px;
-	margin-top: -10px;
-	margin-left: -10px;
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-.loading-spinner:not (:required ):before {
-	content: '';
-	border-radius: 50%;
-	border-top: 2px solid #03ade0;
-	border-right: 2px solid transparent;
-	animation: spinner .6s linear infinite;
-	-webkit-animation: spinner .6s linear infinite;
-}
-
-.spinner-container {
-	position: relative;
-	left: 25%;
-	top: 25%;
-}
 /* About brother page styles */
 figure.inner-image {
 	position: relative;
@@ -457,6 +441,12 @@ figure.inner-image {
 	background: url("../images/Chennai_Cfc_Header.png") repeat scroll 0% 0%
 		#A84041;
 	height: 30px;
+}
+.sermons-player-section {
+	height: 
+}
+.sermons-table-conatiner {
+	
 }
 
 /* Footer Stylings */
