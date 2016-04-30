@@ -332,7 +332,9 @@ a:hover {
 	line-height: 30px;
 	height: 100%;
 }
-
+.content-border {
+	border-right: 1px solid #83CFCB;
+}
 .meeting-heading,.meeting-timings {
 	border-bottom: 1px solid #83CFCB;
 	margin-bottom: 20px;
@@ -391,22 +393,9 @@ a:hover {
 .cfcc-tambaram-directions {
 	background: url("../images/getDir_2.png");
 }
-.lazy {
-	background-image: url('../images/loading-animation.gif');
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-}
-@
-keyframes spinner {
-	to {transform: rotate(360deg);
-}
-
-}
-@
--webkit-keyframes spinner {
-	to {-webkit-transform: rotate(360deg);
-}
-
+.loading-container {
+	margin-top: 100px;
+	margin-left: 40%;
 }
 .loading-spinner {
 	border: 16px solid #f3f3f3; /* Light grey */
