@@ -6,7 +6,7 @@
 	  }
 ?>	  
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-<div class="container" ng-app="myApp" >
+<div class="container" ng-app="myApp">
 			<div class="row" style="margin-top:20px;">
 				<div class="col-md-12">
 					<a class= "navbar-brand" href= "listmessages.php"><i class="glyphicon glyphicon-th-large"></i> Messages List </a>
@@ -157,7 +157,7 @@ if(isset($_POST['submit'])!=""){
 </script>
 <script src="../js/angular.min.js"></script>
 <script type="text/javascript">
- var myApp = angular.module('myApp',[]);
+ angular.module('myApp', []).controller('MyCtrl',MyCtrl);
  function MyCtrl($scope, $http, $timeout) {
 	var id=document.getElementById('hiddenmesageid').value;
 	$http.get('getMessages.php?action='+'edit&id='+id).success(function(data){
