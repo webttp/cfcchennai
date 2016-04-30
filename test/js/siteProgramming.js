@@ -19,13 +19,13 @@ $(function(){
 		if(title == "home"){
 			$(".content-page-section").css("display","none");
 			$(".home-page-section").css("display","block");
-			$(".home-page-section").html(pageName);
+			$(".home-page-section").load(pageName);
 		}else {
 			$(".home-page-section").css("display","none");
 			$(".content-page-section").css("display","block");
 			$(".content-section").html("");
 			$(".timings-section").html("");
-			$(".content-section").html(pageName);
+			$(".content-section").load(pageName);
 			setTimeout(function(){
         			$(".timings-section").load(timingsPage);
     			}, 2000);
