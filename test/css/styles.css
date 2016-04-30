@@ -434,7 +434,7 @@ keyframes spinner {
 }
 
 .spinner-container {
-	positionion: relative;
+	position: relative;
 	left: 25%;
 	top: 25%;
 }
