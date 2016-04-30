@@ -43,9 +43,8 @@ $(function(){
 				success: function(result,status,xhr){
 						$(".home-page-section").css("display","none");
 						$(".content-page-section").css("display","block");
-						$(".content-section").css("display","block");
-						$(".content-section").html("");
-						$(".content-section").load(result);	
+						$(".content-page-section").html("");
+						$(".content-page-section").load(result);	
 				},
 				error: function(xhr,status,error){
 					$(".error-container").css("display","block");
