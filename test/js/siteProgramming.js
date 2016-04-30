@@ -24,7 +24,7 @@ $(function(){
 				success: function(result,status,xhr){
 						$(".content-page-section").css("display","none");
 						$(".home-page-section").css("display","block");
-						$(".home-page-section").load(result);
+						$(".home-page-section").html(result);
 					
 				},
 				error: function(xhr,status,error){
@@ -44,7 +44,7 @@ $(function(){
 						$(".home-page-section").css("display","none");
 						$(".content-page-section").css("display","block");
 						$(".content-page-section").html("");
-						$(".content-page-section").load(result);	
+						$(".content-page-section").html(result);	
 				},
 				error: function(xhr,status,error){
 					$(".error-container").css("display","block");
