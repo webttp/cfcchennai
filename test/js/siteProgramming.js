@@ -15,6 +15,7 @@ $(function(){
 		var self = $(this);	
 		var title = self.attr("title");
 		var pageName= "templates/"+ title +".html";
+		var timingsPage = "templates/timings.html";
 		if(title == "home"){
 			$(".content-page-section").css("display","none");
 			$(".home-page-section").css("display","block");
@@ -22,8 +23,9 @@ $(function(){
 		}else {
 			$(".home-page-section").css("display","none");
 			$(".content-page-section").css("display","block");
-			$(".content-page-section").html("");
-			$(".content-page-section").html(pageName);	
+			$(".content-section").html("");
+			$(".content-section").html(pageName);
+			$(".timings-section").load(timingsPage);
 		}
 	});
 	
