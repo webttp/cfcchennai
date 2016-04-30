@@ -54,24 +54,6 @@ $(function(){
 			}).done(function(){
 				$(".spinner-container").css("display","none");
 			});
-			
-			/* Lazy loadin of timings section */
-			$.ajax({
-				url: 'templates/timings.html',
-				beforeSend: function(xhr){
-					$(".spinner-container").css("display","block");
-				},
-				success: function(result,status,xhr){
-					$(".timings-section").load(result);
-					
-				},
-				error: function(xhr,status,error){
-					$(".error-container").css("display","block");
-					$(".error-container").html("<h3> We are coming soon </h3>");
-				}
-			}).done(function(){
-				$(".spinner-container").css("display","none");
-			});
 		}
 	});
 	
