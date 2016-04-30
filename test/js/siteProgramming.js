@@ -19,7 +19,7 @@ $(function(){
 			$.ajax({
 				url: pageName,
 				beforeSend: function(xhr){
-					$(".spinner-container").css("display","block");
+					$(".spinner-container").addClass("loading-spinner");
 				},
 				success: function(result,status,xhr){
 						$(".content-page-section").css("display","none");
@@ -32,13 +32,13 @@ $(function(){
 					$(".error-container").html("<h3> We are coming soon </h3>");
 				}
 			}).done(function(){
-				$(".spinner-container").css("display","none");
+				$(".spinner-container").removeClass("loading-spinner");
 			});
 		}else {
 			$.ajax({
 				url: pageName,
 				beforeSend: function(xhr){
-					$(".spinner-container").css("display","block");
+					$(".spinner-container").addClass("loading-spinner");
 				},
 				success: function(result,status,xhr){
 						$(".home-page-section").css("display","none");
@@ -51,7 +51,7 @@ $(function(){
 					$(".error-container").html("<h3> We are coming soon </h3>");
 				}
 			}).done(function(){
-				$(".spinner-container").css("display","none");
+				$(".spinner-container").removeClass("loading-spinner");
 			});
 		}
 	});
