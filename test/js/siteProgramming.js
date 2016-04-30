@@ -24,11 +24,9 @@ $(function(){
 			$(".home-page-section").css("display","none");
 			$(".content-section").html("");
 			$(".timings-section").html("");
+			$(".content-page-section").css("display","block");
+			$(".loading-container").css("display","block");
 			setTimeout(function(){
-				$(".loading-container").css("display","block");
-			}, 500);
-			setTimeout(function(){
-				$(".content-page-section").css("display","block");
 				$(".content-section").load(pageName);
 	        		$(".timings-section").load(timingsPage);
 				$(".loading-container").css("display","none");
