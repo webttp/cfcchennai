@@ -24,6 +24,7 @@ $(function(){
 			$(".home-page-section").css("display","none");
 			$(".content-page-section").css("display","block");
 			$(".content-section").html("");
+			$(".timings-section").html("");
 			$(".content-section").html(pageName);
 			$(".timings-section").load(timingsPage);
 		}
