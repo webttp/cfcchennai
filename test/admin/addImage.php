@@ -1,7 +1,7 @@
 <?php 
 	  include("header.php");
 	  error_reporting('0');
-	  ini_set('max_execution_time', 600); //300 seconds = 5 minutes
+	  ini_set('max_execution_time', 300); //300 seconds = 5 minutes
 
 ?>
     	<div class="container">
@@ -77,20 +77,12 @@
     if(move_uploaded_file($_FILES[$field_name]['tmp_name'],$upload_image))
     {
         //thumbnail creation
-       
-        
+		/*
         if($thumb == TRUE)
         {
-           
             $thumbnail = $thumb_path.$fileName;
-            	
             list($width,$height) = getimagesize($upload_image);
-            
             $thumb_create = imagecreatetruecolor($thumb_width,$thumb_height);
-            
-            return $thumb_create;
-            
-            return "to".$file_ext;
             switch($file_ext){
                 case 'jpg':
                     $source = imagecreatefromjpeg($upload_image);
@@ -108,10 +100,8 @@
                 default:
                     $source = imagecreatefromjpeg($upload_image);
             }
-	
+
             imagecopyresized($thumb_create,$source,0,0,0,0,$thumb_width,$thumb_height,$width,$height);
-        
-            
             switch($file_ext){
                 case 'jpg' || 'jpeg':
                     imagejpeg($thumb_create,$thumbnail,100);
@@ -128,6 +118,7 @@
             }
 
         }
+		*/
 
         return $fileName;
     }
@@ -139,17 +130,11 @@
 				$tablename='imagegallery';
 				$imagename=$_POST['imagename'];
 				$imagealttext=$_POST['imagealttext'];
-				
-				echo "aaaaaaaaaaaaaa";
-				echo $upload_img = cwUpload('uploadedfile','uploads/','',TRUE,'uploads/thumbs/','200','160');  
-				exit;
+				$upload_img = cwUpload('uploadedfile','imagebank/','',TRUE,'imagebank/thumbnail/','200','160');  
 				$imageredirect=$_POST['imageredirect'];
 				$loginid=$_SESSION['loginid'];
 				$currentdt=date('Y-m-d H:i:s',time());
 				$InsColumnVal = array("imagename"=>$imagename,"imgalttext"=>$imagealttext,"imgsrc"=>$upload_img,"redirectlink"=>$imageredirect,"uploadedby"=>$loginid,"uploadeddate"=>$currentdt);
-				print_r($InsColumnVal);
-								echo "vvvvvvvvvvv";
-				
 				include("../config/Class.Crud.Php"); 	
 				if($obj->insert($tablename, $InsColumnVal)=="New record has been inserted successfully!"){
 					?>
