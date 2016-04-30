@@ -62,7 +62,7 @@ $(function(){
 					$(".spinner-container").css("display","block");
 				},
 				success: function(result,status,xhr){
-					(".timings-section").load(result);
+					$(".timings-section").load(result);
 					
 				},
 				error: function(xhr,status,error){
