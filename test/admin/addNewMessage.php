@@ -2,7 +2,7 @@
 	  include("header.php");
 	  error_reporting('0');
 ?>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script>
@@ -18,7 +18,7 @@
   });
   </script>
 
-			<div class="container" ng-app="myApp" >
+		<div class="container" ng-app="myApp" >
 			<div class="row" style="margin-top:20px;">
 				<div class="col-md-12">
 					<a class= "navbar-brand" href= "listmessages.php"><i class="glyphicon glyphicon-th-large"></i> Messages List </a>
@@ -61,14 +61,14 @@
 						<option ng-option value="Jesudoss">Jesudoss</option>
 						<option ng-option value="Johnrajan">Johnrajan</option>
 						<option ng-option value="others">others</option>
-						
 					</select>
 					</div>
 					</div>
 					<div class= "form-group" id="video" ng-if="speaker.type == 'others'">
 					<label class= "col-md-2">enter the other speaker</label>
 					<div class="col-md-4">
-					<input name="otherspeaker"  type= "text" class= "form-control" id="otherspeaker" placeholder="Enter the other speaker" required/></div>
+					<input name="otherspeaker"  type= "text" class= "form-control" id="otherspeaker" placeholder="Enter the other speaker" required/>
+					</div>
 					</div>
 					<div class= "form-group">
 					<label class= "col-md-2">Message Type</label>
@@ -82,14 +82,14 @@
 					</div>
 					</div>
 					<div class= "form-group" id="video" ng-if="message.type == 'video' || message.type == 'both'">
-					<label class= "col-md-2">Video Key</label>
+					<label class= "col-md-2">Video Url</label>
 					<div class="col-md-4">
-					<input name="videokey"  type= "text" class= "form-control" id="videokey" placeholder="Enter the Video Key" required/></div>
+					<input name="videokey"  type= "text" class= "form-control" id="videokey" placeholder="Enter the Video Url" required/></div>
 					</div>
 					<div class= "form-group" id="audio" ng-if="message.type == 'audio' || message.type == 'both'">
-					<label class= "col-md-2">Audio Key</label>
+					<label class= "col-md-2">Audio Url</label>
 					<div class="col-md-4">
-					<input name="audiokey"  type= "text" class= "form-control" id="audiokey" placeholder="Enter the Audio Key" required/></div>
+					<input name="audiokey"  type= "text" class= "form-control" id="audiokey" placeholder="Enter the Audio Url" required/></div>
 					</div>
 					<div class= "form-group">
 					<label class= "col-md-2"></label>
@@ -144,11 +144,10 @@
 				{
 					?>
 					<script type="text/javascript">
-				window.location="listmessages.php";
-				</script>
-		<?php
+					window.location="listmessages.php";
+					</script>
+					<?php
 				}
-				
 	}				
 ?>
 <script src="../js/angular.min.js"></script>
