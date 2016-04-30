@@ -11,7 +11,7 @@ $(function(){
 	});
 	
 	// to load the html pages dynamically using class names
-	$("#menu_items_bar > ul > li a").on("click",function(e){
+	/*$("#menu_items_bar > ul > li a").on("click",function(e){
 		var self = $(this);	
 		var title = self.attr("title");
 		var pageName= "templates/"+ title +".html";
@@ -59,7 +59,7 @@ $(function(){
 			});
 		}
 	});
-	
+	*/
 	lightbox.option({
 	      'resizeDuration': 200,
 	      'left': '300px',
