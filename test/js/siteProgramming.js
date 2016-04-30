@@ -30,9 +30,11 @@ $(function(){
 			setTimeout(function(){
 				$(".content-section").addClass("content-border");
 				$(".content-section").load(pageName);
-	        		$(".timings-section").load(timingsPage);
-				$(".loading-container").css("display","none");
+	        		$(".loading-container").css("display","none");
 			}, 2000);
+			setTimeout(function(){
+				$(".timings-section").load(timingsPage);
+			}, 2500);
 			
 		}
 	});
