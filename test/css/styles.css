@@ -318,13 +318,17 @@ a:hover {
 	color: #A74040;
 	font: Bold 24px Arial;
 }
-
+.content-page-section {
+	width: 100%;
+}
 .content-section {
 	min-height: 450px !important;
 	height: auto;
 	margin-top: 10px;
 }
-
+.home-page-section .content-section  {
+	border-right: 1px solid #83CFCB;
+}
 .timings-section {
 	margin-left: 10px !important;
 	margin-top: 10px;
