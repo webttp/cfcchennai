@@ -28,13 +28,13 @@ $(function(){
 			$(".content-page-section").css("display","block");
 			$(".loading-container").css("display","block");
 			setTimeout(function(){
-				$(".content-section").addClass("content-border");
 				$(".content-section").load(pageName);
-	        		$(".loading-container").css("display","none");
-			}, 2000);
+				$(".loading-container").css("display","none");
+				$(".content-section").addClass("content-border");
+	        	}, 2000);
 			setTimeout(function(){
 				$(".timings-section").load(timingsPage);
-			}, 2500);
+			}, 3000);
 			
 		}
 	});
