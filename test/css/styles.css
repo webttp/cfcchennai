@@ -465,14 +465,19 @@ figure.inner-image {
 .sermons-table {
 	margin-top: 25%;
 }
+.sermons-cotainer {
+	width: 100%;
+}
 
 .sermons-header {
 	background: url("../images/Chennai_Cfc_Header.png") repeat scroll 0% 0%
 		#A84041;
-	height: 30px;
+	height: 45px;
+	width: 100%;
 }
 .sermons-player-section {
-	height: 
+	height: 450px;
+	width: 100%;
 }
 .sermons-table-conatiner {
 	
