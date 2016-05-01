@@ -40,10 +40,10 @@ $(function(){
 				$(".content-section").load(pageName);
 				$(".loading-container").css("display","none");
 				$(".content-section").addClass("content-border");
-	        	}, 2000);
+	        	}, 1000);
 			setTimeout(function(){
 				$(".contacts-section").load(contactPage);
-			}, 3000);
+			}, 2000);
 		}
 		else {
 			$(".home-page-section").css("display","none");
@@ -58,10 +58,10 @@ $(function(){
 				$(".content-section").load(pageName);
 				$(".loading-container").css("display","none");
 				$(".content-section").addClass("content-border");
-	        	}, 2000);
+	        	}, 1000);
 			setTimeout(function(){
 				$(".timings-section").load(timingsPage);
-			}, 3000);
+			}, 2000);
 			
 		}
 	});
