@@ -399,14 +399,16 @@ a:hover {
 
 .thirumullai-maps {
 	background: url("../images/thirumullai_maps.PNG");
-	width: 15em;
-	height: 10em;
+	width: 730px;
+    height: 400px;
+    display: block;
 }
 
 .tambaram-maps {
 	background: url("../images/tambaram_maps.PNG");
-	width: 15em;
-	height: 10em;
+	width: 730px;
+    height: 400px;
+    display: block;
 }
 .spinner-row {
 	width: 100%;
