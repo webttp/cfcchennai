@@ -396,6 +396,12 @@ a:hover {
 .cfcc-tambaram-directions {
 	background: url("../images/getDir_2.png");
 }
+.spinner-row {
+	width: 100%;
+}
+.spinner-row .fa-spinner{
+	font-size: 40px;
+}
 .loading-container {
 	margin-top: 100px;
 	margin-left: 90%;
