@@ -54,10 +54,12 @@ $(function(){
 			$(".timings-section").html("");
 			$(".content-page-section").css("display","block");
 			$(".loading-container").css("display","block");
+			$(".timings-section").css("display","block");
 			setTimeout(function(){
 				$(".content-section").load(pageName);
 				$(".loading-container").css("display","none");
 				$(".content-section").addClass("content-border");
+			
 	        	}, 1000);
 			setTimeout(function(){
 				$(".timings-section").load(timingsPage);
