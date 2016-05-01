@@ -16,12 +16,39 @@ $(function(){
 		var title = self.attr("title");
 		var pageName= "templates/"+ title +".html";
 		var timingsPage = "templates/timings.html";
+		var contactPage;
+		 if(title == "cfcc-thirumullai"){
+		 	contactPage = "templates/thirumullai-contact.html";
+		 }else if(title == "cfcc-tambaram"){
+		 	contactPage = "templates/tambaram-contact.html";
+		 }
 		if(title == "home"){
 			$(".content-page-section").css("display","none");
 			$(".home-page-section").css("display","block");
 			$(".home-page-section").load(pageName);
-		}else {
+		}else if(title == "cfcc-thirumullai" || title == "cfcc-tambaram"){
+			
 			$(".home-page-section").css("display","none");
+			$(".timings-section").css("display","none");
+			$(".content-section").html("");
+			$(".content-section").removeClass("content-border");
+			$(".timings-section").html("");
+			$(".content-page-section").css("display","block");
+			$(".contacts-section").css("display","block");
+			$(".loading-container").css("display","block");
+			setTimeout(function(){
+				$(".content-section").load(pageName);
+				$(".loading-container").css("display","none");
+				$(".content-section").addClass("content-border");
+	        	}, 2000);
+			setTimeout(function(){
+				$(".contacts-section").load(contactPage);
+			}, 3000);
+		}
+		else {
+			$(".home-page-section").css("display","none");
+			$(".contacts-section").css("display","none");
+			$(".contacts-section").html("");
 			$(".content-section").html("");
 			$(".content-section").removeClass("content-border");
 			$(".timings-section").html("");
