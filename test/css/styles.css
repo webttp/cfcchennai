@@ -396,6 +396,18 @@ a:hover {
 .cfcc-tambaram-directions {
 	background: url("../images/getDir_2.png");
 }
+
+.thirumullai-maps {
+	background: url("../images/thirumullai_maps.PNG");
+	width: 15em;
+	height: 10em;
+}
+
+.tambaram-maps {
+	background: url("../images/tambaram_maps.PNG");
+	width: 15em;
+	height: 10em;
+}
 .spinner-row {
 	width: 100%;
 }
