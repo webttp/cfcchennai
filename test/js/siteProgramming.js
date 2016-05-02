@@ -9,7 +9,7 @@ $(function(){
 			$("#menu_items_bar > ul > li.active").removeClass("active");
 			$(this).addClass("active");
 	});
-	
+	/*
 	// to load the html pages dynamically using class names
 	$("#menu_items_bar > ul > li a").on("click",function(e){
 		var self = $(this);	
@@ -66,7 +66,7 @@ $(function(){
 			}, 2000);
 			
 		}
-	});
+	}); */
 	
 	lightbox.option({
 	      'resizeDuration': 200,
