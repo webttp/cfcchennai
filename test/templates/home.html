@@ -1,4 +1,4 @@
-    <div class="container image-slider-container">
+<div class="row-fluid home-page-slider" ng-app="myApp">
       <div id="featured-home-page-image" class="row">
        <div id="featured-home-carousel-image">
          <div id="homeCarousel" class="carousel slide" data-ride="carousel">
@@ -103,7 +103,7 @@
 <script type="text/javascript">
  angular.module('myApp', []).controller('MyCtrl',MyCtrl);
  function MyCtrl($scope, $http, $timeout) {
-		$http.get('admin/getImages.php').success(function(data){
+		$http.get('../admin/getImages.php').success(function(data){
 		$scope.items = data;
     });
    
