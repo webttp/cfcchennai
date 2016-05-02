@@ -1,5 +1,3 @@
-<script src="js/angular.min.js"></script>
- <div class="row-fluid home-page-slider" ng-app="myApp">
     <div class="container image-slider-container">
       <div id="featured-home-page-image" class="row">
        <div id="featured-home-carousel-image">
@@ -106,8 +104,12 @@
  angular.module('myApp', []).controller('MyCtrl',MyCtrl);
  function MyCtrl($scope, $http, $timeout) {
 		$http.get('getImages.php').success(function(data){
-		$scope.items = data;
-        
+		$scope.loaded = true;
+		$scope.list = data;
+        $scope.currentPage = 1; //current page
+        $scope.entryLimit = 5; //max no of items to display in a page
+        $scope.filteredItems = $scope.list.length; //Initially for no filter  
+        $scope.totalItems = $scope.list.length;
     });
    
 }
