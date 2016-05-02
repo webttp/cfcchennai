@@ -10,9 +10,46 @@
              </ol>
              <div class="carousel-inner" ng-controller="MyCtrl">
 			 
-					 <div class="item image-viewier" ng-repeat="item in items">
-							<img src="">
-					</div>
+					<div class="item image-viewier active">
+                <img class="category_icon hidden-xs" src="http://cfcindia.org/resources/en/icon/wftw.png"> 
+                <a href="http://www.cfcindia.com/wftw/two-powerful-truths"> 
+                  <img src="http://www.cfcindia.org/images/bank/dove-in-forest.jpg">
+                  <div class="sRight whiteText ">
+                    <mytitle> Two Powerful Truths </mytitle>
+                    <author> Zac Poonen </author>
+                  </div>
+                </a>
+              </div>
+              <div class="item image-viewier">
+                <img class="category_icon hidden-xs" src="http://cfcindia.org/resources/en/icon/page.png"> 
+                <a href="http://www.cfcindia.com/bible-study-challenge"> 
+                  <img src="http://www.cfcindia.org/images/bank/bible-study-challenge.jpg">
+                  <div class="c_hide">
+                    <mytitle> Bible Study Challenge </mytitle>
+                    <author> </author>
+                  </div>
+                </a>
+              </div>
+              <div class="item image-viewier">
+                <img class="category_icon hidden-xs" src="http://cfcindia.org/resources/en/icon/wftw.png"> 
+                <a href="http://www.cfcindia.com/wftw/freedom-from-perpetual-backsliding">
+                  <img src="http://www.cfcindia.org/images/bank/domino.jpg">
+                  <div class="sLeft whiteText">
+                    <mytitle> Freedom from Perpetual Backsliding </mytitle>
+                    <author> Zac Poonen </author>
+                  </div>
+                </a>
+              </div>
+              <div class="item image-viewier">
+                <img class="category_icon hidden-xs" src="http://cfcindia.org/resources/en/icon/sermon.png"> 
+                <a href="http://www.cfcindia.com/sermon/children-obey-your-parents">
+                  <img src="http://www.cfcindia.org/images/bank/father-son-instruction.jpg">
+                  <div class="sLeft blackText ">
+                    <mytitle> Children, Obey Your Parents </mytitle>
+                    <author> Zac Poonen </author>
+                  </div>
+                </a>
+              </div>
 			 </div>
           <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev"> 
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -100,16 +137,3 @@
       </div>
      </div>
  </div>
-<script type="text/javascript">
- function MyCtrl($scope, $http, $timeout) {
-		$http.get('getImages.php').success(function(data){
-		$scope.loaded = true;
-		$scope.list = data;
-        $scope.currentPage = 1; //current page
-        $scope.entryLimit = 5; //max no of items to display in a page
-        $scope.filteredItems = $scope.list.length; //Initially for no filter  
-        $scope.totalItems = $scope.list.length;
-    });
-   
-}
-</script>
