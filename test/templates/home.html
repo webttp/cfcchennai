@@ -101,7 +101,6 @@
      </div>
  </div>
 <script type="text/javascript">
- angular.module('myApp', []).controller('MyCtrl',MyCtrl);
  function MyCtrl($scope, $http, $timeout) {
 		$http.get('getImages.php').success(function(data){
 		$scope.loaded = true;
