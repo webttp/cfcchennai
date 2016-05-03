@@ -10,6 +10,7 @@ $(function(){
 			$(this).addClass("active");
 	});
 	
+	// To handle the nav items click event
 	$("#menu_items_bar > ul > li a").on("click",function(e){
 		var self , url; 
 		self = $(this);
