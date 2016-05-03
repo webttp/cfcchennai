@@ -183,6 +183,7 @@ a:hover {
 	font: Bold 18px Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
 	line-height: 28px;
 	padding: 5px 50px;
+	border:1px solid #FFF;
 	text-decoration: none;
 }
 
@@ -225,6 +226,8 @@ a:hover {
 	left: 0;
 	border: 1px solid #A54040;
 	border-radius: 0;
+	margin-top:-1px;
+  	z-index:-1;
 }
 
 #menu_items_bar .has-sub ul li a {
