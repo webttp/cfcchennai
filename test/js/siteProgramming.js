@@ -27,12 +27,12 @@ $(function(){
 		var self = $(this);	
 		var title = self.attr("title");
 		var pageName= "templates/"+ title +".html";
-		var timingsPage = "templates/timings.html";
+		var timingsPage = "/templates/timings.html";
 		var contactPage;
 		 if(title == "cfcc-thirumullai"){
-		 	contactPage = "templates/thirumullai-contact.html";
+		 	contactPage = "/templates/thirumullai-contact.html";
 		 }else if(title == "cfcc-tambaram"){
-		 	contactPage = "templates/tambaram-contact.html";
+		 	contactPage = "/templates/tambaram-contact.html";
 		 }
 		if(title == "home"){
 			$(".content-page-section").css("display","none");
