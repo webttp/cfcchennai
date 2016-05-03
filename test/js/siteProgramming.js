@@ -11,13 +11,9 @@ $(function(){
 	});
 	
 	$("#menu_items_bar > ul > li a").on("click",function(e){
-		var self = $(this).attr("href");
-		var url, path = '/templates/', page;
-		if(self == "cfcc-home"){
-			url = document.location.host + " / "+ self + ".html";
-		} else {
-			url =  document.location.host + path + self+".html"; 
-		}
+		var self , url; 
+		self = $(this);
+		url = self.attr("href");
 		location.assign(url);
 	});
 	/*
