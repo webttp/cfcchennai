@@ -14,7 +14,12 @@ $(function(){
 		var self , url; 
 		self = $(this);
 		url = self.attr("href");
-		location.assign(url);
+		
+		// To read the href and change the path
+		var oldpath = document.location.pathname;
+		var path = oldpath.substring(0, str.lastIndexOf("/") + 1);
+		var newpath = path.append(url);
+		location.assign(newpath);
 	});
 	/*
         // to load the html pages dynamically using class names
