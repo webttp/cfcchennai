@@ -203,6 +203,7 @@ a:hover {
 
 #menu_items_bar>ul>li.has-sub:hover>a {
 	border-bottom: 0 !important;
+	background:#FFF;
 }
 
 #menu_items_bar>ul>li.active a {
