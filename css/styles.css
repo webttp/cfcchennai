@@ -170,7 +170,7 @@ a:hover {
   background: -ms-linear-gradient(top, #ffffff 0%, #ffffff 100%);
   background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
   color: #A74040;
-  border:1px solid #FFF;
+  border:1px solid #FFF !important;
   display: inline-block;
   font: Bold 16px Arial Rounded MT Bold,Helvetica Rounded,Arial,sans-serif;
   line-height: 28px;
