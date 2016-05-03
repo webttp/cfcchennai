@@ -10,7 +10,18 @@ $(function(){
 			$(this).addClass("active");
 	});
 	
-	// to load the html pages dynamically using class names
+	$("#menu_items_bar > ul > li a").on("click",function(e){
+		var self = $(this).attr("href");
+		var url, path = '/templates/', page;
+		if(self == "cfcc-home"){
+			url = document.location.host + " / "+ self + ".html";
+		} else {
+			url =  document.location.host + path + self+".html"; 
+		}
+		location.assign(url);
+	});
+	/*
+        // to load the html pages dynamically using class names
 	$("#menu_items_bar > ul > li a").on("click",function(e){
 		var self = $(this);	
 		var title = self.attr("title");
@@ -67,7 +78,7 @@ $(function(){
 			
 		}
 	}); 
-	
+	*/
 	lightbox.option({
 	      'resizeDuration': 200,
 	      'left': '300px',
