@@ -329,6 +329,7 @@ a:hover {
 	min-height: 450px !important;
 	height: auto;
 	margin-top: 10px;
+	border-right: 1px solid #83CFCB;
 }
 .home-page-section .content-section  {
 	border-right: 1px solid #83CFCB;
