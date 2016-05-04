@@ -23,7 +23,7 @@ $(function(){
 		else{
 			// To read the href and change the path
 			oldpath = document.location.pathname;
-			path = oldpath.substring(0, oldpath.lastIndexOf("/") + 1);
+			path = oldpath.substring(0, oldpath.lastIndexOf("/") + 1) + "/templates/";
 			newpath = path + url;
 		}
 		
