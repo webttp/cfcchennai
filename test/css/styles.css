@@ -233,7 +233,6 @@ a:hover {
 
 #menu_items_bar .has-sub ul li a {
 	border-bottom: 1px solid #333;
-	color: #333;
 	display: block;
 	line-height: 160%;
 	padding: 15px 10px;
@@ -245,7 +244,8 @@ a:hover {
 }
 
 #menu_items_bar .has-sub ul li:hover a {
-	color: #A54040;
+	color: #BE3B85;
+	background: none;
 	cursor: pointer;
 	background: none;
 }
@@ -636,11 +636,11 @@ footer {
 	}
 	#menu_items_bar>ul>li.active a,#menu_items_bar>ul>li:hover>a {
 		border: none;
-		color: #84cbe2;
+		color: #BE3B85;
 		background: none;
 	}
 	#menu_items_bar .has-sub ul li:hover a {
-		color: #84cbe2;
+		color: #BE3B85;
 		background: none;
 	}
 	#menu_items_bar .has-sub ul {
