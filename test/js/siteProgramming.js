@@ -12,14 +12,21 @@ $(function(){
 	
 	// To handle the nav items click event
 	$("#menu_items_bar > ul > li a").on("click",function(e){
-		var self , url; 
+		var self, url, oldpath, path, newpath; 
 		self = $(this);
 		url = self.attr("href");
 		
-		// To read the href and change the path
-		var oldpath = document.location.pathname;
-		var path = oldpath.substring(0, oldpath.lastIndexOf("/") + 1);
-		var newpath = path + url;
+		if( url == "cfcc-home.html"){
+			// To read the href and change the path
+			newpath = document.location.href;
+		}
+		else{
+			// To read the href and change the path
+			oldpath = document.location.pathname;
+			path = oldpath.substring(0, oldpath.lastIndexOf("/") + 1);
+			newpath = path + url;
+		}
+		
 		location.assign(newpath);
 	});
 	
