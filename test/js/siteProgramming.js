@@ -18,7 +18,7 @@ $(function(){
 		
 		if( url == "cfcc-home.html"){
 			// To read the href and change the path
-			newpath = document.location.href;
+			newpath = "/test/cfcc-home.html";
 		}
 		else{
 			// To read the href and change the path
