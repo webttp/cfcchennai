@@ -405,6 +405,7 @@ a:hover {
 	color: #585d60;
 	margin-bottom: 10px;
 	clear: both;
+	line-height: 22px;
 }
 
 .directions {
@@ -506,6 +507,10 @@ figure.inner-image {
 
 .videogular-container.audio {
     height: 50px;
+}
+/* Maps page stylings*/
+.contact-map iframe {
+	width: 550px;
 }
 /* Footer Stylings */
 footer {
