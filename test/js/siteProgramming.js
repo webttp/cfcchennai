@@ -55,7 +55,9 @@ $(function(){
 				$("#homeCarousel .carousel-inner").html(dataImageItem);
 			}
 		});
-		setTimeout(function(){$(".home-page-spinner").css("display","none");$(".loading-spinner").css("display","none");},2000);
+		setTimeout(function(){
+			$(".home-page-spinner").css("display","none");
+			$(".loading-spinner").css("display","none");},3000);
 	}
 	lightbox.option({
 	      'resizeDuration': 200,
