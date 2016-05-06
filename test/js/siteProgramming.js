@@ -31,16 +31,23 @@ $(function(){
 	$.ajax({
 		 url : imgFolderName,
 		 dataType: "json",
+		 beforeSend: function(data,xhr,response){
+			$("#homeCarousel .carousel-inner").addClass("loading-image");
+		 },
 		 success: function (data) {
+		 	 
 			 $.each(data,function(index,item){
 				if(index == 0) {
 					dataTargetList += "<li data-target='#homeCarousel' data-slide-to='"+index+"' class='active'></li>";
-					dataImageItem += "<div class='item image-viewier active'><a href='"+item.redirectlink+"'> <img src='admin/imagebank/"+item.imgsrc+"'></a></div>";
+					dataImageItem += "<div class='item image-viewier active'><a href='"+item.redirectlink+"'><img src='admin/imagebank/"+item.imgsrc+"'>";
+					dataImageItem += "<div class='sLeft whiteText'><mytitle>"+item.mytitle+"</mytitle></div></a></div>";
 				}else{
 					dataTargetList += "<li data-target='#homeCarousel' data-slide-to='"+index+"'></li>";
-					dataImageItem += "<div class='item image-viewier'><a href='"+item.redirectlink+"'> <img src='admin/imagebank/"+item.imgsrc+"'></a></div>";
+					dataImageItem += "<div class='item image-viewier'><a href='"+item.redirectlink+"'><img src='admin/imagebank/"+item.imgsrc+"'>";
+					dataImageItem += "<div class='sLeft whiteText'><mytitle>"+item.mytitle+"</mytitle></div></a></div>";
 				}
 			});
+			$("#homeCarousel .carousel-inner").removeClass("loading-image");
 			$("#homeCarousel .carousel-indicators").html(dataTargetList);
 			$("#homeCarousel .carousel-inner").html(dataImageItem);
 		}
