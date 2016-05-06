@@ -34,7 +34,7 @@
       <script type="text/javascript" src="js/homeController.js"></script>
       
    </head>
-   <body class="no-sidebars md" ng-app="myApp"> 
+   <body class="no-sidebars md"> 
       <header>
       <div class="menu-container">
       <div class="container">
@@ -152,13 +152,10 @@
                <div id="featured-home-carousel-image">
                   <div id="homeCarousel" class="carousel slide" data-ride="carousel">
                      <ol class="carousel-indicators">
-                        <li data-target="#homeCarousel" data-slide-to="0"></li>
-                        <li data-target="#homeCarousel" data-slide-to="1"></li>
-                        <li data-target="#homeCarousel" data-slide-to="2"></li>
                      </ol>
-                     <div class="carousel-inner" ng-controller="MyCtrl">
-                        <div class="item image-viewier" ng-repeat="item in items">
-                           <a href="{{item.redirectlink}}"> <img src="../test/admin/imagebank/{{item.imgsrc}}"></a>
+                     <div class="carousel-inner">
+                        <div class="item image-viewier">
+                           
                         </div>
                      </div>
                      <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev"> 
