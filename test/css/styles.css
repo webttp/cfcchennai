@@ -503,6 +503,15 @@ figure.inner-image {
 .sermons-table-conatiner {
 	
 }
+
+.sort-icon {
+    font-size: 9px;
+    margin-left: 5px;
+}
+
+th {
+	cursor:pointer;
+}
 .videogular-container {
     width: 100%;
     height: 320px;
