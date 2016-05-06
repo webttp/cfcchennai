@@ -18,13 +18,27 @@ $(function(){
 		
 		// To read the href and change the path
 		oldpath = document.location.pathname;
-        	path = oldpath.substring(0, oldpath.lastIndexOf("/") + 1) ;
-        	newpath = path + url;
+        path = oldpath.substring(0, oldpath.lastIndexOf("/") + 1) ;
+        newpath = path + url;
 		
 		// To load the corresponding page
 		location.assign(newpath);
 	});
 	
+	var imgFolderName = "../admin/getImages.php";
+	var dataTargetList = [] , dataImageItem = [];
+	// To read the images for Home page banner slider
+	$.ajax({
+		 url : imgFolderName,
+		 success: function (data) {
+			 foreach(item in data){
+				dataTargetList += "<li data-target="#homeCarousel" data-slide-to='"+index+"'></li>";
+				dataImageItem += "<a href='"+item.redirectlink+"'> <img src='"+item.imgsrc+"'></a>";
+			}
+			$("#homeCarousel .carousel-indicators").append(dataTargetList);
+			$("#homeCarousel .carousel-inner .item.image-viewier").append(dataImageItem);
+		}
+	});
 	lightbox.option({
 	      'resizeDuration': 200,
 	      'left': '300px',
