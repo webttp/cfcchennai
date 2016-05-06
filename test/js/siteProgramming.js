@@ -30,13 +30,11 @@ $(function(){
 	var pageName = document.location.pathname;
 	
 	if(pageName.indexOf("cfcc-home") != -1) {
+		$(".loading-spinner").css("display","block");
 		// To read the images for Home page banner slider
 		$.ajax({
 			 url : imgFolderName,
 			 dataType: "json",
-			 beforeSend: function(data,xhr,response){
-				$("#homeCarousel .carousel-inner item").addClass("loading-image");
-			 },
 			 success: function (data) {
 				 
 				 $.each(data,function(index,item){
@@ -50,7 +48,7 @@ $(function(){
 						dataImageItem += "<div class='sLeft whiteText'><mytitle>"+item.mytitle+"</mytitle></div></a></div>";
 					}
 				});
-				$("#homeCarousel .carousel-inner item").removeClass("loading-image");
+				$(".loading-spinner").css("display","none");
 				$("#homeCarousel .carousel-indicators").html(dataTargetList);
 				$("#homeCarousel .carousel-inner").html(dataImageItem);
 			}
