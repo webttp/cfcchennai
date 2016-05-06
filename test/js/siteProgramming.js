@@ -25,11 +25,12 @@ $(function(){
 		location.assign(newpath);
 	});
 	
-	var imgFolderName = "admin/getImages.php";
+	var imgFolderName = "../admin/getImages.php";
 	var dataTargetList = [] , dataImageItem = [];
 	// To read the images for Home page banner slider
 	$.ajax({
 		 url : imgFolderName,
+		 dataType: "json",
 		 success: function (data) {
 			 $.each(data,function(index,item){
 				dataTargetList += "<li data-target='#homeCarousel' data-slide-to='"+index+"'></li>";
