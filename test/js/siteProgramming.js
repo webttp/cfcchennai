@@ -57,7 +57,7 @@ $(function(){
 		});
 		setTimeout(function(){
 			$(".home-page-spinner").css("display","none");
-			$(".loading-spinner").css("display","none");},3000);
+			$(".loading-spinner").css("display","none");},4500);
 	}
 	lightbox.option({
 	      'resizeDuration': 200,
