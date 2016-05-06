@@ -34,7 +34,7 @@ $(function(){
 		 success: function (data) {
 			 $.each(data,function(index,item){
 				dataTargetList += "<li data-target='#homeCarousel' data-slide-to='"+index+"'></li>";
-				dataImageItem += "<a href='"+item.redirectlink+"'> <img src='admin/imagebank/"+item.imgsrc+"></a>";
+				dataImageItem += "<a href='"+item.redirectlink+"'> <img src='admin/imagebank/"+item.imgsrc+"'></a>";
 			});
 			$("#homeCarousel .carousel-indicators").append(dataTargetList);
 			$("#homeCarousel .carousel-inner .item.image-viewier").append(dataImageItem);
