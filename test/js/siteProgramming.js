@@ -32,7 +32,7 @@ $(function(){
 		 url : imgFolderName,
 		 success: function (data) {
 			 $.each(data,function(index,item){
-				dataTargetList += "<li data-target="#homeCarousel" data-slide-to='"+index+"'></li>";
+				dataTargetList += "<li data-target='#homeCarousel' data-slide-to='"+index+"'></li>";
 				dataImageItem += "<a href='"+item.redirectlink+"'> <img src='"+item.imgsrc+"'></a>";
 			});
 			$("#homeCarousel .carousel-indicators").append(dataTargetList);
