@@ -33,11 +33,16 @@ $(function(){
 		 dataType: "json",
 		 success: function (data) {
 			 $.each(data,function(index,item){
-				dataTargetList += "<li data-target='#homeCarousel' data-slide-to='"+index+"'></li>";
-				dataImageItem += "<a href='"+item.redirectlink+"'> <img src='admin/imagebank/"+item.imgsrc+"'></a>";
+				if(index == 0) {
+					dataTargetList += "<li data-target='#homeCarousel' data-slide-to='"+index+"' class='active'></li>";
+					dataImageItem += "<div class='item image-viewier active'><a href='"+item.redirectlink+"'> <img src='admin/imagebank/"+item.imgsrc+"'></a></div>";
+				}else{
+					dataTargetList += "<li data-target='#homeCarousel' data-slide-to='"+index+"'></li>";
+					dataImageItem += "<div class='item image-viewier'><a href='"+item.redirectlink+"'> <img src='admin/imagebank/"+item.imgsrc+"'></a></div>";
+				}
 			});
-			$("#homeCarousel .carousel-indicators").append(dataTargetList);
-			$("#homeCarousel .carousel-inner .item.image-viewier").append(dataImageItem);
+			$("#homeCarousel .carousel-indicators").html(dataTargetList);
+			$("#homeCarousel .carousel-inner").html(dataImageItem);
 		}
 	});
 	lightbox.option({
