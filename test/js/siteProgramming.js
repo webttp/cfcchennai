@@ -31,10 +31,10 @@ $(function(){
 	$.ajax({
 		 url : imgFolderName,
 		 success: function (data) {
-			 foreach(item in data){
+			 $.each(data,function(index,item){
 				dataTargetList += "<li data-target="#homeCarousel" data-slide-to='"+index+"'></li>";
 				dataImageItem += "<a href='"+item.redirectlink+"'> <img src='"+item.imgsrc+"'></a>";
-			}
+			});
 			$("#homeCarousel .carousel-indicators").append(dataTargetList);
 			$("#homeCarousel .carousel-inner .item.image-viewier").append(dataImageItem);
 		}
