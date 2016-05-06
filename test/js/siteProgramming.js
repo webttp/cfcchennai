@@ -15,8 +15,8 @@ $(function(){
 		var self, url, oldpath, path, newpath; 
 		self = $(this);
 		url = self.attr("href");
-		$(".home-page-spinner").css("display","none");
-		$(".loading-spinner").css("display","none");
+		/*$(".home-page-spinner").css("display","none");
+		$(".loading-spinner").css("display","none");*/
 		// To read the href and change the path
 		oldpath = document.location.pathname;
         path = oldpath.substring(0, oldpath.lastIndexOf("/") + 1) ;
@@ -30,7 +30,7 @@ $(function(){
 	var dataTargetList = [] , dataImageItem = [];
 	var pageName = document.location.pathname;
 	
-	if(pageName.indexOf("cfcc-home") != -1) {
+	/*if(pageName.indexOf("cfcc-home") != -1) {
 		$(".home-page-spinner").css("display","block");
 		$(".loading-spinner").css("display","block");
 		// To read the images for Home page banner slider
@@ -58,7 +58,7 @@ $(function(){
 		setTimeout(function(){
 			$(".home-page-spinner").css("display","none");
 			$(".loading-spinner").css("display","none");},2000);
-	}
+	} */
 	lightbox.option({
 	      'resizeDuration': 200,
 	      'left': '300px',
