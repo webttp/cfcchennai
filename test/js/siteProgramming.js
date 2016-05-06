@@ -40,11 +40,11 @@ $(function(){
 				if(index == 0) {
 					dataTargetList += "<li data-target='#homeCarousel' data-slide-to='"+index+"' class='active'></li>";
 					dataImageItem += "<div class='item image-viewier active'><a href='"+item.redirectlink+"'><img src='admin/imagebank/"+item.imgsrc+"'>";
-					dataImageItem += "<div class='sLeft whiteText'><mytitle>"+item.mytitle+"</mytitle></div></a></div>";
+					dataImageItem += "<div class='sLeft whiteText'><mytitle>"+item.imagename+"</mytitle></div></a></div>";
 				}else{
 					dataTargetList += "<li data-target='#homeCarousel' data-slide-to='"+index+"'></li>";
 					dataImageItem += "<div class='item image-viewier'><a href='"+item.redirectlink+"'><img src='admin/imagebank/"+item.imgsrc+"'>";
-					dataImageItem += "<div class='sLeft whiteText'><mytitle>"+item.mytitle+"</mytitle></div></a></div>";
+					dataImageItem += "<div class='sLeft whiteText'><mytitle>"+item.imagename+"</mytitle></div></a></div>";
 				}
 			});
 			$("#homeCarousel .carousel-inner item").removeClass("loading-image");
