@@ -32,7 +32,7 @@ $(function(){
 		 url : imgFolderName,
 		 dataType: "json",
 		 beforeSend: function(data,xhr,response){
-			$("#homeCarousel .carousel-inner").addClass("loading-image");
+			$("#homeCarousel .carousel-inner item").addClass("loading-image");
 		 },
 		 success: function (data) {
 		 	 
@@ -47,7 +47,7 @@ $(function(){
 					dataImageItem += "<div class='sLeft whiteText'><mytitle>"+item.mytitle+"</mytitle></div></a></div>";
 				}
 			});
-			$("#homeCarousel .carousel-inner").removeClass("loading-image");
+			$("#homeCarousel .carousel-inner item").removeClass("loading-image");
 			$("#homeCarousel .carousel-indicators").html(dataTargetList);
 			$("#homeCarousel .carousel-inner").html(dataImageItem);
 		}
