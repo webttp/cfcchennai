@@ -15,7 +15,8 @@ $(function(){
 		var self, url, oldpath, path, newpath; 
 		self = $(this);
 		url = self.attr("href");
-		
+		$(".home-page-spinner").css("display","none");
+		$(".loading-spinner").css("display","none");
 		// To read the href and change the path
 		oldpath = document.location.pathname;
         path = oldpath.substring(0, oldpath.lastIndexOf("/") + 1) ;
