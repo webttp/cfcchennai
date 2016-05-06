@@ -41,18 +41,18 @@ $(function(){
 					if(index == 0) {
 						dataTargetList += "<li data-target='#homeCarousel' data-slide-to='"+index+"' class='active'></li>";
 						dataImageItem += "<div class='item image-viewier active'><a href='"+item.redirectlink+"'><img src='admin/imagebank/"+item.imgsrc+"'>";
-						dataImageItem += "<div class='sLeft whiteText'><mytitle>"+item.mytitle+"</mytitle></div></a></div>";
+						dataImageItem += "<div class='sLeft whiteText'><mytitle>"+item.imagename+"</mytitle></div></a></div>";
 					}else{
 						dataTargetList += "<li data-target='#homeCarousel' data-slide-to='"+index+"'></li>";
 						dataImageItem += "<div class='item image-viewier'><a href='"+item.redirectlink+"'><img src='admin/imagebank/"+item.imgsrc+"'>";
-						dataImageItem += "<div class='sLeft whiteText'><mytitle>"+item.mytitle+"</mytitle></div></a></div>";
+						dataImageItem += "<div class='sLeft whiteText'><mytitle>"+item.imagename+"</mytitle></div></a></div>";
 					}
 				});
-				$(".loading-spinner").css("display","none");
 				$("#homeCarousel .carousel-indicators").html(dataTargetList);
 				$("#homeCarousel .carousel-inner").html(dataImageItem);
 			}
 		});
+		setTimeout(function(){$(".loading-spinner").css("display","none");},2000);
 	}
 	lightbox.option({
 	      'resizeDuration': 200,
