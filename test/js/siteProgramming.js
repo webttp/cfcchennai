@@ -16,21 +16,12 @@ $(function(){
 		self = $(this);
 		url = self.attr("href");
 		
-		if( url == "cfcc-home.html"){
-			// To read the href and change the path
-			newpath = "/test/cfcc-home.html";
-		}
-		else{
-			// To read the href and change the path
-			oldpath = document.location.pathname;
-                       
-			path = oldpath.substring(0, oldpath.lastIndexOf("/") + 1) ;
-                        
-                        if(path.indexOf("/") == 2)
-                         path += "templates/";
-			newpath = path + url;
-		}
+		// To read the href and change the path
+		oldpath = document.location.pathname;
+        	path = oldpath.substring(0, oldpath.lastIndexOf("/") + 1) ;
+        	newpath = path + url;
 		
+		// To load the corresponding page
 		location.assign(newpath);
 	});
 	
