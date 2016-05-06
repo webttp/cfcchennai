@@ -288,6 +288,9 @@ a:hover {
 	margin-right: 0;
 }
 /* Main content stylings */
+.container.body-container{
+	clear: both;
+}
 .content-page-section {
 	min-height: 450px;
 	height: auto;
