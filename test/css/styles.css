@@ -398,6 +398,7 @@ a:hover {
 	width: 100%;
 	font: bold 24px Arial;
 	color: #494949;
+	
 }
 
 .cfcc-timings {
@@ -511,6 +512,9 @@ figure.inner-image {
 /* Maps page stylings*/
 .contact-map iframe {
 	width: 550px;
+}
+.contact-heading {
+	border-bottom: 1px solid #494949;
 }
 /* Footer Stylings */
 footer {
