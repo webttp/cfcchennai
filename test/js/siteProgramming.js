@@ -30,6 +30,7 @@ $(function(){
 	var pageName = document.location.pathname;
 	
 	if(pageName.indexOf("cfcc-home") != -1) {
+		$(".home-page-spinner").css("display","block");
 		$(".loading-spinner").css("display","block");
 		// To read the images for Home page banner slider
 		$.ajax({
@@ -48,11 +49,12 @@ $(function(){
 						dataImageItem += "<div class='sLeft whiteText'><mytitle>"+item.imagename+"</mytitle></div></a></div>";
 					}
 				});
+				
 				$("#homeCarousel .carousel-indicators").html(dataTargetList);
 				$("#homeCarousel .carousel-inner").html(dataImageItem);
 			}
 		});
-		setTimeout(function(){$(".loading-spinner").css("display","none");},2000);
+		setTimeout(function(){$(".home-page-spinner").css("display","none");$(".loading-spinner").css("display","none");},2000);
 	}
 	lightbox.option({
 	      'resizeDuration': 200,
