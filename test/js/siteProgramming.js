@@ -25,7 +25,7 @@ $(function(){
 		location.assign(newpath);
 	});
 	
-	var imgFolderName = "../../admin/getImages.php";
+	var imgFolderName = "admin/getImages.php";
 	var dataTargetList = [] , dataImageItem = [];
 	// To read the images for Home page banner slider
 	$.ajax({
