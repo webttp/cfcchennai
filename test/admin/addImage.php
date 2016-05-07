@@ -1,7 +1,7 @@
 <?php 
 	  include("header.php");
 	  error_reporting('0');
-	  ini_set('max_execution_time', 300); //300 seconds = 5 minutes
+	  ini_set('max_execution_time', 200); //300 seconds = 5 minutes
 
 ?>
     	<div class="container">
