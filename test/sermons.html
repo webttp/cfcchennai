@@ -31,9 +31,14 @@
     <script type="text/javascript" src="js/lightbox.js"></script>
     <script type="text/javascript" src="js/jquery.jqpagination.js"></script>
     <script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="js/sermonProgramming.js"></script>
- </head>
-  <body class="no-sidebars md">
+    <script type="text/javascript" src="js/sermonScript.js"></script>
+ 
+
+   
+  </head>
+  <body class="no-sidebars md" ng-app="sermonApp">
     <header>
       <div class="menu-container">
         <div class="container">
@@ -65,7 +70,7 @@
             <div class="hidden-md hidden-lg hidden-sm col-xs-1">
               <nav class="navbar navbar-default navbar-inverse menu" role="navigation">
                 <div class="navbar-header toggle-bar">
-                  <button type="button" id="menu_btn" class="navbar-toggle" data-toggle="collapse" data-target="#mobile_menu_items_bar">
+                  <button type="button" id="menu_btn" class="navbar-toggle" data-toggle="collapse" data-target="#menu_items_bar">
                   <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                   </button>
                 </div>
@@ -158,29 +163,29 @@
           </div>
         </div>
         <div class="row" id="full-width">
-          <div class="col-md-12 col-xs-12 col-sm-12home-page">
-          <div class="col-md-8 col-xs-12 col-sm-12 content-section" id="content_section">
-            <div class="col-md-12 col-xs-12 col-sm-12 sermons-player-section">
-            	        <div id="sermon_section_title" class="sermon-section-title">  </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 home-page">
+          <div class="col-md-8 col-sm-12 col-xs-12 content-section" id="content_section">
+            <div class="col-md-12 col-sm-12 col-xs-12 sermons-player-section">
+            	<div id="sermon_section_title" class="sermon-section-title">  </div>
            		 <div class="audio-section" style="display:none;">
            		 	<audio id="audioPlayer" src="http://www.cfcindia.org/resources/en/study-series/basic-christian-teachings/37-jesus-valued-all-people.mp3"></audio>
            		 </div>
            		 <div class="video-section">
            		 	<div class="player">
-				 	<iframe width="720" height="340" src="http://www.youtube.com/embed/MslSfF9AewQ?rel=0&showinfo=0&enablejsapi=1" frameborder="0" allowfullscreen> 
-					</iframe>
-				</div>
-			</div>
-            	</div>
-        	 <div class="col-md-12 col-xs-12 col-sm-12 sermons-table">
+								<iframe width="720" height="340" src="http://www.youtube.com/embed/MslSfF9AewQ?rel=0&showinfo=0&enablejsapi=1" frameborder="0" allowfullscreen> 
+								</iframe>
+					</div>
+				 </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 sermons-table">
 				<div class="sermons-header">
-					<div class="sermon-date sermon-col col-md-2"> Date </div>
-					<div class="sermon-title sermon-col col-md-4"> Title </div>
-					<div class="sermon-speaker sermon-col col-md-3"> Speaker </div>
-					<div class="sermon-media sermon-col col-md-3"> Media</div>
+					<div class="sermon-date sermon-col col-md-2 col-sm-2 col-xs-2"> Date </div>
+					<div class="sermon-title sermon-col col-md-4 col-sm-4 col-xs-4"> Title </div>
+					<div class="sermon-speaker sermon-col col-md-3 col-sm-3 col-xs-3"> Speaker </div>
+					<div class="sermon-media sermon-col col-md-3 col-sm-3 col-xs-3"> Media</div>
 				</div>
 				<div class="sermon-content">
-					
+				
 				</div>
 				<div class="pagination">
 				
