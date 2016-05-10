@@ -550,10 +550,10 @@ figure.inner-image {
 .audio-section , .video-section {
 	clear: both;
 }
-.video-section , .player {
+.video-section, .player {
 	width: 100%;
 }
-.video-section .player iframe {
+.player iframe {
 	width: 100%;
 }
 .sermon-audio , .sermon-video, .sermon-download {
@@ -682,7 +682,7 @@ footer {
 	
 	#menu_items_bar {
 		position: fixed;
-		height: 100% !important;
+		height: 65% !important;
 		width: 75%;
 		margin: 0;
 		padding: 0;
@@ -690,8 +690,8 @@ footer {
 		top: 0;
 		right: 0;
 		z-index: 1000;
-		background: url("../images/Chennai_Cfc_Header.png") repeat scroll 0% 0% #A74041;
-        box-shadow: -3px 10px 10px #A74042;
+		background: #fcfcfc;
+        box-shadow: -5px 5px 5px #A74042;
 	}
 	#menu_items_bar a {
 		background: none;
@@ -699,7 +699,7 @@ footer {
 		background: none;
 		line-height: 16px;
 		border: none;
-		color: #fcfcfc;
+		color: #A74043;
 	}
 	#menu_items_bar label {
 		width: 28px;
@@ -735,7 +735,7 @@ footer {
 		min-height: 50px;
 		clear: both;
 		float: right;
-		border-bottom: 1px solid #f2f2f2;
+		border-bottom: 1px solid #494949;
 		width: 100%;
 	}
 	#menu_items_bar>ul>li.active a,#menu_items_bar>ul>li:hover>a {
@@ -761,7 +761,7 @@ footer {
 	}
 	#menu_items_bar .has-sub ul li a {
 		border-bottom: 1px solid #f4f4f4;
-		color: #f4f4f4;
+		color: #A74042;
 		font-size: 14px;
 	}
 	#menu_btn:checked ~.overlay-container {
@@ -806,6 +806,19 @@ footer {
 	}
 	.xs-banner-text{
 	   text-align: left;
+	}
+	.sermon-row .sermon-col {
+		padding: 0px 5px;
+	}
+	.sermons-header {
+		padding: 10px 15px;
+		font: Bold 15px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
+	}
+	.sermon-row {
+		font: normal 12px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
+	}
+	.sermon-audio, .sermon-video, .sermon-download {
+		margin: 0;
 	}
 	.footer-menu h4 {
 	   font-size: 16px;
