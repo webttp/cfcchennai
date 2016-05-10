@@ -73,8 +73,7 @@ a:hover {
 	float: left;
 	width: 100%;
 	color: #ffffff;
-	font: Bold 32px Arial Rounded MT Bold, Helvetica Rounded, Arial,
-		sans-serif;
+	font: Bold 32px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
 	margin: 25px 0 0 20px;
 }
 
@@ -235,7 +234,8 @@ a:hover {
 	border-bottom: 1px solid #333;
 	display: block;
 	line-height: 160%;
-	padding: 15px 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	font-size: 16px;
 }
 
@@ -326,7 +326,7 @@ a:hover {
 
 .body-container h3 {
 	color: #A74040;
-	font: Bold 24px Arial;
+	font: Bold 18px Arial;
 }
 .content-page-section {
 	width: 100%;
@@ -362,6 +362,17 @@ a:hover {
 	margin-bottom: 10px;
 	clear: both;
 }
+.thirumullai-language, .tambaram-language {
+	margin: 5px 0;
+	clear: both;
+}
+.thirumullai-language a, .tambaram-language a{
+	font: normal 16px Arial;
+	color: #494949;
+}
+.tambaram-cfc a {
+	color: #A74040;
+}
 .cfcc-meetings-place h4 {
 	color: #007e73;
 }
@@ -372,19 +383,29 @@ a:hover {
 .tambaram-cfc a {
 	color: #ab2a3c;
 }
-.cfcc-meetings-place-contact {
+.cfcc-meetings-place-thirumullai {
 	margin-bottom: 5px;
     color: #007e73;
     clear: both;
 }
-.cfcc-meetings-place-brother {
+.cfcc-meetings-place-tambaram {
 	margin-bottom: 5px;
-    color: #007e73;
+    color: #A74040;
     clear: both;
+}
+.cfcc-meetings-place-brother.thirumullai {
+	color: #007e73;
+    clear: both;
+}
+.cfcc-meetings-place-brother.tambaram{
+	color: #A74040;
+	clear: both;
+}
+.cfcc-meetings-place-brother h4 {
+	margin-bottom: 0px;
 }
 .cfcc-meetings-place a {
-	font: Bold 20px Arial;
-	color: #007e73;
+	font: Bold 16px Arial;
 }
 
 .cfcc-meetings-place a:hover {
@@ -405,11 +426,15 @@ a:hover {
 }
 
 .cfcc-timings {
-	font: normal 16px Arial;
+	font: normal 14px Arial;
 	color: #585d60;
-	margin-bottom: 10px;
 	clear: both;
-	line-height: 22px;
+	line-height: 20px;
+}
+.language-content {
+	font: normal 14px Arial;
+	color: #585d60;
+	line-height: 20px;
 }
 
 .directions {
@@ -484,24 +509,72 @@ figure.inner-image {
 
 /* sermons page stylings */
 .sermons-table {
-	margin-top: 25%;
+	
 }
 .sermons-cotainer {
 	width: 100%;
 }
 
 .sermons-header {
-	background: url("../images/Chennai_Cfc_Header.png") repeat scroll 0% 0%
-		#A84041;
+	background: url("../images/Chennai_Cfc_Header.png") repeat scroll 0% 0% #A84041;
 	height: 45px;
 	width: 100%;
+	color: #fcfcfc;
+	padding: 10px;
+    font: Bold 18px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
 }
-.sermons-player-section {
-	height: 450px;
+.sermon-row{
 	width: 100%;
+	border-bottom: 1px solid #ccc;
+	padding: 18px;
+	color: #585d60;
+	font: normal 15px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
 }
-.sermons-table-conatiner {
-	
+
+.sermons-player-section {
+	height: auto;
+	width: 100%;
+	background: #f3f3f3;
+	min-height: 200px !important;
+	max-height: 410px !important;
+}
+.mejs-container.mejs-video{
+	margin-left: 5%;
+} 
+.mejs-container.mejs-audio{
+	margin: 10%;
+}
+.sermons-table {
+	margin-top: 20px;
+}
+.audio-section , .video-section {
+	clear: both;
+}
+.sermon-audio , .sermon-video, .sermon-download {
+	width: 28px;
+	height: 28px;
+	position: relative;
+	display: inline-block;
+    margin-right: 10px;
+}
+.sermon-section-title {
+	font: Bold 18px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
+	margin: 10px 0;
+}
+.sermon-audio {
+	background: url(../images/music-icon.png);
+}
+.sermon-video {
+	background: url(../images/video-icon.png);
+}
+.sermon-download {
+	background: url(../images/download-icon.png);
+}
+
+.pagination {
+	clear: both;
+	float: right;
+	margin: 20px 10px;
 }
 
 .sort-icon {
