@@ -550,6 +550,12 @@ figure.inner-image {
 .audio-section , .video-section {
 	clear: both;
 }
+.video-section , .player {
+	width: 100%;
+}
+.video-section .player iframe {
+	width: 100%;
+}
 .sermon-audio , .sermon-video, .sermon-download {
 	width: 28px;
 	height: 28px;
