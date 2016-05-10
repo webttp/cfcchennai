@@ -95,6 +95,10 @@ $(document).ready(function() {
 			player.src = src ;
 			player.load();
 			player.play();
+		} else if(item.hasClass("sermon-video")){
+			$(".sermons-player-section .audio-section").css("display","none");
+			$(".sermons-player-section .video-section").css("display","block");
+			$(".video-section .player iframe").attr("src",src);
 		}
 	});
 	  
