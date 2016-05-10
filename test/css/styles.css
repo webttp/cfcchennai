@@ -735,7 +735,7 @@ footer {
 		min-height: 50px;
 		clear: both;
 		float: right;
-		border-bottom: 1px solid #494949;
+		border-bottom: 1px solid #A74045;
 		width: 100%;
 	}
 	#menu_items_bar>ul>li.active a,#menu_items_bar>ul>li:hover>a {
@@ -760,7 +760,7 @@ footer {
 		border: none;
 	}
 	#menu_items_bar .has-sub ul li a {
-		border-bottom: 1px solid #f4f4f4;
+		border-bottom: 1px solid #A74045;
 		color: #A74042;
 		font-size: 14px;
 	}
@@ -819,6 +819,9 @@ footer {
 	}
 	.sermon-audio, .sermon-video, .sermon-download {
 		margin: 0;
+	}
+	.contact-map iframe {
+		width: 100%;
 	}
 	.footer-menu h4 {
 	   font-size: 16px;
