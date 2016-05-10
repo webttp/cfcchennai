@@ -39,7 +39,7 @@
         </div>
         <div class="col-md-10 col-sm-11 col-xs-10  cfcc-verse">
           <div class="col-md-9 col-sm-10 col-xs-9">
-            <a href="http://www.cfcindia.com">
+            <a href="http://www.cfcindia.com">vbnvbnbvbnvbvn
               <div class="hidden-xs banner-text">Christian Fellowship Church, Chennai</div>
             </a>
             <div class="hidden-xs verse-text">
