@@ -88,15 +88,15 @@ $(document).ready(function() {
 	$(".sermon-content").on("click","a.sermon-audio",function(e){
 		e.preventDefault();
 		var item = $(this);
-		var title = item.attr("title");
-		var src =  item.attr("data-src");
 		var player = new MediaElementPlayer('audio');
+		player.pause();
+		var title = item.attr("title");
 		$(".sermon-section-title").html(title);
+		var src =  item.attr("data-src");
 		if(item.hasClass("sermon-audio")){
 			$(".sermons-player-section .video-section").css("display","none");
 			$(".sermons-player-section .audio-section").css("display","block");
-			player.pause();
-			player.src = src ;
+			player.setSrc(src) ;
 			player.load();
 			player.play();
 		} else if(item.hasClass("sermon-video")){
