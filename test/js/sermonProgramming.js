@@ -6,7 +6,7 @@ $(document).ready(function() {
 	$(".loading-spinner").css("display","block");
 	// To read the images for Home page banner slider
 	$.ajax({
-		 url : admin/getMessages.php,
+		 url : "admin/getMessages.php",
 		 dataType: "json",
 		 success: function (data) {
 			 console.log("inside ajax");
