@@ -7,6 +7,10 @@ $(document).ready(function() {
 	// To read the images for Home page banner slider
 	$.ajax({
 		 url : "admin/getMessages.php",
+		 data: {
+		 action:"start"
+    		 },
+		 type:"GET", 
 		 dataType: "json",
 		 success: function (data) {
 			 console.log("inside ajax");
