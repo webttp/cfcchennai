@@ -90,7 +90,7 @@ $(document).ready(function() {
 		var item = $(this);
 		var title = item.attr("title");
 		var src =  item.attr("data-src");
-		var player = new MediaElementPlayer('#audioPlayer');
+		var player = new MediaElementPlayer('audio');
 		$(".sermon-section-title").html(title);
 		if(item.hasClass("sermon-audio")){
 			$(".sermons-player-section .video-section").css("display","none");
