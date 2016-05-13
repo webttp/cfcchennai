@@ -105,7 +105,7 @@
 <script type="text/javascript">
  angular.module('myApp', []).controller('MyCtrl',MyCtrl);
  function MyCtrl($scope, $http, $timeout) {
-		$http.get('../admin/getMessages.php').success(function(data){
+		$http.get('../admin/getMessages.php?action=start').success(function(data){
 		$scope.loaded = true;
 		$scope.items = data;
     });
