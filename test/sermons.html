@@ -197,6 +197,7 @@
 						<div class='sermon-col col-md-2'> {{message.date}} </div>
 						<div class='sermon-col col-md-4'> {{message.title }} </div>
 						<div class='sermon-col col-md-3'> {{message.speaker}} </div>
+						<div class='sermon-col col-md-3'style="display:none;"> {{message.location}} </div>
 						<div class='sermon-col col-md-3' ng-if="message.messagetype == 'audio'">
 							<a id='sermon_audio' class='sermon-audio' data-src="{{message.audiokey}}" title="{message.title}"></a>
 							<a class='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
