@@ -30,6 +30,7 @@
     <script type="text/javascript" src="js/csi.min.js"></script>
     <script type="text/javascript" src="js/lightbox.js"></script>
     <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/toArrayFilter.js"></script>
     <script type="text/javascript" src="js/jquery.jqpagination.js"></script>
     <script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
     <script type="text/javascript" src="js/sermonProgramming.js"></script>
@@ -192,7 +193,7 @@
 					<div class="sermon-media sermon-col col-md-3 col-sm-3 col-xs-3"> Media</div>
 				</div>
 				<div class="sermon-content">
-					<div class="sermon-row index{{::$index}}" ng-repeat="message in messages track by $index | orderBy:searchByLocation ">
+					<div class="sermon-row index{{::$index}}" ng-repeat="message in messages | toArray | orderBy: 'location'">
 						<div class='sermon-col col-md-2'> {{message.date}} </div>
 						<div class='sermon-col col-md-4'> {{message.title }} </div>
 						<div class='sermon-col col-md-3'> {{message.speaker}} </div>
