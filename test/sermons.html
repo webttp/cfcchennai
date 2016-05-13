@@ -185,8 +185,8 @@
 					<div class="sermon-speaker sermon-col col-md-3 col-sm-3 col-xs-3"> Speaker </div>
 					<div class="sermon-media sermon-col col-md-3 col-sm-3 col-xs-3"> Media</div>
 				</div>
-				<div class="sermon-content" ng-repeat="message in messages track by $index">
-					<div class="sermon-row index$index">
+				<div class="sermon-content">
+					<div  ng-repeat="message in messages track by $index" class="sermon-row index $index">
 						<div class='sermon-col col-md-2'> {{message.date}} </div>
 						<div class='sermon-col col-md-4'> {{message.title }} </div>
 						<div class='sermon-col col-md-3'> {{message.speaker}} </div>
