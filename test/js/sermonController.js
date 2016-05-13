@@ -1,16 +1,10 @@
-var sermonApp = angular.module('sermonApp', []);
+var sermonApp = angular.module('sermonApp', ['angular-toArrayFilter']);
 
 sermonApp.controller('sermonController',function($scope, $http, $timeout){
    $http.get('admin/getMessages.php?action=start').success(function(data){
    		$scope.loaded = true;
    		$scope.messages = data;
    });
-   $scope.locationItems = [
-      {  id: 1,
-         location: 'CFC-Tambaram'},
-      {  id: 2,
-         location: 'CFC-Thirumullaivoyal' }
-      ];
-      $scope.searchByLocation = "location";
+   $scope.searchByLocation = "location";
 });
 
