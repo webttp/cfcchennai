@@ -186,7 +186,7 @@
 					<div class="sermon-media sermon-col col-md-3 col-sm-3 col-xs-3"> Media</div>
 				</div>
 				<div class="sermon-content">
-					<div  ng-repeat="message in messages track by $index">
+					<div class="sermon-container" ng-repeat="message in messages track by $index">
 						<span ng-init="sermonIndex = $index"></span>
 						<div class="sermon-row index sermonIndex">
 							<div class='sermon-col col-md-2'> {{message.date}} </div>
