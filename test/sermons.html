@@ -168,18 +168,20 @@
           <div class="col-md-8 col-sm-12 col-xs-12 content-section" id="content_section">
             <div class="col-md-12 col-sm-12 col-xs-12 sermons-player-section">
             	<div id="sermon_section_title" class="sermon-section-title">  </div>
-           		 <div class="audio-section" style="display:none;">
-           		 	<audio id="audioPlayer" src="http://www.cfcindia.org/resources/en/study-series/basic-christian-teachings/37-jesus-valued-all-people.mp3"></audio>
-           		 </div>
-           		 <div class="video-section">
-           		 	<div class="player">
-								<iframe width="720" height="340" src="http://www.youtube.com/embed/MslSfF9AewQ?rel=0&showinfo=0&enablejsapi=1" frameborder="0" allowfullscreen> 
-								</iframe>
-					</div>
-				 </div>
+           	<div class="audio-section" style="display:none;">
+           		<audio id="audioPlayer" src="http://www.cfcindia.org/resources/en/study-series/basic-christian-teachings/37-jesus-valued-all-people.mp3"></audio>
+           	</div>
+           	<div class="video-section">
+           	 	<div class="player">
+				<iframe width="720" height="340" src="http://www.youtube.com/embed/MslSfF9AewQ?rel=0&showinfo=0&enablejsapi=1" frameborder="0" allowfullscreen> 
+				</iframe>
+			</div>
+		 </div>
             </div>
-			<div class="col-md-4 col-xs-12 col-sm-12 sermon-location">
-				<select ng-model="searchByLocation" ng-options="item.location for item in locationItems">
+		<div class="col-md-4 col-xs-12 col-sm-12 sermon-location">
+				<select ng-model="searchByLocation">
+					<option value="location">CFC-Thirumullaivoyal</option>
+					<option value="location">CFC-Tambaram</option>
 				 </select>
 			</div>
         		 <div class="col-md-12 col-sm-12 col-xs-12 sermons-table">
