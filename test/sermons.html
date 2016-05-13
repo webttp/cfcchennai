@@ -201,7 +201,7 @@
 							<a id='sermon_audio' class='sermon-audio' data-src="{{message.audiokey}}" title="{message.title}"></a>
 							<a class='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
 						</div>
-						<div class='sermon-col col-md-3' ng-if="{message.messagetype == 'video'}">
+						<div class='sermon-col col-md-3' ng-if="message.messagetype == 'video'">
 							<a id='sermon_video' class='sermon-video' data-src="{{message.videokey}}" title="{{message.title}}"></a>
 							<a class='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
 						</div>
