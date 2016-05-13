@@ -5,7 +5,7 @@ $(document).ready(function() {
 	 console.log("inside sermon pgm");
 	$(".loading-spinner").css("display","block");
 	// To read the images for Home page banner slider
-	$.ajax({
+	/*$.ajax({
 		 url : "admin/getMessages.php",
 		 data: {
 		 action:"start"
@@ -36,7 +36,7 @@ $(document).ready(function() {
 		error: function(data){
 			console.log(data);
 		}
-	});
+	}); */
 	setTimeout(function(){
 		$(".home-page-spinner").css("display","none");
 		$(".loading-spinner").css("display","none");},2000);
