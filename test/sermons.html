@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html ng-app="sermonApp">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <meta name="description" content="A Church of disciples of the Lord Jesus Christ, at Chennai since 1986, 
@@ -29,15 +29,17 @@
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/csi.min.js"></script>
     <script type="text/javascript" src="js/lightbox.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="js/jquery.jqpagination.js"></script>
     <script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
     <script type="text/javascript" src="js/sermonProgramming.js"></script>
+    <script type="text/javascript" src="js/sermonController.js"></script>
     
  
 
    
   </head>
-  <body class="no-sidebars md" ng-app="sermonApp">
+  <body class="no-sidebars md" ng-controller="sermonController">
     <header>
       <div class="menu-container">
         <div class="container">
@@ -183,8 +185,26 @@
 					<div class="sermon-speaker sermon-col col-md-3 col-sm-3 col-xs-3"> Speaker </div>
 					<div class="sermon-media sermon-col col-md-3 col-sm-3 col-xs-3"> Media</div>
 				</div>
-				<div class="sermon-content">
-				
+				<div class="sermon-content" ng-repeat="message in messages track by $index">
+					<div class="sermon-row index$index">
+						<div class='sermon-col col-md-2'> {{message.date}} </div>
+						<div class='sermon-col col-md-4'> {{message.title }} </div>
+						<div class='sermon-col col-md-3'> {{message.speaker}} </div>
+						<div class='sermon-col col-md-3' ng-if="message.messagetype == 'audio'">
+							<a id='sermon_audio' class='sermon-audio' data-src="message.audiokey" title="message.title"></a>
+							<a class='sermon-download' href="message.audiokey" download="message.audiokey"></a>
+						</div>
+						<div class='sermon-col col-md-3' ng-if="message.messagetype == 'video'">
+							<a id='sermon_video' class='sermon-video' data-src="message.videokey" title="message.title"></a>
+							<a class='sermon-download' href="message.audiokey" download="message.audiokey"></a>
+						</div>
+						<div class='sermon-col col-md-3' ng-if="message.messagetype == 'both'">
+							<a id='sermon_audio' class='sermon-audio' data-src="message.audiokey" title="message.title"></a>
+							<a id='sermon_video' class='sermon-video' data-src="message.videokey" title="message.title"></a>
+							<a class='sermon-download' href="message.audiokey" download="message.audiokey"></a>
+						</div>
+						
+					</div>
 				</div>
 				<div class="pagination">
 				
