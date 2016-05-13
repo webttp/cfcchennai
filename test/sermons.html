@@ -179,10 +179,8 @@
 		 </div>
             </div>
 		<div class="col-md-4 col-xs-12 col-sm-12 sermon-location">
-				<select ng-model="searchByLocation">
-					<option value="location">CFC-Thirumullaivoyal</option>
-					<option value="location">CFC-Tambaram</option>
-				 </select>
+				<select ng-model="searchByLocation" ng-options="item for messages in ['id', 'location']"> </select>
+				</select>
 			</div>
         		 <div class="col-md-12 col-sm-12 col-xs-12 sermons-table">
 				<div class="sermons-header">
