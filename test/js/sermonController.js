@@ -10,6 +10,7 @@ sermonApp.controller('sermonController',function($scope, $http, $timeout){
          location: 'CFC-Tambaram'},
       {  id: 2,
          location: 'CFC-Thirumullaivoyal' }
-      ]
+      ];
+      $scope.searchByLocation = "location";
 });
 
