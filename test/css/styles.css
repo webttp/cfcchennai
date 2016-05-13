@@ -814,6 +814,9 @@ footer {
 		padding: 10px 15px;
 		font: Bold 15px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
 	}
+	.sermon-container {
+		width: 100%;
+	}
 	.sermon-row {
 		font: normal 12px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
 	}
@@ -892,3 +895,4 @@ footer {
 		height: 90px;
 	}
 }
+
