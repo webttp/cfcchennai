@@ -132,7 +132,7 @@ if(isset($_POST['submit'])!=""){
 		}	
 		$condition = array("id"=>$msgid);
 		$set = array("date"=>$date,"location"=>$location,"title"=>$title,"speaker"=>$speaker,
-					 "messagetype"=>$messagetype,"videokey"=>$videokey,"audiokey"=>$audiokey,
+					 "messagetype"=>$messagetype,"videokey"=>$videokey."?enablejsapi=1&origin=http://cfcchennai.church","audiokey"=>$audiokey,
 					 "modifiedby"=>$loginid,"modifieddate"=>$currentdt);	
 		$tablename='messagelist';
 		$msg=$obj->update($tablename, $set,$condition);
