@@ -556,21 +556,28 @@ figure.inner-image {
 .player iframe {
 	width: 100%;
 }
-.sermon-audio , .sermon-video, .sermon-download {
+#sermon-audio , #sermon-video, #sermon-download {
 	width: 28px;
 	height: 28px;
 	position: relative;
 	display: inline-block;
     margin-right: 10px;
 }
+	.sermon-content {
+		width: 100%;
+	}
+	.sermon-header a , .sermon-header a:hover{
+		color: #ffffff;
+		text-decoration: none;
+	}
 	.sermon-section-title {
 		font: Bold 18px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
 		margin: 10px 0;
 	}
-	.sermon-audio {
+	#sermon-audio {
 		background: url(../images/music-icon.png);
 	}
-	.sermon-video {
+	#sermon-video {
 		background: url(../images/video-icon.png);
 	}
 	.query-section {
@@ -598,7 +605,7 @@ figure.inner-image {
 	.search-textbox {
 		font: normal 14px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
 	}
-   .sermon-download {
+   #sermon-download {
 	background: url(../images/download-icon.png);
 	}
 
@@ -869,7 +876,7 @@ footer {
 	.sermon-row {
 		font: normal 12px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
 	}
-	.sermon-audio, .sermon-video, .sermon-download {
+	#sermon-audio, #sermon-video, #sermon-download {
 		margin: 0;
 	}
 	.contact-map iframe {
