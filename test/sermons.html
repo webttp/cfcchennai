@@ -182,9 +182,9 @@
             <div class="col-md-12 col-sm-12 col-xs-12 sermons-table">
 				<div class="query-section">
 					<div class="search-textbox">
-						<input ng-model="query" class="seacrh-input" value="Search Sermon title" /> 
+						<span class="search-title-hint"> Search sermon by title:  </span><input ng-model="query" class="seacrh-input" value="Search Sermon title" /> 
 					</div>
-					<div class="pull-right search-dropdown"> Location
+					<div class="pull-right search-dropdown"> <span class="search-location-hint"> Location: </span> 
 						<select name="location" id="location" ng-model="locationOrder" ng-change="locationtrigger(locationOrder)">
 							<option value="CFC-Tambaram"> CFC-Tambaram </option>
 							<option value="CFC-Thirumullaivoyal"> CFC-Thirumullaivoyal </option>
@@ -202,26 +202,24 @@
 						<div class='sermon-col col-md-2'> {{ message.date | date:'dd-MM-yyyy'}} </div>
 						<div class='sermon-col col-md-4'> {{ message.title }} </div>
 						<div class='sermon-col col-md-3'> {{ message.speaker }} </div>
-						<div class='sermon-col col-md-3' ng-if="{{message.messagetype == 'audio'}}">
-							<a id='sermon_audio' class='sermon-audio' data-src="{{message.audiokey}}" title="{message.title}"></a>
-							<a class='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
+						<div class='sermon-col col-md-3' ng-if="message.messagetype == 'audio'">
+							<a id='sermon_audio' class='sermon-audio' data-src="message.audiokey" title="message.title"></a>
+							<a class='sermon-download' href="message.audiokey" download="message.audiokey"></a>
 						</div>
-						<div class='sermon-col col-md-3' ng-if="{{message.messagetype == 'video'}}">
-							<a id='sermon_video' class='sermon-video' data-src="{{message.videokey}}" title="{{message.title}}"></a>
-							<a class='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
+						<div class='sermon-col col-md-3' ng-if="message.messagetype == 'video'">
+							<a id='sermon_video' class='sermon-video' data-src="message.videokey" title="message.title"></a>
+							<a class='sermon-download' href="message.audiokey" download="message.audiokey"></a>
 						</div>
-						<div class='sermon-col col-md-3' ng-if="{{message.messagetype == 'both'}}">
-							<a id='sermon_audio' class='sermon-audio' data-src="{{message.audiokey}}" title="{{message.title}}"></a>
-							<a id='sermon_video' class='sermon-video' data-src="{{message.videokey}}" title="{{message.title}}"></a>
-							<a class='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
+						<div class='sermon-col col-md-3' ng-if="message.messagetype == 'both'">
+							<a id='sermon_audio' class='sermon-audio' data-src="message.audiokey" title="message.title"></a>
+							<a id='sermon_video' class='sermon-video' data-src="message.videokey" title="message.title"></a>
+							<a class='sermon-download' href="message.audiokey" download="message.audiokey"></a>
 						</div>
 					</div>
 				</div>
 				<div class="empty-message" ng-show="messages.length == 0">
-            				<div class="col-md-12 col-xs-12 com-sm-12">
-                				<h4>No messages found</h4>
-            				</div>
-        			</div>
+            				<h4>No messages found</h4>
+            			</div>
 				<div class="pagination">
 				
 					<a href="#" class="first" data-action="first">&laquo;</a>
