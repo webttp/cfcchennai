@@ -558,6 +558,10 @@ figure.inner-image {
 	width: 100%;
 	height: 360px;
 }
+.empty-message {
+	width: 100%;
+	text-align: center;
+}
 .player iframe {
 	width: 100%;
 }
