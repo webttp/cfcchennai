@@ -56,6 +56,8 @@ $(document).ready(function() {
 		var item = $(this);
 		var player = new MediaElementPlayer('audio');
 		player.pause();
+		var title = item.attr("title");
+		$(".sermon-section-title").html(title);
 		var src =  item.attr("class");
 		if(item.hasClass("sermon-audio")){
 			$(".sermons-player-section .video-section").css("display","none");
