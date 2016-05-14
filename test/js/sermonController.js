@@ -1,4 +1,4 @@
-var sermonApp = angular.module('sermonApp', ['angular-toArrayFilter']);
+var sermonApp = angular.module('sermonApp', ['angular-toArrayFilter', '720kb.datepicker']);
 
 sermonApp.controller('sermonController',function($scope, $http, $timeout){
    $http.get('admin/getMessages.php?action=start').success(function(data){
