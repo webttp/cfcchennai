@@ -184,41 +184,44 @@
 					<div class="search-textbox">
 						<input ng-model="query" class="seacrh-input" value="Search Sermon title" /> 
 					</div>
-					<div class="search-dropdown">
-						<select ng-model="locationOrder">
-							<option value="">  Location </option>
-							<option value="+location"> CFC-Tambaram </option>
-							<option value="-location"> CFC-Thirumullaivoyal </option>
+					<div class="pull-right search-dropdown"> Location
+						<select name="location" id="location" ng-model="locationOrder" ng-change="locationtrigger(locationOrder)">
+							<option value="CFC-Tambaram"> CFC-Tambaram </option>
+							<option value="CFC-Thirumullaivoyal"> CFC-Thirumullaivoyal </option>
 						</select>
 					</div>
 				</div>
 				<div class="sermons-header">
-					<div class="sermon-date sermon-col col-md-2 col-sm-2 col-xs-2"> Date </div>
+					<div class="sermon-date sermon-col col-md-2 col-sm-2 col-xs-2"> <a ng-click="sort_by('date');"> Date <i class="fa fa-caret-down"></i></a></div>
 					<div class="sermon-title sermon-col col-md-4 col-sm-4 col-xs-4"> Title </div>
-					<div class="sermon-speaker sermon-col col-md-3 col-sm-3 col-xs-3"> Speaker </div>
+					<div class="sermon-speaker sermon-col col-md-3 col-sm-3 col-xs-3"> <a ng-click="sort_by('speaker');"> Speaker <i class="fa fa-caret-down"></i> </a> </div>
 					<div class="sermon-media sermon-col col-md-3 col-sm-3 col-xs-3"> Media</div>
 				</div>
 				<div class="sermon-content">
-					
 					<div class="sermon-row index{{::$index}}" ng-repeat="message in messages | toArray | filter:query | orderBy:locationOrder  track by $index">
-						<div class='sermon-col col-md-2'> {{message.date}} </div>
-						<div class='sermon-col col-md-4'> {{message.title }} </div>
-						<div class='sermon-col col-md-3'> {{message.speaker}} </div>
-						<div class='sermon-col col-md-3' ng-if="message.messagetype == 'audio'">
+						<div class='sermon-col col-md-2'> {{ message.date | date:'dd-MM-yyyy'}} </div>
+						<div class='sermon-col col-md-4'> {{ message.title }} </div>
+						<div class='sermon-col col-md-3'> {{ message.speaker }} </div>
+						<div class='sermon-col col-md-3' ng-if="{{message.messagetype == 'audio'}}">
 							<a id='sermon_audio' class='sermon-audio' data-src="{{message.audiokey}}" title="{message.title}"></a>
 							<a class='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
 						</div>
-						<div class='sermon-col col-md-3' ng-if="message.messagetype == 'video'">
+						<div class='sermon-col col-md-3' ng-if="{{message.messagetype == 'video'}}">
 							<a id='sermon_video' class='sermon-video' data-src="{{message.videokey}}" title="{{message.title}}"></a>
 							<a class='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
 						</div>
-						<div class='sermon-col col-md-3' ng-if="message.messagetype == 'both'">
+						<div class='sermon-col col-md-3' ng-if="{{message.messagetype == 'both'}}">
 							<a id='sermon_audio' class='sermon-audio' data-src="{{message.audiokey}}" title="{{message.title}}"></a>
 							<a id='sermon_video' class='sermon-video' data-src="{{message.videokey}}" title="{{message.title}}"></a>
 							<a class='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
 						</div>
 					</div>
 				</div>
+				<div class="empty-message" ng-show="messages.length == 0">
+            				<div class="col-md-12 col-xs-12 com-sm-12">
+                				<h4>No messages found</h4>
+            				</div>
+        			</div>
 				<div class="pagination">
 				
 					<a href="#" class="first" data-action="first">&laquo;</a>
