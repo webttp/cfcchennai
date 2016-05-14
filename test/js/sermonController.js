@@ -10,6 +10,10 @@ sermonApp.controller('sermonController',function($scope, $http, $timeout){
 			$http.get('admin/getMessages.php?action='+'locate&'+'location='+place).success(function(data){
 			$scope.messages = data;
 	});
-   
+   }
+   $scope.sort_by = function(predicate) {
+        $scope.predicate = predicate;
+        $scope.reverse = !$scope.reverse;
+    };
 });
 
