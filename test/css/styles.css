@@ -563,19 +563,43 @@ figure.inner-image {
 	display: inline-block;
     margin-right: 10px;
 }
-.sermon-section-title {
-	font: Bold 18px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
-	margin: 10px 0;
-}
-.sermon-audio {
-	background: url(../images/music-icon.png);
-}
-.sermon-video {
-	background: url(../images/video-icon.png);
-}
-.sermon-download {
+	.sermon-section-title {
+		font: Bold 18px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
+		margin: 10px 0;
+	}
+	.sermon-audio {
+		background: url(../images/music-icon.png);
+	}
+	.sermon-video {
+		background: url(../images/video-icon.png);
+	}
+	.query-section {
+		width: 100%;
+	}
+	.search-dropdown {
+		float: right;
+	}
+	.search-dropdown select
+	{ 
+		background: #fdfdfd;
+		border-radius: 3px;
+		padding: 5px;
+	}
+	.search-textbox  input{
+		border-radius: 3px;
+		background: #fdfdfd;
+		-webkit-box-shadow: inset 1px 1px 0px 0px #fcfcfc;
+		-moz-box-shadow: inset 1px 1px 0px 0px #fcfcfc;
+		box-shadow: inset 1px 1px 0px 0px #fcfcfc;
+		min-height: 30px;
+		min-width: 150px;
+	}
+	.search-textbox {
+		font: normal 14px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
+	}
+   .sermon-download {
 	background: url(../images/download-icon.png);
-}
+	}
 
 .pagination {
 	clear: both;
@@ -831,8 +855,8 @@ footer {
 		min-height: 30px;
 		min-width: 150px;
 	}
-	.search-textbox span.text-placeholder {
-		font: normal 14px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
+	.search-textbox {
+		font: normal 12px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
 	}
 	.sermons-header {
 		padding: 10px 15px;
