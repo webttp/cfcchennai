@@ -6,5 +6,10 @@ sermonApp.controller('sermonController',function($scope, $http, $timeout){
    		$scope.messages = data;
    });
    
+   $scope.locationtrigger = function(place) {
+			$http.get('admin/getMessages.php?action='+'locate&'+'location='+place).success(function(data){
+			$scope.messages = data;
+	});
+   
 });
 
