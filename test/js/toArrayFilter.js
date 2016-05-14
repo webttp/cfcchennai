@@ -2,17 +2,15 @@ angular.module('angular-toArrayFilter', [])
 
 .filter('toArray', function () {
   return function (obj, addKey) {
-    if (!angular.isObject(obj)) return obj;
+    if (!(obj instanceof Object)) {
+      return obj;
+    }
+
     if ( addKey === false ) {
-      return Object.keys(obj).map(function(key) {
-        return obj[key];
-      });
+      return Object.values(obj);
     } else {
       return Object.keys(obj).map(function (key) {
-        var value = obj[key];
-        return angular.isObject(value) ?
-          Object.defineProperty(value, '$key', { enumerable: false, value: key}) :
-          { $key: key, $value: value };
+        return Object.defineProperty(obj[key], '$key', { enumerable: false, value: key});
       });
     }
   };
