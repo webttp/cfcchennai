@@ -70,7 +70,7 @@ $(function(){
 		$(".mobile-menu-items").show();
 	});
 	
-	$("#menu_items_bar .mobile-menu-items a").click(function(e){
+	$("a#menu_btn").click(function(e){
 		$(".mobile-menu-items").hide();
 	});
 	
