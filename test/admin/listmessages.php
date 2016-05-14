@@ -43,7 +43,7 @@ include("header.php");
             <tbody>
                 <tr ng-repeat="data in filtered = (list | filter:search | orderBy : predicate :reverse) | startFrom:(currentPage-1)*entryLimit | limitTo:entryLimit">
                     <td>{{data.date | date:'dd-MM-yyyy'}}</td>
-                    <td>{{data.title}}</td>
+                    <td class="{{data.title}}">{{data.title}}</td>
                     <td>{{data.speaker}}</td>
 					<td>{{data.messagetype}}</td>
 					<td><a onclick="action(this.id,'edit')" id="{{data.id}}" class="btn">&nbsp;<i class="glyphicon glyphicon-edit"></i>&nbsp; Edit Message</a>
