@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html ng-app="homeApp">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
       <meta name="description" content="A Church of disciples of the Lord Jesus Christ, at Chennai since 1986, 
@@ -29,12 +29,12 @@
       <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="js/csi.min.js"></script>
       <script type="text/javascript" src="js/lightbox.js"></script>
-     <!--  <script type="text/javascript" src="js/angular.min.js"></script>
+      <script type="text/javascript" src="js/angular.min.js"></script>
       <script type="text/javascript" src="js/angular.route.js"></script>
-      <script type="text/javascript" src="js/homeController.js"></script> -->
+      <script type="text/javascript" src="js/homeController.js"></script>
       
    </head>
-   <body class="no-sidebars md"> 
+   <body class="no-sidebars md" ng-controller="imageController"> 
       <header>
       <div class="menu-container">
       <div class="container">
@@ -146,7 +146,36 @@
       </header>
       <div class="error-container"></div>
       <div class="home-page-section">
-         <div data-include="home.html"></div>
+         <div class="row-fluid home-page-slider">
+	   <div class="container image-slider-container">
+	      <div id="featured-home-page-image" class="row">
+	         <div id="featured-home-carousel-image">
+	            <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+	               <ol class="carousel-indicators">
+	                  <li data-target="#homeCarousel" ng-repeat="img in images track by $index" data-slide-to="{{$index}}" class="active"></li>
+	              </ol>
+	               <div class="carousel-inner">
+	                  <div class="item image-viewier active" ng-repeat="img in images track by $index">
+	                     <a href="#">
+	                        <img src='admin/images/{{ img.imgsrc }}'>
+	                        <div class='sLeft whiteText'>
+	                           <mytitle> {{ img.imagename }} </mytitle>
+	                        </div>
+	                     </a>
+	                  </div>
+	               </div>
+	               <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev"> 
+	               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	               </a> 
+	               <a class="right carousel-control" href="#homeCarousel" role="button" data-slide="next"> 
+	               <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	               </a>
+	            </div>
+	         </div>
+	      </div>
+	   </div>
+	</div>
+	</div>
          <div class="container body-container bs-docs-container">
             <div class="row-fluid" id="full-width">
                <div class="col-md-12 home-page">
