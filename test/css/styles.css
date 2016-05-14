@@ -813,10 +813,10 @@ footer {
 	.query-section {
 		width: 100%;
 	}
-	.search-dropdwon {
+	.search-dropdown {
 		float: right;
 	}
-	.search-dropdwon select
+	.search-dropdown select
 	{ 
 		background: #fdfdfd;
 		border-radius: 3px;
