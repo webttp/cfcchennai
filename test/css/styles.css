@@ -556,6 +556,7 @@ figure.inner-image {
 }
 .video-section, .player {
 	width: 100%;
+	height: 360px;
 }
 .player iframe {
 	width: 100%;
