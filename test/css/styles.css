@@ -810,6 +810,33 @@ footer {
 	.sermon-row .sermon-col {
 		padding: 0px 5px;
 	}
+	.query-section {
+		width: 100%;
+	}
+	.search-textbox {
+		
+	}
+	.search-dropdwon {
+		float: right;
+	}
+	.search-dropdwon select
+	{
+		background: #fdfdfd;
+		border-radius: 3px;
+		padding: 10px;
+	}
+	.search-textbox  input{
+		border-radius: 3px;
+		background: #fdfdfd;
+		-webkit-box-shadow: inset 1px 1px 0px 0px #fcfcfc;
+		-moz-box-shadow: inset 1px 1px 0px 0px #fcfcfc;
+		box-shadow: inset 1px 1px 0px 0px #fcfcfc;
+		min-height: 30px;
+		min-width: 150px;
+	}
+	.search-textbox span.text-placeholder {
+		font: normal 14px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
+	}
 	.sermons-header {
 		padding: 10px 15px;
 		font: Bold 15px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
