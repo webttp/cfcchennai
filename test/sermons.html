@@ -195,7 +195,7 @@
 					<div class="sermon-date sermon-col col-md-2 col-sm-2 col-xs-2"> <a ng-click="sort_by('date');"> Date <i class="fa fa-caret-down"></i></a></div>
 					<div class="sermon-title sermon-col col-md-4 col-sm-4 col-xs-4"> Title </div>
 					<div class="sermon-speaker sermon-col col-md-3 col-sm-3 col-xs-3"> <a ng-click="sort_by('speaker');"> Speaker <i class="fa fa-caret-down"></i> </a> </div>
-					<div class="sermon-media sermon-col col-md-3 col-sm-3 col-xs-3"> Media</div>
+					<div class="sermon-media sermon-col col-md-3 col-sm-3 col-xs-3"> <a ng-click="sort_by('messagetype');"> Media <i class="fa fa-caret-down"> </i> </a> </div>
 				</div>
 				<div class="sermon-content">
 					<div class="sermon-row index{{::$index}}" ng-repeat="message in messages | filter:query | orderBy : predicate :reverse  track by $index">
