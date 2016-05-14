@@ -59,13 +59,13 @@ $(document).ready(function() {
 		var title = item.attr("title");
 		$(".sermon-section-title").html(title);
 		var src =  item.attr("class");
-		if(item.hasClass("sermon-audio")){
+		if(item.attr("id") == "sermon-audio"){
 			$(".sermons-player-section .video-section").css("display","none");
 			$(".sermons-player-section .audio-section").css("display","block");
 			player.setSrc(src) ;
 			player.load();
 			player.play();
-		} else if(item.hasClass("sermon-video")){
+		} else if(item.attr("id") == "sermon-video"){
 			$(".sermons-player-section .audio-section").css("display","none");
 			$(".sermons-player-section .video-section").css("display","block");
 			$(".video-section .player iframe").attr("src",src);
