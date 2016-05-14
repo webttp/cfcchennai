@@ -85,7 +85,7 @@ $(document).ready(function() {
 	    $(".pagination").show();
 
 	    //loop through all of the divs and hide them by default.
-	    for (var i=0; i <= totalNumRecords; i++) {
+	    for (var i=0; i < totalNumRecords; i++) {
 	        $(".sermon-content").find(".sermon-row.index" + i).hide();
 	    }
 
