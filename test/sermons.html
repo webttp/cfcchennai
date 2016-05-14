@@ -32,6 +32,7 @@
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="js/jquery.jqpagination.js"></script>
     <script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
+    <script type="text/javascript" src="js/angular-datepicker.js"></script>
     <script type="text/javascript" src="js/toArrayFilter.js"></script>
     <script type="text/javascript" src="js/sermonProgramming.js"></script>
     <script type="text/javascript" src="js/sermonController.js"></script>
@@ -192,7 +193,16 @@
 					</div>
 				</div>
 				<div class="sermons-header">
-					<div class="sermon-date sermon-col col-md-2 col-sm-2 col-xs-2"> <a ng-click="sort_by('date');"> Date <i class="fa fa-caret-down"></i></a></div>
+					<div class="sermon-date sermon-col col-md-2 col-sm-2 col-xs-2"> 
+						<datepicker date-format="yyyy-MM-dd" selector="form-control">
+						    <div class="input-group">
+						        <input ng-model='date' class="form-control" placeholder="Choose a date"/>
+						        <span class="input-group-addon" style="cursor: pointer">
+						        	<i class="fa fa-lg fa-calendar"></i>
+						        </span>
+						    </div>
+						</datepicker>
+						<a ng-click="sort_by('date');"> Date </a></div>
 					<div class="sermon-title sermon-col col-md-4 col-sm-4 col-xs-4"> Title </div>
 					<div class="sermon-speaker sermon-col col-md-3 col-sm-3 col-xs-3"> <a ng-click="sort_by('speaker');"> Speaker <i class="fa fa-caret-down"></i> </a> </div>
 					<div class="sermon-media sermon-col col-md-3 col-sm-3 col-xs-3"> <a ng-click="sort_by('messagetype');"> Media <i class="fa fa-caret-down"> </i> </a> </div>
