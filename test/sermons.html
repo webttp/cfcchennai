@@ -30,9 +30,9 @@
     <script type="text/javascript" src="js/csi.min.js"></script>
     <script type="text/javascript" src="js/lightbox.js"></script>
     <script type="text/javascript" src="js/angular.min.js"></script>
-    <script type="text/javascript" src="js/toArrayFilter.js"></script>
     <script type="text/javascript" src="js/jquery.jqpagination.js"></script>
     <script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
+    <script type="text/javascript" src="js/toArrayFilter.js"></script>
     <script type="text/javascript" src="js/sermonProgramming.js"></script>
     <script type="text/javascript" src="js/sermonController.js"></script>
     
@@ -169,23 +169,17 @@
           <div class="col-md-8 col-sm-12 col-xs-12 content-section" id="content_section">
             <div class="col-md-12 col-sm-12 col-xs-12 sermons-player-section">
             	<div id="sermon_section_title" class="sermon-section-title">  </div>
-           	<div class="audio-section" style="display:none;">
-           		<audio id="audioPlayer" src="http://www.cfcindia.org/resources/en/study-series/basic-christian-teachings/37-jesus-valued-all-people.mp3"></audio>
-           	</div>
-           	<div class="video-section">
-           	 	<div class="player">
-				<iframe width="720" height="340" src="http://www.youtube.com/embed/MslSfF9AewQ?rel=0&showinfo=0&enablejsapi=1" frameborder="0" allowfullscreen> 
-				</iframe>
-			</div>
-		 </div>
+           		 <div class="audio-section" style="display:none;">
+           		 	<audio id="audioPlayer" src="http://www.cfcindia.org/resources/en/study-series/basic-christian-teachings/37-jesus-valued-all-people.mp3"></audio>
+           		 </div>
+           		 <div class="video-section">
+           		 	<div class="player">
+								<iframe width="720" height="340" src="http://www.youtube.com/embed/MslSfF9AewQ?rel=0&showinfo=0&enablejsapi=1" frameborder="0" allowfullscreen> 
+								</iframe>
+					</div>
+				 </div>
             </div>
-		<div class="col-md-4 col-xs-12 col-sm-12 sermon-location">
-				<select ng-model="searchByLocation">
-				      <option value="+location">CFC_Thirumullaivoyal </option>
-				      <option value="-location">CFC-Tambaram </option>
-				 </select>
-			</div>
-        		 <div class="col-md-12 col-sm-12 col-xs-12 sermons-table">
+            <div class="col-md-12 col-sm-12 col-xs-12 sermons-table">
 				<div class="sermons-header">
 					<div class="sermon-date sermon-col col-md-2 col-sm-2 col-xs-2"> Date </div>
 					<div class="sermon-title sermon-col col-md-4 col-sm-4 col-xs-4"> Title </div>
@@ -193,11 +187,16 @@
 					<div class="sermon-media sermon-col col-md-3 col-sm-3 col-xs-3"> Media</div>
 				</div>
 				<div class="sermon-content">
-					<div class="sermon-row index{{::$index}}" ng-repeat="message in messages | toArray | orderBy: 'location'">
+					Search by: 
+					<input ng-model="query" placeholder=" ">
+					<select ng-model="selectLocation">
+				      <option value="+location"> CFC-Thirumullaivoyal </option>
+				      <option value="-location"> CFC-Tambaram </option>
+				     </select>
+					<div class="sermon-row index{{::$index}}" ng-repeat="message in messages track by $index | toArray | orderBy: selectLocation | filter:query">
 						<div class='sermon-col col-md-2'> {{message.date}} </div>
 						<div class='sermon-col col-md-4'> {{message.title }} </div>
 						<div class='sermon-col col-md-3'> {{message.speaker}} </div>
-						<div class='sermon-col col-md-3'style="display:none;"> {{message.location}} </div>
 						<div class='sermon-col col-md-3' ng-if="message.messagetype == 'audio'">
 							<a id='sermon_audio' class='sermon-audio' data-src="{{message.audiokey}}" title="{message.title}"></a>
 							<a class='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
