@@ -575,6 +575,7 @@ figure.inner-image {
 	}
 	.query-section {
 		width: 100%;
+		margin-bottom: 10px;
 	}
 	.search-dropdown {
 		float: right;
