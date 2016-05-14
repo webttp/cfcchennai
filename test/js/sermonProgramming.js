@@ -51,7 +51,7 @@ $(document).ready(function() {
 	});
 	
 	// To handle the click event of music , video and download buttons
-	$(".sermon-content").on("click","a.sermon-audio, a.sermon-video",function(e){
+	$(".sermon-content").on("click","a",function(e){
 		e.preventDefault();
 		var item = $(this);
 		var player = new MediaElementPlayer('audio');
