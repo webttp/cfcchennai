@@ -523,6 +523,10 @@ figure.inner-image {
 	padding: 10px;
     font: Bold 18px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
 }
+.sermons-header  a, .sermons-header a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
 .sermon-row{
 	width: 100%;
 	border-bottom: 1px solid #ccc;
