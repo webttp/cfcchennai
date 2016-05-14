@@ -90,7 +90,7 @@ $(document).ready(function() {
 	    }
 
 	    //then only display the number of divs the user dictated
-	    for (var i = 1; i <= recordsPerPage; i++) {
+	    for (var i = 0; i < recordsPerPage; i++) {
 	        $(".sermon-content").find(".sermon-row.index" + i).show();
 	    }
 
@@ -105,7 +105,7 @@ $(document).ready(function() {
 	            //a new page has been requested
 
 	            //loop through all of the divs and hide them all.
-	            for (var i=1; i <= totalNumRecords; i++) {
+	            for (var i=0; i < totalNumRecords; i++) {
 	            	 $(".sermon-content").find(".sermon-row.index" + i).hide();
 	            }
 
