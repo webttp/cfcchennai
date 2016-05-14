@@ -182,12 +182,11 @@
             <div class="col-md-12 col-sm-12 col-xs-12 sermons-table">
 				<div class="query-section">
 					<div class="search-textbox">
-						Search by: 
-						<input ng-model="query" placeholder=" Search Sermons ..">
+						<input ng-model="query" class="seacrh-input"> <span class="text-placeholder"> Search Sermon title </span> </input>
 					</div>
 					<div class="search-dropdwon">
 						<select ng-model="locationOrder">
-							<option default="Select Location"> Select Location </option>
+							<option value="">  Location </option>
 							<option value="+location"> CFC-Tambaram </option>
 							<option value="-location"> CFC-Thirumullaivoyal </option>
 						</select>
