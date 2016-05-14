@@ -1,42 +1,8 @@
 $(document).ready(function() {
+	
 	// To load the sermons from json file
-	var sermonFolderName = "admin/messagesData.json";
-	var sermonRowList = [] ;
-	 console.log("inside sermon pgm");
 	$(".loading-spinner").css("display","block");
-	// To read the images for Home page banner slider
-	/*$.ajax({
-		 url : "admin/getMessages.php",
-		 data: {
-		 action:"start"
-    		 },
-		 type:"GET", 
-		 dataType: "json",
-		 success: function (data) {
-			 console.log("inside ajax");
-			 $.each(data,function(index,item){
-				 sermonRowList += "<div class='sermon-row index"+index+"'><div class='sermon-col col-md-2'>"+ item.date+"</div>";
-				 sermonRowList += "<div class='sermon-col col-md-4'>"+ item.title+"</div>";
-				 sermonRowList += "<div class='sermon-col col-md-3'>"+ item.speaker+"</div>";
-				 sermonRowList += "<div class='sermon-col col-md-3'>";
-				 if(item.messagetype == "audio"){
-					 sermonRowList += "<a id='sermon_audio' class='sermon-audio' data-src='"+ item.audiokey +"' title='"+item.title+"'></a>";
-				 }
-				 else if(item.messagetype == "video"){
-					 sermonRowList += "<a id='sermon_video' class='sermon-video' data-src='"+ item.videokey +"' title='"+item.title+"'></a>";
-				 } else if(item.messagetype == "both") {
-					 sermonRowList += "<a id='sermon_audio' class='sermon-audio' data-src='"+ item.audiokey +"' title='"+item.title+"'></a>";
-					 sermonRowList += "<a id='sermon_video' class='sermon-video' data-src='"+ item.videokey +"' title='"+item.title+"'></a>";
-				 }
-				 sermonRowList += "<a class='sermon-download' href='"+item.audiokey+"' download='"+item.audiokey+"'></a>";
-				 sermonRowList += "</div></div>";
-				$(".sermon-content").html(sermonRowList);
-			 });
-		},
-		error: function(data){
-			console.log(data);
-		}
-	}); */
+	
 	setTimeout(function(){
 		$(".home-page-spinner").css("display","none");
 		$(".loading-spinner").css("display","none");},2000);
@@ -158,5 +124,14 @@ $(document).ready(function() {
    }
    
 	}, 2000);
+	
+	/* Textbox and dropdown functionalities in sermon's page */
+	$(".search-textbox input").on("focus mouseenter", function(e){
+		$(this).find("span").html("");
+	}).on("mouseout", function(e){
+		if($(this).find("span").html("") == ""){
+			$(this).find("span").html("Search Sermon title");
+		}
+	});
 });
 
