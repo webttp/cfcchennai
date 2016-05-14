@@ -127,10 +127,10 @@ $(document).ready(function() {
 	
 	/* Textbox and dropdown functionalities in sermon's page */
 	$(".search-textbox input").on("focus mouseenter", function(e){
-		$(this).find("span").html("");
+		$(this).attr("value","");
 	}).on("mouseout", function(e){
-		if($(this).find("span").html("") == ""){
-			$(this).find("span").html("Search Sermon title");
+		if($(this).attr("value") == ""){
+			$(this).attr("value","Search Sermon title");
 		}
 	});
 });
