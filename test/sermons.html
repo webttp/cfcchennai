@@ -193,7 +193,7 @@
 					      <option value="-CFC-Thirumullaivoyal"> CFC-Thirumullaivoyal </option>
 					      <option value="+CFC-Tambaram"> CFC-Tambaram </option>
 				     	</select>
-					<div class="sermon-row index{{::$index}}" ng-repeat="message in messages track by $index | orderBy: selectLocation | filter:query">
+					<div class="sermon-row index{{::$index}}" ng-repeat="message in messageObject track by $index | orderBy: selectLocation | filter:query">
 						<div class='sermon-col col-md-2'> {{message.date}} </div>
 						<div class='sermon-col col-md-4'> {{message.title }} </div>
 						<div class='sermon-col col-md-3'> {{message.speaker}} </div>
