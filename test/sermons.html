@@ -190,8 +190,8 @@
 					Search by: 
 					<input ng-model="query" placeholder=" ">
 					<select ng-model="selectLocation">
-					      <option value="+location"> CFC-Thirumullaivoyal </option>
-					      <option value="-location"> CFC-Tambaram </option>
+					      <option value="-CFC-Thirumullaivoyal"> CFC-Thirumullaivoyal </option>
+					      <option value="+CFC-Tambaram"> CFC-Tambaram </option>
 				     	</select>
 					<div class="sermon-row index{{::$index}}" ng-repeat="message in messages track by $index | orderBy: selectLocation | filter:query">
 						<div class='sermon-col col-md-2'> {{message.date}} </div>
