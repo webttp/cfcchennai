@@ -174,8 +174,8 @@
            		 </div>
            		 <div class="video-section">
            		 	<div class="player">
-								<iframe width="720" height="340" src="http://www.youtube.com/embed/MslSfF9AewQ?rel=0&showinfo=0&enablejsapi=1" frameborder="0" allowfullscreen> 
-								</iframe>
+					<iframe width="720" height="340" src="http://www.youtube.com/embed/MslSfF9AewQ?rel=0&showinfo=0&enablejsapi=1" frameborder="0" allowfullscreen> 
+					</iframe>
 					</div>
 				 </div>
             </div>
@@ -190,10 +190,10 @@
 					Search by: 
 					<input ng-model="query" placeholder=" ">
 					<select ng-model="selectLocation">
-				      <option value="+location"> CFC-Thirumullaivoyal </option>
-				      <option value="-location"> CFC-Tambaram </option>
-				     </select>
-					<div class="sermon-row index{{::$index}}" ng-repeat="message in messages track by $index | toArray | orderBy: selectLocation | filter:query">
+					      <option value="+location"> CFC-Thirumullaivoyal </option>
+					      <option value="-location"> CFC-Tambaram </option>
+				     	</select>
+					<div class="sermon-row index{{::$index}}" ng-repeat="message in messages track by $index | orderBy: selectLocation | filter:query">
 						<div class='sermon-col col-md-2'> {{message.date}} </div>
 						<div class='sermon-col col-md-4'> {{message.title }} </div>
 						<div class='sermon-col col-md-3'> {{message.speaker}} </div>
