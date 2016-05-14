@@ -186,7 +186,8 @@
 						<span class="search-title-hint"> Search sermon by title:  </span><input ng-model="query" class="seacrh-input" value="Search Sermon title" /> 
 					</div>
 					<div class="pull-right search-dropdown"> <span class="search-location-hint"> Location: </span> 
-						<select name="location" id="location" ng-model="locationOrder" ng-change="locationtrigger(locationOrder)">
+						<select name="location" id="location" ng-model="locationOrder" ng-change="locationtrigger(locationOrder)" required>
+							<option value="">Select CFC - Location</option>
 							<option value="CFC-Tambaram"> CFC-Tambaram </option>
 							<option value="CFC-Thirumullaivoyal"> CFC-Thirumullaivoyal </option>
 						</select>
@@ -194,15 +195,7 @@
 				</div>
 				<div class="sermons-header">
 					<div class="sermon-date sermon-col col-md-2 col-sm-2 col-xs-2"> 
-						<datepicker date-format="yyyy-MM-dd" selector="form-control">
-						    <div class="input-group">
-						        <input ng-model='date' class="form-control" placeholder="Choose a date"/>
-						        <span class="input-group-addon" style="cursor: pointer">
-						        	<i class="fa fa-lg fa-calendar"></i>
-						        </span>
-						    </div>
-						</datepicker>
-						<a ng-click="sort_by('date');"> Date </a></div>
+						<a ng-click="sort_by('date');"> Date <i class="fa fa-caret-down"></i> </a></div>
 					<div class="sermon-title sermon-col col-md-4 col-sm-4 col-xs-4"> Title </div>
 					<div class="sermon-speaker sermon-col col-md-3 col-sm-3 col-xs-3"> <a ng-click="sort_by('speaker');"> Speaker <i class="fa fa-caret-down"></i> </a> </div>
 					<div class="sermon-media sermon-col col-md-3 col-sm-3 col-xs-3"> <a ng-click="sort_by('messagetype');"> Media <i class="fa fa-caret-down"> </i> </a> </div>
