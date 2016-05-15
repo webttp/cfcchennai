@@ -2,7 +2,7 @@ var sermonApp = angular.module('sermonApp', ['angular-toArrayFilter', '720kb.dat
 
 sermonApp.controller('sermonController',function($scope, $http, $timeout){
    // setting the number of records per page
-   
+   $scope.messages = [];
    $http.get('admin/getMessages.php?action=start').success(function(data){
    		$scope.loaded = true;
    		$scope.messages = data;
@@ -52,7 +52,7 @@ sermonApp.controller('sermonController',function($scope, $http, $timeout){
 	  };
 
 	  $scope.pageCount = function() {
-		return Math.ceil($scope.datalists.length/$scope.itemsPerPage)-1;
+		return Math.ceil($scope.messages.length/$scope.itemsPerPage)-1;
 	  };
 
 	  $scope.nextPage = function() {
