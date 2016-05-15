@@ -72,6 +72,8 @@ $(document).ready(function() {
 		}
 	});
 	  
+	var recordsPerPage = 5;
+	var totalNumRecords;
 	// Loading of the Sermon table contents
 	setTimeout(function(){
 	$(".pagination").hide();
@@ -85,7 +87,7 @@ $(document).ready(function() {
 	    $(".pagination").show();
 
 	    //loop through all of the divs and hide them by default.
-	    for (var i=0; i < totalNumRecords; i++) {
+	    for (var i=0; i <= totalNumRecords; i++) {
 	        $(".sermon-content").find(".sermon-row.index" + i).hide();
 	    }
 
@@ -114,7 +116,7 @@ $(document).ready(function() {
 	            var recordsTo = recordsPerPage * (page);
 
 	            //then display only the records on the specified page
-	            for (var i = recordsFrom; i <= recordsTo; i++) {
+	            for (var i = recordsFrom; i < recordsTo; i++) {
             	$(".sermon-content").find(".sermon-row.index" + i).show();
 	            }      
 	            //scroll to the top of the page if the page is changed
