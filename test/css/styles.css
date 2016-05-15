@@ -565,6 +565,9 @@ figure.inner-image {
 .pagination-div {
 	float: right;
 }
+.pagination>li {
+	display: inline-flex;
+}
 .player iframe {
 	width: 100%;
 }
