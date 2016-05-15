@@ -66,10 +66,12 @@ $(document).ready(function() {
 				player.setSrc(src) ;
 				player.load();
 				player.play();
+				$("html, body").animate({ scrollTop: 0 }, "slow");
 			} else if(item.attr("id") == "sermon-video"){
 				$(".sermons-player-section .audio-section").css("display","none");
 				$(".sermons-player-section .video-section").css("display","block");
 				$(".video-section .player iframe").attr("src",src);
+				$("html, body").animate({ scrollTop: 0 }, "slow");
 			}
 		}
 	});
