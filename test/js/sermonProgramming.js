@@ -72,7 +72,7 @@ $(document).ready(function() {
 		}
 	});
 	  
-	var recordsPerPage = 5;
+	/* var recordsPerPage = 5;
 	var totalNumRecords;
 	// Loading of the Sermon table contents
 	setTimeout(function(){
@@ -126,7 +126,7 @@ $(document).ready(function() {
    }
    
 	}, 2000);
-	
+	*/
 	/* Textbox and dropdown functionalities in sermon's page */
 	$(".search-textbox input").on("focus mouseenter", function(e){
 		$(this).attr("value","");
