@@ -180,7 +180,7 @@
 					</div>
 				 </div>
             </div>
-            <div class="col-md-12 col-sm-12 col-xs-12 sermons-table">
+            <div class="col-md-12 col-sm-12 col-xs-12 sermons-table" ng-init="showData()">
 				<div class="query-section">
 					<div class="search-textbox">
 						<span class="search-title-hint"> Search sermon by title:  </span><input ng-model="query" class="seacrh-input" value="Search Sermon title" /> 
@@ -201,7 +201,7 @@
 					<div class="sermon-media sermon-col col-md-3 col-sm-3 col-xs-3"> <a ng-click="sort_by('messagetype');"> Media <i class="fa fa-caret-down"> </i> </a> </div>
 				</div>
 				<div class="sermon-content">
-					<div class="sermon-row index{{::$index}}" ng-repeat="message in filtered = ( messages | filter:query | orderBy : predicate :reverse )  track by $index">
+					<div class="paginationclass sermon-row index{{::$index}}" ng-repeat="message in filtered = ( messages | filter:query | orderBy : predicate :reverse  | pagination : currentPage*itemsPerPage | limitTo: itemsPerPage )  track by $index">
 						<div class='sermon-col col-md-2'> {{ message.date | date:'dd-MM-yyyy'}} </div>
 						<div class='sermon-col col-md-4'> {{ message.title }} </div>
 						<div class='sermon-col col-md-3'> {{ message.speaker }} </div>
@@ -223,13 +223,19 @@
 				<div class="empty-message" ng-show="messages.length == 0">
             				<h4>No messages found</h4>
             			</div>
-				<div class="pagination">
-				
-					<a href="#" class="first" data-action="first">&laquo;</a>
-					<a href="#" class="previous" data-action="previous">&lsaquo;</a> 
-					<input type="text" readonly="readonly" data-max-page="40" /> 
-					<a href="#" class="next" data-action="next">&rsaquo;</a> 
-					<a href="#" class="last" data-action="last">&raquo;</a>
+				<div class="pagination-div">
+					<ul class="pagination">
+						  <li ng-class="DisablePrevPage()">
+							<a href ng-click="prevPage()">« Prev</a>
+						  </li>
+						  <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
+							<a href="#">{{n+1}}</a>
+						  </li>
+						  <li ng-class="DisableNextPage()">
+							<a href ng-click="nextPage()">Next »</a>
+							 
+						  </li>
+						</ul>
 				</div>
 			</div>
 			</div>
