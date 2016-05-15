@@ -562,6 +562,9 @@ figure.inner-image {
 	width: 100%;
 	text-align: center;
 }
+.pagination-div {
+	float: right;
+}
 .player iframe {
 	width: 100%;
 }
