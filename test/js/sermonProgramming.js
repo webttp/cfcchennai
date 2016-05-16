@@ -7,7 +7,7 @@ $(document).ready(function() {
 		$(".home-page-spinner").css("display","none");
 		$(".loading-spinner").css("display","none");},2000);
 	
-	var mediaPlayer = $('audio').mediaelementplayer({
+/*	var mediaPlayer = $('audio').mediaelementplayer({
 			// if the <video width> is not specified, this is the default
 		    defaultVideoWidth: 480,
 		    // if the <video height> is not specified, this is the default
@@ -49,6 +49,7 @@ $(document).ready(function() {
 		    // array of keyboard commands
 		    keyActions: []
 	});
+	*/
 	 /*jPlayer audio player*/ 
 	$("#audio_jplayer_1").jPlayer({
 	        ready: function () {
