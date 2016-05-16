@@ -81,9 +81,10 @@ $(document).ready(function() {
 			if(item.attr("id") == "sermon-audio"){
 				$(".sermons-player-section .video-section").css("display","none");
 				$(".sermons-player-section .audio-section").css("display","block");
-				player.setSrc(src) ;
+				updatePlayer(title,src);
+				/*player.setSrc(src) ;
 				player.load();
-				player.play();
+				player.play();*/
 				$("html, body").animate({ scrollTop: 0 }, "slow");
 			} else if(item.attr("id") == "sermon-video"){
 				$(".sermons-player-section .audio-section").css("display","none");
@@ -94,7 +95,27 @@ $(document).ready(function() {
 		}
 	});
 	  
+	function updatePlayer(title, src){
+	        var player = $("#audio_jplayer_1");
 	
+	        player.jPlayer({
+	        ready: function () { 
+	          $(this).jPlayer("setMedia", { 
+	            title: title,
+	            mp3: src
+	
+	          }); 
+	          $(this).jPlayer("play", 0);
+	        },
+	        swfPath: "/js",
+	        supplied: "mp3",
+	
+	      }); 
+	      player.jPlayer("setMedia", { 
+	            mp3: src
+	          }); 
+	      player.jPlayer("play", 0);
+    }
 	/* var recordsPerPage = 5;
 	var totalNumRecords;
 	// Loading of the Sermon table contents
