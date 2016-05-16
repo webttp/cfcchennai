@@ -74,8 +74,8 @@ $(document).ready(function() {
 		var item = $(this);
 		if(item.attr("id") != "sermon-download"){
 			e.preventDefault();
-			var player = new MediaElementPlayer('audio');
-			player.pause();
+			/* var player = new MediaElementPlayer('audio');
+			player.pause();*/
 			var title = item.attr("title");
 			$(".sermon-section-title").html(title);
 			var src =  item.attr("class");
