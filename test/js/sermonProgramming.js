@@ -50,25 +50,6 @@ $(document).ready(function() {
 		    keyActions: []
 	});
 	*/
-	 /*jPlayer audio player*/ 
-	$("#audio_jplayer_1").jPlayer({
-	        ready: function () {
-	          $(this).jPlayer("setMedia", {
-	            title: "CFCC Messages",
-	            mp3: "https://ia601508.us.archive.org/14/items/02DailyFellowshipWithGod/02-Daily%20fellowship%20with%20God.mp3"
-	           });
-	        },
-	        cssSelectorAncestor: "#audio_jplayer_1",
-	        swfPath: "/js",
-	        supplied: "mp3",
-	        useStateClassSkin: true,
-	        autoBlur: false,
-	        smoothPlayBar: true,
-	        keyEnabled: true,
-	        remainingDuration: true,
-	        toggleDuration: true
-	      });
-	
 	// To handle the click event of music , video and download buttons
 	$(".sermon-content").on("click","a",function(e){
 		var item = $(this);
@@ -112,11 +93,7 @@ $(document).ready(function() {
 	        supplied: "mp3",
 	
 	      }); 
-	      player.jPlayer("setMedia", { 
-	            mp3: src
-	          }); 
-	      player.jPlayer("play", 0);
-    }
+	}
 	/* var recordsPerPage = 5;
 	var totalNumRecords;
 	// Loading of the Sermon table contents
