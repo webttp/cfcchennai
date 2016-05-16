@@ -554,6 +554,25 @@ figure.inner-image {
 .audio-section , .video-section {
 	clear: both;
 }
+.audio-section {
+	min-height: 250px;
+	margin-left: 20%;
+}
+.jp-audio, .jp-audio-stream, .jp-video {
+	margin-top: 10%;
+}
+.jp-audio .jp-controls {
+	width: 100% !important;
+}
+.jp-volume-controls {
+	top: 24px !important;
+}
+.jp-controls-holder {
+	width: 70% !important;
+}
+.jp-progress , .jp-seek-bar {
+	
+}
 .video-section, .player {
 	width: 100%;
 	height: 360px;
