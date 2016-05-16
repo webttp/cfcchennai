@@ -38,27 +38,6 @@
       <script type="text/javascript" src="js/toArrayFilter.js"></script>
       <script type="text/javascript" src="js/sermonProgramming.js"></script>
       <script type="text/javascript" src="js/sermonController.js"></script>
-      <script type="text/javascript">
-	    $(document).ready(function(){
-	      $("#audio_jplayer_1").jPlayer({
-	        ready: function () {
-	          $(this).jPlayer("setMedia", {
-	            title: "CFCC Messages",
-	            mp3: "https://ia601508.us.archive.org/14/items/02DailyFellowshipWithGod/02-Daily%20fellowship%20with%20God.mp3"
-	          });
-	        },
-	        cssSelectorAncestor: "#jp_container_1",
-	        swfPath: "/js",
-	        supplied: "mp3",
-	        useStateClassSkin: true,
-	        autoBlur: false,
-	        smoothPlayBar: true,
-	        keyEnabled: true,
-	        remainingDuration: true,
-	        toggleDuration: true
-	      });
-	    });
-	  </script>
    </head>
    <body class="no-sidebars md" ng-controller="sermonController">
       <header>
