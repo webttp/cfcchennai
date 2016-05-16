@@ -1,295 +1,314 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html ng-app="sermonApp">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <meta name="description" content="A Church of disciples of the Lord Jesus Christ, at Chennai since 1986, 
-      emphasizing new birth, holiness of inner life, mutual love, financial integrity and sharing God's truth with others. 
-      An evangelical, non-denominational church in Chennai, India.">
-    <meta name="keywords" content="Chennai,Zac Poonen, Zac poonen church in Chennai, cfc church in chennai, Chennai church,church chennai,christian chennai,India,church india,church south india,
-      churches in india,churches in chennai, church in india,christian,chrisrtian india,fellowship,Christian fellowship Church in Chennai, cfc chennai, cfc in chennai,cfc">
-    <meta name="MobileOptimized" content="width">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="viewport" content="width=device-width,  initial-scale=1.0 , maximum-scale=1.0">
-    <meta http-equiv="cleartype" content="on">
-    <title>CHENNAI CHURCH | Christian Fellowship Church, India </title>
-    <!-- lightbox css files -->
-    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
-    <!-- CSS files  -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/slider.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/jqpagination.css"> 
-    <link type="text/css" href="skin/blue.monday/css/jplayer.blue.monday.css" rel="stylesheet" /> -->
-    <link type="text/css" rel="stylesheet" href="skin/pink.flag/css/jplayer.pink.flag.css"  />
-    
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/mediaelementplayer.css" /> -->
-    
-    <!-- Script files -->
-    <script type="text/javascript" src="js/jQuery.js"></script>
-    <script type="text/javascript" src="js/siteProgramming.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/csi.min.js"></script>
-    <script type="text/javascript" src="js/lightbox.js"></script>
-    <script type="text/javascript" src="js/angular.min.js"></script>
-    <script type="text/javascript" src="js/jquery.jqpagination.js"></script>
-    <!-- <script type="text/javascript" src="js/mediaelement-and-player.min.js"></script> -->
-    <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
-    <script type="text/javascript" src="js/angular-datepicker.js"></script>
-    <script type="text/javascript" src="js/toArrayFilter.js"></script>
-    <script type="text/javascript" src="js/sermonProgramming.js"></script>
-    <script type="text/javascript" src="js/sermonController.js"></script>
-    
- 
-
-   
-  </head>
-  <body class="no-sidebars md" ng-controller="sermonController">
-    <header>
-      <div class="menu-container">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-1 col-sm-1 col-xs-2 cfcc-logo">
-              <a href="http://www.cfcindia.com/"> 
-              <img class="img-responsive main-logo" src="images/Logo.png" alt="Chennai-CFC-Image">
-              </a>
-            </div>
-            <div class="col-md-10 col-sm-10 col-xs-8 cfcc-verse">
-              <div class="col-md-10 col-sm-10 hidden-xs">
-                <a href="http://www.cfcindia.com">
-                  <div class="hidden-xs banner-text">Christian Fellowship
-                    Church, Chennai
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="description" content="A Church of disciples of the Lord Jesus Christ, at Chennai since 1986, 
+         emphasizing new birth, holiness of inner life, mutual love, financial integrity and sharing God's truth with others. 
+         An evangelical, non-denominational church in Chennai, India.">
+      <meta name="keywords" content="Chennai,Zac Poonen, Zac poonen church in Chennai, cfc church in chennai, Chennai church,church chennai,christian chennai,India,church india,church south india,
+         churches in india,churches in chennai, church in india,christian,chrisrtian india,fellowship,Christian fellowship Church in Chennai, cfc chennai, cfc in chennai,cfc">
+      <meta name="MobileOptimized" content="width">
+      <meta name="HandheldFriendly" content="true">
+      <meta name="viewport" content="width=device-width,  initial-scale=1.0 , maximum-scale=1.0">
+      <meta http-equiv="cleartype" content="on">
+      <title>CHENNAI CHURCH | Christian Fellowship Church, India </title>
+      <!-- lightbox css files -->
+      <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+      <!-- CSS files  -->
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+      <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
+      <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/slider.css">
+      <!-- <link rel="stylesheet" type="text/css" href="css/jqpagination.css"> 
+         <link type="text/css" href="skin/blue.monday/css/jplayer.blue.monday.css" rel="stylesheet" /> -->
+      <link type="text/css" rel="stylesheet" href="skin/pink.flag/css/jplayer.pink.flag.css"  />
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+      <!-- <link rel="stylesheet" href="css/mediaelementplayer.css" /> -->
+      <!-- Script files -->
+      <script type="text/javascript" src="js/jQuery.js"></script>
+      <script type="text/javascript" src="js/siteProgramming.js"></script>
+      <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/csi.min.js"></script>
+      <script type="text/javascript" src="js/lightbox.js"></script>
+      <script type="text/javascript" src="js/angular.min.js"></script>
+      <script type="text/javascript" src="js/jquery.jqpagination.js"></script>
+      <!-- <script type="text/javascript" src="js/mediaelement-and-player.min.js"></script> -->
+      <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+      <script type="text/javascript" src="js/angular-datepicker.js"></script>
+      <script type="text/javascript" src="js/toArrayFilter.js"></script>
+      <script type="text/javascript" src="js/sermonProgramming.js"></script>
+      <script type="text/javascript" src="js/sermonController.js"></script>
+      <script type="text/javascript">
+	    $(document).ready(function(){
+	      $("#audio_jplayer_1").jPlayer({
+	        ready: function () {
+	          $(this).jPlayer("setMedia", {
+	            title: "CFCC Messages",
+	            mp3: "https://ia601508.us.archive.org/14/items/02DailyFellowshipWithGod/02-Daily%20fellowship%20with%20God.mp3"
+	          });
+	        },
+	        cssSelectorAncestor: "#jp_container_1",
+	        swfPath: "/js",
+	        supplied: "mp3",
+	        useStateClassSkin: true,
+	        autoBlur: false,
+	        smoothPlayBar: true,
+	        keyEnabled: true,
+	        remainingDuration: true,
+	        toggleDuration: true
+	      });
+	    });
+	  </script>
+   </head>
+   <body class="no-sidebars md" ng-controller="sermonController">
+      <header>
+         <div class="menu-container">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-1 col-sm-1 col-xs-2 cfcc-logo">
+                     <a href="http://www.cfcindia.com/"> 
+                     <img class="img-responsive main-logo" src="images/Logo.png" alt="Chennai-CFC-Image">
+                     </a>
                   </div>
-                </a>
-                <!-- <div class="hidden-xs verse-text">
-                  <em>And he who does not take his cross and follow after Me is not worthy of Me </br> (Matthew 10:38) </em>
-                  </div> -->
-              </div>
-              <div class="hidden-md hidden-lg hidden-sm col-xs-12 xs-banner-text">
-                Christian Fellowship Church, Chennai
-              </div>
+                  <div class="col-md-10 col-sm-10 col-xs-8 cfcc-verse">
+                     <div class="col-md-10 col-sm-10 hidden-xs">
+                        <a href="http://www.cfcindia.com">
+                           <div class="hidden-xs banner-text">Christian Fellowship
+                              Church, Chennai
+                           </div>
+                        </a>
+                        <!-- <div class="hidden-xs verse-text">
+                           <em>And he who does not take his cross and follow after Me is not worthy of Me </br> (Matthew 10:38) </em>
+                           </div> -->
+                     </div>
+                     <div class="hidden-md hidden-lg hidden-sm col-xs-12 xs-banner-text">
+                        Christian Fellowship Church, Chennai
+                     </div>
+                  </div>
+                  <div class="col-md-1 col-sm-1 col-xs-1">
+                     <a class="fb-share-button"
+                        href="https://www.facebook.com/groups/1419135528352392/" target="_blank"></a>
+                  </div>
+                  <div class="hidden-md hidden-lg hidden-sm col-xs-1">
+                     <nav class="navbar navbar-default navbar-inverse menu" role="navigation">
+                        <div class="navbar-header toggle-bar">
+                           <button type="button" id="menu_btn" class="navbar-toggle" data-toggle="collapse" data-target="#menu_items_bar">
+                           <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                           </button>
+                        </div>
+                        <div id="menu_items_bar" class="overlay-container mobile-menu-items collapse navbar-collapse" style="display:none;">
+                           <a id="menu_btn">
+                              </al>
+                              <ul class="nav navbar-main">
+                                 <li class='active dropdown parent_menu'>
+                           <a href='cfcc-home.html' title="home" class='home dropdown-toggle' 
+                              data-toggle='dropdown'>
+                           <span>Home</span></a>
+                           </li>
+                           <li class='dropdown parent_menu'>
+                           <a href="about-us.html" target="_self" title="about-us" class='aboutUs dropdown-toggle' data-toggle='dropdown'>
+                           <span>About us</span></a>
+                           </li>
+                           <li class='dropdown parent_menu'>
+                           <a href='sermons.html' title="sermons" class='sermons dropdown-toggle' 
+                              data-toggle='dropdown'>
+                           <span>Sermons</span></a>
+                           </li>
+                           <li class='dropdown parent_menu'>
+                           <a href='about-zac.html' title="about-zac" class='aboutBrother dropdown-toggle' data-toggle='dropdown'>
+                           <span>About Zac Poonen</span></a>
+                           </li>
+                           <li class="has-sub dropdown parent_menu">
+                           <a href='cfcc-thirumullai.html' title="cfcc-thirumullai" class='locateUs dropdown-toggle' data-toggle='dropdown'>
+                           <span>Locate Us</span> <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                           <ul class="dropdown-menu  multi-column-dropdown">
+                           <li class="child_menu menu-list-item">
+                           <a href="cfcc-thirumullai.html" title="cfcc-thirumullai"><span>CFC Thirumullaivoyal</span></a>
+                           </li>
+                           <li class="child_menu menu-list-item">
+                           <a href="cfcc-tambaram.html" title="cfcc-tambaram"><span> CFC Tambaram </span></a>
+                           </li>
+                           </ul>
+                           </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-1 col-sm-1 col-xs-1">
-              <a class="fb-share-button"
-                href="https://www.facebook.com/groups/1419135528352392/" target="_blank"></a>
+         </div>
+         </div>
+         <div class="menu-nav-container">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12 hidden-xs">
+                     <nav class="navbar navbar-default navbar-inverse menu" role="navigation">
+                        <div id="menu_items_bar" class="collapse navbar-collapse">
+                           <ul class="nav navbar-main">
+                              <li class='active dropdown parent_menu'>
+                                 <a href='cfcc-home.html' title="home" class='home dropdown-toggle' data-toggle='dropdown'><span>Home</span></a>
+                              </li>
+                              <li class='dropdown parent_menu'>
+                                 <a href="about-us.html" target="_self" title="about-us" class='aboutUs dropdown-toggle' data-toggle='dropdown'><span>About us</span></a>
+                              </li>
+                              <li class='dropdown parent_menu'>
+                                 <a href='sermons.html' title="sermons"  class='sermons dropdown-toggle' data-toggle='dropdown'><span>Sermons</span></a>
+                              </li>
+                              <li class='dropdown parent_menu'>
+                                 <a href='about-zac.html' title="about-zac"  class='aboutBrother dropdown-toggle' data-toggle='dropdown'><span>About Zac Poonen</span></a>
+                              </li>
+                              <li class="has-sub dropdown parent_menu">
+                                 <a href='cfcc-thirumullai.html' title="cfcc-thirumullai"  class='locateUs dropdown-toggle' data-toggle='dropdown'><span>Locate Us</span>
+                                 <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                                 <ul class="dropdown-menu  multi-column-dropdown">
+                                    <li class="child_menu menu-list-item">
+                                       <a href="cfcc-thirumullai.html" title="cfcc-thirumullai"><span> CFC Thirumullaivoyal</span></a>
+                                    </li>
+                                    <li class="child_menu menu-list-item">
+                                       <a href="cfcc-tambaram.html" title="cfcc-tambaram"><span> CFC Tambaram </span></a>
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
             </div>
-            <div class="hidden-md hidden-lg hidden-sm col-xs-1">
-              <nav class="navbar navbar-default navbar-inverse menu" role="navigation">
-                <div class="navbar-header toggle-bar">
-                  <button type="button" id="menu_btn" class="navbar-toggle" data-toggle="collapse" data-target="#menu_items_bar">
-                  <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-                  </button>
-                </div>
-                <div id="menu_items_bar" class="overlay-container mobile-menu-items collapse navbar-collapse" style="display:none;">
-                  <a id="menu_btn"></al>
-                  <ul class="nav navbar-main">
-                    <li class='active dropdown parent_menu'>
-                      <a href='cfcc-home.html' title="home" class='home dropdown-toggle' 
-                        data-toggle='dropdown'>
-                      <span>Home</span></a>
-                    </li>
-                    <li class='dropdown parent_menu'>
-                      <a href="about-us.html" target="_self" title="about-us" class='aboutUs dropdown-toggle' data-toggle='dropdown'>
-                      <span>About us</span></a>
-                    </li>
-                    <li class='dropdown parent_menu'>
-                      <a href='sermons.html' title="sermons" class='sermons dropdown-toggle' 
-                        data-toggle='dropdown'>
-                      <span>Sermons</span></a>
-                    </li>
-                    <li class='dropdown parent_menu'>
-                      <a href='about-zac.html' title="about-zac" class='aboutBrother dropdown-toggle' data-toggle='dropdown'>
-                      <span>About Zac Poonen</span></a>
-                    </li>
-                    <li class="has-sub dropdown parent_menu">
-                      <a href='cfcc-thirumullai.html' title="cfcc-thirumullai" class='locateUs dropdown-toggle' data-toggle='dropdown'>
-                      <span>Locate Us</span> <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-                      <ul class="dropdown-menu  multi-column-dropdown">
-                        <li class="child_menu menu-list-item">
-                          <a href="cfcc-thirumullai.html" title="cfcc-thirumullai"><span>CFC Thirumullaivoyal</span></a>
-                        </li>
-                        <li class="child_menu menu-list-item">
-                          <a href="cfcc-tambaram.html" title="cfcc-tambaram"><span> CFC Tambaram </span></a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
+         </div>
+      </header>
+      <div class="error-container"></div>
+      <div class="content-page-section">
+         <div class="container body-container bs-docs-container">
+            <div class="row spinner-row">
+               <div class="loading-container" style="display:none;">
+                  <i class="loading-image"></i>
+               </div>
             </div>
-          </div>
-        </div>
+            <div class="row" id="full-width">
+               <div class="col-md-12 col-sm-12 col-xs-12 home-page">
+                  <div class="col-md-8 col-sm-12 col-xs-12 content-section" id="content_section">
+                     <div class="col-md-12 col-sm-12 col-xs-12 sermons-player-section">
+                        <div id="sermon_section_title" class="sermon-section-title">  </div>
+                        <div class="audio-section" style="display:none;">
+                           <!-- <audio id="audioPlayer" src="http://www.cfcindia.org/resources/en/study-series/basic-christian-teachings/37-jesus-valued-all-people.mp3"></audio> -->
+                           <div id="audio_jplayer_1" class="jp-jplayer"></div>
+                           <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+                              <div class="jp-type-single">
+                                 <div class="jp-gui jp-interface">
+                                    <div class="jp-volume-controls">
+                                       <button class="jp-mute" role="button" tabindex="0">mute</button>
+                                       <button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+                                       <div class="jp-volume-bar">
+                                          <div class="jp-volume-bar-value"></div>
+                                       </div>
+                                    </div>
+                                    <div class="jp-controls-holder">
+                                       <div class="jp-controls">
+                                          <button class="jp-play" role="button" tabindex="0">play</button>
+                                          <button class="jp-pause" role="button" tabindex="0">pause</button>
+                                          <button class="jp-stop" role="button" tabindex="0">stop</button>
+                                       </div>
+                                       <div class="jp-progress">
+                                          <div class="jp-seek-bar">
+                                             <div class="jp-play-bar"></div>
+                                          </div>
+                                       </div>
+                                       <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+                                       <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+                                       <div class="jp-toggles">
+                                          <button class="jp-repeat" role="button" tabindex="0">repeat</button>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="jp-details">
+                                    <div class="jp-title" aria-label="title">&nbsp;</div>
+                                 </div>
+                                 <div class="jp-no-solution">
+                                    <span>Update Required</span>
+                                    To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="video-section">
+                           <div class="player">
+                              <iframe width="720" height="340" src="http://www.youtube.com/embed/MslSfF9AewQ?rel=0&showinfo=0&enablejsapi=1" frameborder="0" allowfullscreen> 
+                              </iframe>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-12 col-sm-12 col-xs-12 sermons-table" ng-init="showData()">
+                        <div class="query-section">
+                           <div class="search-textbox">
+                              <span class="search-title-hint"> Search sermon by title:  </span><input ng-model="query" class="seacrh-input" value="Search Sermon title" /> 
+                           </div>
+                           <div class="pull-right search-dropdown">
+                              <span class="search-location-hint"> Location: </span> 
+                              <select name="location" id="location" ng-model="locationOrder" ng-change="locationtrigger(locationOrder)" required>
+                                 <option value=""> Select CFC Location </option>
+                                 <option value="CFC-both"> CFC - ALL</option>
+                                 <option value="CFC-Tambaram"> CFC-Tambaram </option>
+                                 <option value="CFC-Thirumullaivoyal"> CFC-Thirumullaivoyal </option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="sermons-header">
+                           <div class="sermon-date sermon-col col-md-2 col-sm-2 col-xs-2"> 
+                              <a ng-click="sort_by('date');"> Date <i class="fa fa-caret-down"></i> </a>
+                           </div>
+                           <div class="sermon-title sermon-col col-md-4 col-sm-4 col-xs-4"> Title </div>
+                           <div class="sermon-speaker sermon-col col-md-3 col-sm-3 col-xs-3"> <a ng-click="sort_by('speaker');"> Speaker <i class="fa fa-caret-down"></i> </a> </div>
+                           <div class="sermon-media sermon-col col-md-3 col-sm-3 col-xs-3"> <a ng-click="sort_by('messagetype');"> Media <i class="fa fa-caret-down"> </i> </a> </div>
+                        </div>
+                        <div class="sermon-content">
+                           <div class="paginationclass sermon-row index{{::$index}}" ng-repeat="message in filtered = ( messages | filter:query | orderBy : predicate :reverse  |  pagination: curPage * pageSize | limitTo: pageSize )  track by $index">
+                              <div class='sermon-col col-md-2'> {{ message.date | date:'dd-MM-yyyy'}} </div>
+                              <div class='sermon-col col-md-4'> {{ message.title }} </div>
+                              <div class='sermon-col col-md-3'> {{ message.speaker }} </div>
+                              <div class='sermon-col col-md-3' ng-if="message.messagetype == 'audio'">
+                                 <a id='sermon-audio' class="{{message.audiokey}}" title="{{message.title}}"></a>
+                                 <a id='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
+                              </div>
+                              <div class='sermon-col col-md-3' ng-if="message.messagetype == 'video'">
+                                 <a id='sermon-video' class="{{message.videokey}}" title="{{message.title}}"></a>
+                                 <a id='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
+                              </div>
+                              <div class='sermon-col col-md-3' ng-if="message.messagetype == 'both'">
+                                 <a id='sermon-audio' class="{{message.audiokey}}" title="{{message.title}}"></a>
+                                 <a id='sermon-video' class="{{message.videokey}}" title="{{message.title}}"></a>
+                                 <a id='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="empty-message" ng-show="messages.length == 0">
+                           <h4>No messages found</h4>
+                        </div>
+                        <div class="pagination pagination-centered" ng-show="messages.length">
+                           <ul class="pagination-controle pagination">
+                              <li>
+                                 <button type="button" class="btn btn-primary" ng-disabled="curPage == 0"  ng-click="curPage=curPage-1"> &lt; PREV</button>
+                              </li>
+                              <li>
+                                 <span>Page {{curPage + 1}} of {{ numberOfPages() }}</span>
+                              </li>
+                              <li>
+                                 <button type="button" class="btn btn-primary" ng-disabled="curPage >= messages.length/pageSize - 1" ng-click="curPage = curPage+1">NEXT &gt;</button>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 timings-section" id="timings_section">
+                     <div data-include="timings.html"> </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-      </div>
-      <div class="menu-nav-container">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 hidden-xs">
-              <nav class="navbar navbar-default navbar-inverse menu" role="navigation">
-                <div id="menu_items_bar" class="collapse navbar-collapse">
-                  <ul class="nav navbar-main">
-                    <li class='active dropdown parent_menu'>
-                      <a href='cfcc-home.html' title="home" class='home dropdown-toggle' data-toggle='dropdown'><span>Home</span></a>
-                    </li>
-                    <li class='dropdown parent_menu'>
-                      <a href="about-us.html" target="_self" title="about-us" class='aboutUs dropdown-toggle' data-toggle='dropdown'><span>About us</span></a>
-                    </li>
-                    <li class='dropdown parent_menu'>
-                      <a href='sermons.html' title="sermons"  class='sermons dropdown-toggle' data-toggle='dropdown'><span>Sermons</span></a>
-                    </li>
-                    <li class='dropdown parent_menu'>
-                      <a href='about-zac.html' title="about-zac"  class='aboutBrother dropdown-toggle' data-toggle='dropdown'><span>About Zac Poonen</span></a>
-                    </li>
-                    <li class="has-sub dropdown parent_menu">
-                      <a href='cfcc-thirumullai.html' title="cfcc-thirumullai"  class='locateUs dropdown-toggle' data-toggle='dropdown'><span>Locate Us</span>
-                      <i class="fa fa-caret-down" aria-hidden="true"></i></a>
-                      <ul class="dropdown-menu  multi-column-dropdown">
-                        <li class="child_menu menu-list-item">
-                          <a href="cfcc-thirumullai.html" title="cfcc-thirumullai"><span> CFC Thirumullaivoyal</span></a>
-                        </li>
-                        <li class="child_menu menu-list-item">
-                          <a href="cfcc-tambaram.html" title="cfcc-tambaram"><span> CFC Tambaram </span></a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="error-container"></div>
-    <div class="content-page-section">
-      <div class="container body-container bs-docs-container">
-        <div class="row spinner-row">
-          <div class="loading-container" style="display:none;">
-            <i class="loading-image"></i>
-          </div>
-        </div>
-        <div class="row" id="full-width">
-          <div class="col-md-12 col-sm-12 col-xs-12 home-page">
-          <div class="col-md-8 col-sm-12 col-xs-12 content-section" id="content_section">
-            <div class="col-md-12 col-sm-12 col-xs-12 sermons-player-section">
-            	<div id="sermon_section_title" class="sermon-section-title">  </div>
-           		 <div class="audio-section" style="display:none;">
-           		 	<!-- <audio id="audioPlayer" src="http://www.cfcindia.org/resources/en/study-series/basic-christian-teachings/37-jesus-valued-all-people.mp3"></audio> -->
-           		 	<div id="audio_jplayer_1" class="jp-jplayer"></div>
-						<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
-						  <div class="jp-type-single">
-						    <div class="jp-gui jp-interface">
-						      <div class="jp-volume-controls">
-						        <button class="jp-mute" role="button" tabindex="0">mute</button>
-						        <button class="jp-volume-max" role="button" tabindex="0">max volume</button>
-						        <div class="jp-volume-bar">
-						          <div class="jp-volume-bar-value"></div>
-						        </div>
-						      </div>
-						      <div class="jp-controls-holder">
-						        <div class="jp-controls">
-						          <button class="jp-play" role="button" tabindex="0">play</button>
-						          <button class="jp-stop" role="button" tabindex="0">stop</button>
-						        </div>
-						        <div class="jp-progress">
-						          <div class="jp-seek-bar">
-						            <div class="jp-play-bar"></div>
-						          </div>
-						        </div>
-						        <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-						        <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-						        <div class="jp-toggles">
-						          <button class="jp-repeat" role="button" tabindex="0">repeat</button>
-						        </div>
-						      </div>
-						    </div>
-						    <div class="jp-details">
-						      <div class="jp-title" aria-label="title">&nbsp;</div>
-						    </div>
-						    <div class="jp-no-solution">
-						      <span>Update Required</span>
-						      To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
-						    </div>
-						  </div>
-						</div>
-           		 	</div>
-           		 <div class="video-section">
-           		 	<div class="player">
-					<iframe width="720" height="340" src="http://www.youtube.com/embed/MslSfF9AewQ?rel=0&showinfo=0&enablejsapi=1" frameborder="0" allowfullscreen> 
-					</iframe>
-					</div>
-				 </div>
-            </div>
-            <div class="col-md-12 col-sm-12 col-xs-12 sermons-table" ng-init="showData()">
-				<div class="query-section">
-					<div class="search-textbox">
-						<span class="search-title-hint"> Search sermon by title:  </span><input ng-model="query" class="seacrh-input" value="Search Sermon title" /> 
-					</div>
-					<div class="pull-right search-dropdown"> <span class="search-location-hint"> Location: </span> 
-						<select name="location" id="location" ng-model="locationOrder" ng-change="locationtrigger(locationOrder)" required>
-							<option value=""> Select CFC Location </option>
-							<option value="CFC-both"> CFC - ALL</option>
-							<option value="CFC-Tambaram"> CFC-Tambaram </option>
-							<option value="CFC-Thirumullaivoyal"> CFC-Thirumullaivoyal </option>
-						</select>
-					</div>
-				</div>
-				<div class="sermons-header">
-					<div class="sermon-date sermon-col col-md-2 col-sm-2 col-xs-2"> 
-						<a ng-click="sort_by('date');"> Date <i class="fa fa-caret-down"></i> </a></div>
-					<div class="sermon-title sermon-col col-md-4 col-sm-4 col-xs-4"> Title </div>
-					<div class="sermon-speaker sermon-col col-md-3 col-sm-3 col-xs-3"> <a ng-click="sort_by('speaker');"> Speaker <i class="fa fa-caret-down"></i> </a> </div>
-					<div class="sermon-media sermon-col col-md-3 col-sm-3 col-xs-3"> <a ng-click="sort_by('messagetype');"> Media <i class="fa fa-caret-down"> </i> </a> </div>
-				</div>
-				<div class="sermon-content">
-					<div class="paginationclass sermon-row index{{::$index}}" ng-repeat="message in filtered = ( messages | filter:query | orderBy : predicate :reverse  |  pagination: curPage * pageSize | limitTo: pageSize )  track by $index">
-						<div class='sermon-col col-md-2'> {{ message.date | date:'dd-MM-yyyy'}} </div>
-						<div class='sermon-col col-md-4'> {{ message.title }} </div>
-						<div class='sermon-col col-md-3'> {{ message.speaker }} </div>
-						<div class='sermon-col col-md-3' ng-if="message.messagetype == 'audio'">
-							<a id='sermon-audio' class="{{message.audiokey}}" title="{{message.title}}"></a>
-							<a id='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
-						</div>
-						<div class='sermon-col col-md-3' ng-if="message.messagetype == 'video'">
-							<a id='sermon-video' class="{{message.videokey}}" title="{{message.title}}"></a>
-							<a id='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
-						</div>
-						<div class='sermon-col col-md-3' ng-if="message.messagetype == 'both'">
-							<a id='sermon-audio' class="{{message.audiokey}}" title="{{message.title}}"></a>
-							<a id='sermon-video' class="{{message.videokey}}" title="{{message.title}}"></a>
-							<a id='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
-						</div>
-					</div>
-				</div>
-				<div class="empty-message" ng-show="messages.length == 0">
-            				<h4>No messages found</h4>
-            			</div>
-				<div class="pagination pagination-centered" ng-show="messages.length">
-					<ul class="pagination-controle pagination">
-						 <li>
-						  <button type="button" class="btn btn-primary" ng-disabled="curPage == 0"  ng-click="curPage=curPage-1"> &lt; PREV</button>
-						 </li>
-						 <li>
-						 <span>Page {{curPage + 1}} of {{ numberOfPages() }}</span>
-						 </li>
-						 <li>
-						 <button type="button" class="btn btn-primary" ng-disabled="curPage >= messages.length/pageSize - 1" ng-click="curPage = curPage+1">NEXT &gt;</button>
-						 </li>
-					</ul>
-				</div>
-			</div>
-			</div>
-            <div class="col-md-3 col-sm-12 col-xs-12 timings-section" id="timings_section">
-              <div data-include="timings.html"> </div>
-            </div>
-          </div>
-        </div>
-      </div>
-	</div>
-    <footer>
-      <div data-include="footer.html"></div>
-    </footer>
-    <script src="js/lightbox.js"></script>
-   </body> 
-  </html>  
+      <footer>
+         <div data-include="footer.html"></div>
+      </footer>
+      <script src="js/lightbox.js"></script>
+   </body>
+</html>
