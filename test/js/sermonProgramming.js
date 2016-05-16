@@ -79,20 +79,24 @@ $(document).ready(function() {
 	  
 	function updatePlayer(title, src){
 	        var player = $("#audio_jplayer_1");
-	
 	        player.jPlayer({
-	        ready: function () { 
-	          $(this).jPlayer("setMedia", { 
+	        ready: function () {
+	          $(this).jPlayer("setMedia", {
 	            title: title,
 	            mp3: src
-	
-	          }); 
-	          $(this).jPlayer("play", 0);
+	          });
+	           $(this).jPlayer("play", 0);
 	        },
-	        swfPath: "/js",
-	        supplied: "mp3",
-	
-	      }); 
+	         cssSelectorAncestor: "#jp_container_1",
+	         swfPath: "/js",
+	         supplied: "mp3",
+	         useStateClassSkin: true,
+	         autoBlur: false,
+	         smoothPlayBar: true,
+	         keyEnabled: true,
+	         remainingDuration: true,
+	         toggleDuration: true
+	       });
 	}
 	/* var recordsPerPage = 5;
 	var totalNumRecords;
