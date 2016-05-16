@@ -79,6 +79,7 @@ $(document).ready(function() {
 	  
 	function updatePlayer(title, src){
 	        var player = $("#audio_jplayer_1");
+	        player.jPlayer("destroy");
 	        player.jPlayer({
 	        ready: function () {
 	          $(this).jPlayer("setMedia", {
