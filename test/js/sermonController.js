@@ -20,21 +20,34 @@ sermonApp.controller('sermonController',function($scope, $http, $timeout){
         $scope.reverse = !$scope.reverse;
     };
     
-    $scope.showData = function( ){
+    /* date picker functionalities */
+    $scope.formatDate = function (date) {
+    function pad(n) { return n < 10 ? '0' + n : n };
 
-	 $scope.curPage = 0;
- 	$scope.pageSize = 5;
- 
-  	$scope.numberOfPages = function() {
-				return Math.ceil($scope.messages.length / $scope.pageSize);
+    return date
+        ? date.getFullYear() + '-' + pad(date.getMonth() + 1) + '-' + pad(date.getDate())
+        : '';
 	};
-    }
-});
+	$scope.parseDate = function (s) {
+	    var tokens = /^(\d{4})-(\d\d)-(\d\d)$/.exec(s);
+	
+	    return tokens && new Date(tokens[1], tokens[2] - 1, tokens[3]);
+	};
+	$scope.showData = function( ){
+	
+		 $scope.curPage = 0;
+	 	$scope.pageSize = 5;
+	 
+	  	$scope.numberOfPages = function() {
+					return Math.ceil($scope.messages.length / $scope.pageSize);
+		};
+	    }
+	});
 
-angular.module('sermonApp').filter('pagination', function()
-{
-  return function(input, start) {
-    start = parseInt(start, 10);
-    return input.slice(start);
-  };
-});
+	angular.module('sermonApp').filter('pagination', function()
+	{
+	  return function(input, start) {
+	    start = parseInt(start, 10);
+	    return input.slice(start);
+	  };
+	});
