@@ -7,7 +7,7 @@ $(document).ready(function() {
 		$(".home-page-spinner").css("display","none");
 		$(".loading-spinner").css("display","none");},2000);
 	
-	/* To display date picker in the messages section */
+	/* To display date picker in the messages section 
 	var date = new Date();
 	 $('#messageDate').datepicker({ 
 	        startDate: date,
@@ -20,7 +20,7 @@ $(document).ready(function() {
 	        	var date = scope.selected_date; 
 	        	scope.loadByDate(date);
 	     });
-        });
+        });*/
 	
 	// To handle the click event of music , video and download buttons
 	$(".sermon-content").on("click","a",function(e){
