@@ -25,14 +25,20 @@ sermonApp.controller('sermonController',function($scope, $http, $timeout){
     function pad(n) { return n < 10 ? '0' + n : n };
 
     return date
-        ? date.getFullYear() + '-' + pad(date.getMonth() + 1) + '-' + pad(date.getDate())
-        : '';
+        ?  pad(date.getDate()) + '-' + pad(date.getMonth() + 1) + '-' + date.getFullYear() : '';
 	};
 	$scope.parseDate = function (s) {
 	    var tokens = /^(\d{4})-(\d\d)-(\d\d)$/.exec(s);
 	
 	    return tokens && new Date(tokens[1], tokens[2] - 1, tokens[3]);
 	};
+	$scope.loadByDate = function(date) {
+			$http.get('admin/getMessages.php?action='+'locate&'+'date='+date).success(function(data){
+			$scope.messages = data;
+			$scope.pageLimit = 5; // setting the number of records per page
+		});
+	};
+
 	$scope.showData = function( ){
 	
 		 $scope.curPage = 0;
