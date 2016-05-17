@@ -36,7 +36,7 @@
       <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
       <!-- <script type="text/javascript" src="js/mediaelement-and-player.min.js"></script> -->
       <script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
-      <script type="text/javascript" src="js/angular-datepicker.js"></script>
+      <script type="text/javascript" src="js/angular-date-picker.js"></script>
       <script type="text/javascript" src="js/toArrayFilter.js"></script>
       <script type="text/javascript" src="js/sermonProgramming.js"></script>
       <script type="text/javascript" src="js/sermonController.js"></script>
@@ -236,7 +236,7 @@
                         </div>
                         <div class="sermons-header">
                            <div class="sermon-date sermon-col col-md-2 col-sm-2 col-xs-2"> 
-                              Date <label name="messagedate" class= "form-control" id="messagedate" />  </a>
+                              Date <date-picker ng-model="date2" parse-date="parseDate" format-date="formatDate"></date-picker>
                            </div>
                            <div class="sermon-title sermon-col col-md-4 col-sm-4 col-xs-4"> Title </div>
                            <div class="sermon-speaker sermon-col col-md-3 col-sm-3 col-xs-3"> <a ng-click="sort_by('speaker');"> Speaker <i class="fa fa-caret-down"></i> </a> </div>
