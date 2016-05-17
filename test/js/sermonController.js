@@ -3,6 +3,7 @@ var sermonApp = angular.module('sermonApp', ['angular-toArrayFilter', '720kb.dat
 sermonApp.controller('sermonController',function($scope, $http, $timeout){
    // setting the number of records per page
    $scope.messages = [];
+   $scope.selected-date;
    $http.get('admin/getMessages.php?action=start').success(function(data){
    		$scope.loaded = true;
    		$scope.messages = data;
