@@ -1,4 +1,4 @@
-var sermonApp = angular.module('sermonApp', ['angular-toArrayFilter', '720kb.datepicker']);
+var sermonApp = angular.module('sermonApp', ['angular-toArrayFilter']);
 
 sermonApp.controller('sermonController',function($scope, $http, $timeout){
    // setting the number of records per page
