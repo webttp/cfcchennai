@@ -236,14 +236,14 @@
                         </div>
                         <div class="sermons-header">
                            <div class="sermon-date sermon-col col-md-2 col-sm-2 col-xs-2"> 
-                              Date <date-picker ng-model="date2" parse-date="parseDate" format-date="formatDate"></date-picker>
+                              Date <date-picker ng-model="selected-date" parse-date="parseDate" format-date="formatDate"></date-picker>
                            </div>
                            <div class="sermon-title sermon-col col-md-4 col-sm-4 col-xs-4"> Title </div>
                            <div class="sermon-speaker sermon-col col-md-3 col-sm-3 col-xs-3"> <a ng-click="sort_by('speaker');"> Speaker <i class="fa fa-caret-down"></i> </a> </div>
                            <div class="sermon-media sermon-col col-md-3 col-sm-3 col-xs-3"> <a ng-click="sort_by('messagetype');"> Media <i class="fa fa-caret-down"> </i> </a> </div>
                         </div>
                         <div class="sermon-content">
-                           <div class="paginationclass sermon-row index{{::$index}}" ng-repeat="message in filtered = ( messages | filter:query | orderBy : predicate :reverse  |  pagination: curPage * pageSize | limitTo: pageSize )  track by $index">
+                           <div class="paginationclass sermon-row index{{::$index}}" ng-repeat="message in filtered = ( messages | filter:query | orderBy : predicate :reverse |  pagination: curPage * pageSize | limitTo: pageSize )  track by $index">
                               <div class='sermon-col col-md-2'> {{ message.date | date:'dd-MM-yyyy'}} </div>
                               <div class='sermon-col col-md-4'> {{ message.title }} </div>
                               <div class='sermon-col col-md-3'> {{ message.speaker }} </div>
