@@ -609,10 +609,10 @@ figure.inner-image {
 		margin: 10px 0;
 	}
 	#sermon-audio {
-		background: url(../images/youtube-icon.png);
+		background: url(../images/music-icon.png);
 	}
 	#sermon-video {
-		background: url(../images/video-icon.png);
+		background: url(../images/youtube-icon.png);
 	}
 	.query-section {
 		width: 100%;
