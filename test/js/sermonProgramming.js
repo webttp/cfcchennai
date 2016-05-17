@@ -8,14 +8,19 @@ $(document).ready(function() {
 		$(".loading-spinner").css("display","none");},2000);
 	
 	/* To display date picker in the messages section */
-	var d = new Date();
-	    $( "#messagedate" ).datepicker({
-			maxDate:new Date(d.setDate(d.getDate() )),
-	      showOn: "button",
-	      buttonImage: "../images/calendar.gif",
-	      buttonImageOnly: true,
-	      buttonText: "Select date"
-	});
+	var date = new Date();
+	 $('#messageDate').datepicker({ 
+	        startDate: date,
+	        todayHighlight: true
+	        }).on('changeDate', function(e){
+	        var element = angular.element($('#messageDate'));
+	        var controller = element.controller();
+	        var scope = element.scope();
+	        scope.$apply(function(){
+	        	var date = scope.selected-date; 
+	        	scope.loadByDate(date);
+	     });
+        });
 	
 	// To handle the click event of music , video and download buttons
 	$(".sermon-content").on("click","a",function(e){
