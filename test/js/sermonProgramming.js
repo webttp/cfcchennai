@@ -17,7 +17,7 @@ $(document).ready(function() {
 	        var controller = element.controller();
 	        var scope = element.scope();
 	        scope.$apply(function(){
-	        	var date = scope.selected-date; 
+	        	var date = scope.selected_date; 
 	        	scope.loadByDate(date);
 	     });
         });
