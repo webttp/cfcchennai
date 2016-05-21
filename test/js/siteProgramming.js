@@ -25,6 +25,10 @@ $(function(){
 		}
 	});
 	
+	$("#menu_items_bar a#menu_btn").on("click",function(e){
+		$(".mobile-menu-items").hide();
+	});
+	
 	/*var imgFolderName = "admin/getImages.php";
 	var dataTargetList = [] , dataImageItem = [];
 	var pageName = document.location.pathname;
