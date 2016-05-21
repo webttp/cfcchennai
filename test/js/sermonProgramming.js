@@ -12,7 +12,7 @@ $(document).ready(function() {
 	$("#messagedate" ).datepicker({
 	  maxDate:new Date(date.setDate(date.getDate() )),
       showOn: "button",
-      buttonImage: "images/calendar.gif",
+      buttonImage: "../images/calendar.gif",
       buttonImageOnly: true,
       buttonText: "Select date"
     });
