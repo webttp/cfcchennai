@@ -220,20 +220,19 @@
                         </div>
                      </div>
                      <div class="col-md-12 col-sm-12 col-xs-12 sermons-table" ng-init="showData()">
-                        <div class="pull-left query-section col-xs-12 col-sm-12">
-                           <div class="search-textbox">
-                              <span class="search-title-hint"> Search sermon by title:  </span><input ng-model="query" class="seacrh-input" value="Search Sermon title" /> 
-                           </div>
-                           <div class="pull-right search-dropdown col-xs-12 col-sm-12">
-                              <span class="search-location-hint"> Location: </span> 
-                              <select name="location" id="location" ng-model="locationOrder" ng-change="locationtrigger(locationOrder)" required>
-                                 <option value=""> Select CFC Location </option>
+                        <div class="pull-left search-textbox col-md-4 col-xs-12 col-sm-12">
+                            <span class="search-title-hint"> Search sermon by title:  </span><input ng-model="query" class="seacrh-input" value="Search Sermon title" /> 
+                        </div>
+                        <div class="pull-right search-dropdown col-md-3 col-xs-12 col-sm-12">
+                            <span class="search-location-hint"> Location: </span> 
+                            <select name="location" id="location" ng-model="locationOrder" ng-change="locationtrigger(locationOrder)" required>
+								<option value=""> Select CFC Location </option>
                                  <option value="CFC-both"> CFC - ALL</option>
                                  <option value="CFC-Tambaram"> CFC-Tambaram </option>
                                  <option value="CFC-Thirumullaivoyal"> CFC-Thirumullaivoyal </option>
-                              </select>
-                           </div>
+                            </select>
                         </div>
+                     </div>
                         <div class="sermons-header">
                            <div class="sermon-date sermon-col col-md-2 col-sm-2 col-xs-2"> 
                              <a ng-click="sort_by('date');"> Date <i class="fa fa-caret-down"></i> </a> 
