@@ -772,7 +772,7 @@ footer {
 		border: none;
 		color: #A74043;
 	}
-	#menu_items_bar label {
+	#menu_items_bar a#menu_btn {
 		width: 28px;
 		height: 28px;
 		position: absolute;
@@ -826,7 +826,7 @@ footer {
 		background: none;
 		display: none;
 		width: 100%;
-		top: 100%;
+		top: 75%;
 		right: 0;
 		border: none;
 	}
