@@ -16,6 +16,14 @@ sermonApp.controller('sermonController',function($scope, $http, $timeout){
 			$scope.pageLimit = 5; // setting the number of records per page
 	});
    }
+   
+   $scope.messagetriggerbydate = function(date) {
+			$http.get('admin/getMessages.php?action='+'start&'+'date='+date).success(function(data){
+			$scope.messages = data;
+			$scope.pageLimit = 5; // setting the number of records per page
+	});
+   }
+   
    $scope.sort_by = function(predicate) {
         $scope.predicate = predicate;
         $scope.reverse = !$scope.reverse;
