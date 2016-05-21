@@ -18,7 +18,7 @@ sermonApp.controller('sermonController',function($scope, $http, $timeout){
    }
    
    $scope.messagetriggerbydate = function(date) {
-			$http.get('admin/getMessages.php?action='+'start&'+'date='+date).success(function(data){
+			$http.get('admin/getMessages.php?action='+'locate&'+'date='+date).success(function(data){
 			$scope.messages = data;
 			$scope.pageLimit = 5; // setting the number of records per page
 	});
