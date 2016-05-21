@@ -620,11 +620,16 @@ figure.inner-image {
 	}
 	.search-dropdown {
 		float: right;
+		padding: 5px;
 	}
 	.search-dropdown select
 	{ 
 		background: #fdfdfd;
 		border-radius: 3px;
+		padding: 5px;
+	}
+	.search-textbox {
+		margin-bottom: 10px;
 		padding: 5px;
 	}
 	.search-textbox  input{
