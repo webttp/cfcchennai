@@ -14,16 +14,15 @@ $(function(){
 	$("#menu_items_bar > ul > li a").on("click",function(e){
 		var self, url, oldpath, path, newpath; 
 		self = $(this);
-		url = self.attr("href");
-		/*$(".home-page-spinner").css("display","none");
-		$(".loading-spinner").css("display","none");*/
-		// To read the href and change the path
-		oldpath = document.location.pathname;
-        path = oldpath.substring(0, oldpath.lastIndexOf("/") + 1) ;
-        newpath = path + url;
-		
-		// To load the corresponding page
-		location.assign(newpath);
+		if(self.attr("id") != 'menu_btn') {
+			url = self.attr("href");
+			// To read the href and change the path
+			oldpath = document.location.pathname;
+        		path = oldpath.substring(0, oldpath.lastIndexOf("/") + 1) ;
+        		newpath = path + url;
+			// To load the corresponding page
+			location.assign(newpath);
+		}
 	});
 	
 	/*var imgFolderName = "admin/getImages.php";
