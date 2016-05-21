@@ -10,7 +10,7 @@ $(document).ready(function() {
 	/* To display date picker in the messages section */
 	var date = new Date();
 	$("#messagedate" ).datepicker({
-	  maxDate:new Date(d.setDate(d.getDate() )),
+	  maxDate:new Date(date.setDate(date.getDate() )),
       showOn: "button",
       buttonImage: "images/calendar.gif",
       buttonImageOnly: true,
