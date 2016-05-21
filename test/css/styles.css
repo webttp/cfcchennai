@@ -763,6 +763,7 @@ footer {
 		z-index: 1000;
 		background: #fcfcfc;
         box-shadow: -5px 5px 5px #A74042;
+		overflow-y: initial !important;
 	}
 	#menu_items_bar a {
 		background: none;
@@ -776,9 +777,9 @@ footer {
 		width: 28px;
 		height: 28px;
 		position: absolute;
-		right: 10px;
+		right: -60px;
 		top: 10px;
-		background: url('../images/close.png');
+		background: url('../images/close.png') no-repeat;
 		z-index: 100;
 		cursor: pointer;
 	}
