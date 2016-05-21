@@ -7,20 +7,15 @@ $(document).ready(function() {
 		$(".home-page-spinner").css("display","none");
 		$(".loading-spinner").css("display","none");},2000);
 	
-	/* To display date picker in the messages section 
+	/* To display date picker in the messages section */
 	var date = new Date();
-	 $('#messageDate').datepicker({ 
-	        startDate: date,
-	        todayHighlight: true
-	        }).on('changeDate', function(e){
-	        var element = angular.element($('#messageDate'));
-	        var controller = element.controller();
-	        var scope = element.scope();
-	        scope.$apply(function(){
-	        	var date = scope.selected_date; 
-	        	scope.loadByDate(date);
-	     });
-        });*/
+	$("#messagedate" ).datepicker({
+	  maxDate:new Date(d.setDate(d.getDate() )),
+      showOn: "button",
+      buttonImage: "images/calendar.gif",
+      buttonImageOnly: true,
+      buttonText: "Select date"
+    });
 	
 	// To handle the click event of music , video and download buttons
 	$(".sermon-content").on("click","a",function(e){
@@ -130,5 +125,10 @@ $(document).ready(function() {
 			$(this).attr("value","Search Sermon title");
 		}
 	});
+	
+	$("#menu_items_bar a#menu_btn").on("click",function(e){
+		$(".mobile-menu-items").hide();
+	});
+
 });
 
