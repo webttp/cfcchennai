@@ -107,8 +107,7 @@
 <?php 
 	if(isset($_POST['submit'])!=""){
 				$tablename='messagelist';
-				$sparts = explode('/', $_POST['messagedate']);
-				$date  = "$sparts[2]-$sparts[0]-$sparts[1]";
+				$date  = $_POST['messagedate'];
 		
 				$location=$_POST['location'];
 				$messagetitle=$_POST['messagetitle'];
