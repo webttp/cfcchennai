@@ -659,6 +659,7 @@ figure.inner-image {
     margin-left: 5px;
 }
 .form-control#messagedate {
+	display: inline-block;
 	width: 90%;
 }
 .search-content-section {
