@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html ng-app="sermonApp">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -84,10 +84,9 @@
                               </a>
                               <ul class="nav navbar-main">
                                  <li class='active dropdown parent_menu'>
-                           <a href='cfcc-home.html' title="home" class='home dropdown-toggle' 
-                              data-toggle='dropdown'>
-                           <span>Home</span></a>
-                           </li>
+									<a href='cfcc-home.html' title="home" class='home dropdown-toggle'  		data-toggle='dropdown'>
+									<span>Home</span></a>
+							</li>
                            <li class='dropdown parent_menu'>
                            <a href="about-us.html" target="_self" title="about-us" class='aboutUs dropdown-toggle' data-toggle='dropdown'>
                            <span>About us</span></a>
@@ -223,20 +222,33 @@
                      </div>
                      <div class="col-md-12 col-sm-12 col-xs-12 sermons-table" ng-init="showData()">
                         <div class="pull-left search-textbox col-md-4 col-xs-12 col-sm-12">
-                            <span class="search-title-hint"> Search sermon by title:  </span><input ng-model="query" class="seacrh-input" value="Search Sermon title" /> 
+                            <div class="search-title-section">
+								<span class="search-title-hint"> Search sermon by title:  </span>
+							</div>
+							<div class="search-content-section">
+								<input ng-model="query" class="seacrh-input" value="Search Sermon title" /> 
+							</div>
                         </div>
 						<div class="sermon-datepicker col-md-4 col-xs-12 col-sm-12">
-							<span class="search-location-hint"> Search by Date: </span> 
-							<input name="messagedate" ng-model="messagedate" ng-change="messagetriggerbydate(messagedate)" type= "text" class= "form-control" id="messagedate" placeholder="Message Date"/>
+							<div class="search-title-section">
+								<span class="search-location-hint"> Search by Date: </span> 
+							</div>
+							<div class="search-content-section">
+								<input name="messagedate" ng-model="messagedate" ng-change="messagetriggerbydate(messagedate)" type= "text" class= "form-control" id="messagedate" placeholder="Message Date"/>
+							</div>
 						</div>
                         <div class="pull-right search-dropdown col-md-4 col-xs-12 col-sm-12">
-                            <span class="search-location-hint"> Location: </span> 
-                            <select name="location" id="location" ng-model="locationOrder" ng-change="locationtrigger(locationOrder)">
-								<option value=""> Select CFC Location </option>
-                                <option value="CFC-both"> CFC - ALL</option>
-                                <option value="CFC-Tambaram"> CFC-Tambaram </option>
-                                <option value="CFC-Thirumullaivoyal"> CFC-Thirumullaivoyal </option>
-                            </select>
+							<div class="search-title-section">
+								<span class="search-location-hint"> Location: </span>
+							</div>
+							<div class="search-content-section">
+								<select name="location" id="location" ng-model="locationOrder" ng-change="locationtrigger(locationOrder)">
+									<option value=""> Select CFC Location </option>
+									<option value="CFC-both"> CFC - ALL</option>
+									<option value="CFC-Tambaram"> CFC-Tambaram </option>
+									<option value="CFC-Thirumullaivoyal"> CFC-Thirumullaivoyal </option>
+								</select>
+							</div>
                         </div>
                      </div>
                         <div class="sermons-header">
