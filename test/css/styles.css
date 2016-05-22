@@ -653,12 +653,13 @@ figure.inner-image {
 	float: right;
 	margin: 20px 10px;
 }
-img.ui-datepicker-trigger{
-	margin-top: 10px;
-}
+
 .sort-icon {
     font-size: 9px;
     margin-left: 5px;
+}
+.form-control#messagedate {
+	width: 90%;
 }
 .search-content-section {
 	clear: both;
