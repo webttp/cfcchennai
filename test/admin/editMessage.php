@@ -99,8 +99,7 @@ if(isset($_POST['submit'])!=""){
 		$loginid=$_SESSION['loginid'];
 		$currentdt=date('Y-m-d H:i:s',time());
 		$msgid=$_POST['hiddenmesageid'];
-		$sparts = explode('/', $_POST['messagedate']);
-				$date  = "$sparts[2]-$sparts[0]-$sparts[1]";
+		$date  = $_POST['messagedate'];
 		$location=$_POST['location'];
 		$title=$_POST['messagetitle'];
 		$speaker=$_POST['speaker'];
@@ -132,7 +131,7 @@ if(isset($_POST['submit'])!=""){
 		}	
 		$condition = array("id"=>$msgid);
 		$set = array("date"=>$date,"location"=>$location,"title"=>$title,"speaker"=>$speaker,
-					 "messagetype"=>$messagetype,"videokey"=>$videokey."?enablejsapi=1&origin=http://cfcchennai.church","audiokey"=>$audiokey,
+					 "messagetype"=>$messagetype,"videokey"=>$videokey."?enablejsapi=1&origin=http://cfcchennai.church&rel=0","audiokey"=>$audiokey,
 					 "modifiedby"=>$loginid,"modifieddate"=>$currentdt);	
 		$tablename='messagelist';
 		$msg=$obj->update($tablename, $set,$condition);
