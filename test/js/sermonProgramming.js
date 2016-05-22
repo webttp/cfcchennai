@@ -16,13 +16,7 @@ $(document).ready(function() {
       buttonImageOnly: true,
       buttonText: "Select date"
     });
-	$( 'audio' ).audioPlayer({
-		classPrefix: 'player', // default value: 'audioplayer'
-		strPlay: 'Play', // default value: 'Play'
-		strPause: 'Pause', // default value: 'Pause'
-		strVolume: 'Volume'
-	}); 
-	// To handle the click event of music , video and download buttons
+// To handle the click event of music , video and download buttons
 	$(".sermon-content").on("click","a",function(e){
 		var item = $(this);
 		if(item.attr("id") != "sermon-download"){
@@ -34,12 +28,10 @@ $(document).ready(function() {
 				$(".video-section .player iframe").attr("src",null);
 				$(".sermons-player-section .video-section").css("display","none");
 				$(".sermons-player-section .audio-section").css("display","block");
-				$("audio").attr("src",null);
-				$("audio").attr("src",src);
+				updateAudioPlayer(title,src);
 				$("html, body").animate({ scrollTop: 0 }, "slow");
 			} else if(item.attr("id") == "sermon-video"){
-				//$("#audio_jplayer_1").jPlayer( "stop" );
-				$("audio").attr("src",null);
+				$("#audio_jplayer_1").jPlayer( "stop" );
 				$(".sermons-player-section .audio-section").css("display","none");
 				$(".sermons-player-section .video-section").css("display","block");
 				$(".video-section .player iframe").attr("src",src);
