@@ -7,7 +7,7 @@ $(document).ready(function() {
 		$(".home-page-spinner").css("display","none");
 		$(".loading-spinner").css("display","none");},2000);
 	
-	/* To display date picker in the messages section */
+	/* To display date picker in the messages  section */
 	var date = new Date();
 	$("#messagedate" ).datepicker({
 	  maxDate:new Date(date.setDate(date.getDate() )),
