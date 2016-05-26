@@ -889,6 +889,16 @@ footer {
 	.sermon-row .sermon-col {
 		padding: 0px 5px;
 	}
+	.audio-section {
+		margin-left: 0;
+	}
+	.jp-details, .jp-playlist {
+		width: 90% !important;
+		margin-left: 0px;
+	}
+	.jp-volume-controls {
+		left: 75%;
+	}
 	.query-section {
 		width: 100%;
 	}
@@ -945,6 +955,23 @@ footer {
   .cfcc-bottom-footer {
       font-size: 14px;
   }
+}
+
+/* For all mobile devices common styles */
+@media ( min-width :320px) and (max-width: 516px) {
+	.jp-controls{
+		padding: 20px 0px !important;
+	}
+	.jp-audio .jp-interface {
+		height: 125px !important;
+	}
+	.jp-volume-controls {
+		    position: relative !important;
+			top: -65px !important;
+	}
+	.jp-current-time, .jp-duration {
+		margin: 5px 0px 0px 5px !important;
+	}
 }
 
 @media (min-width :500px) and (max-width: 768px) {
