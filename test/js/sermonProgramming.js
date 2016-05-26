@@ -7,17 +7,23 @@ $(document).ready(function() {
 		$(".home-page-spinner").css("display","none");
 		$(".loading-spinner").css("display","none");},2000);
 	
-	/* To display date picker in the messages  section */
+	/* To display date picker in the messages section */
 	var date = new Date();
 	$("#messagedate" ).datepicker({
 	  maxDate:new Date(date.setDate(date.getDate() )),
-	  dateFormat: "dd-mm-yy",
-      showOn: "button",
+      dateFormat: "dd-mm-yy",
+	  showOn: "button",
       buttonImage: "../images/calendar.gif",
       buttonImageOnly: true,
       buttonText: "Select date"
     });
-// To handle the click event of music , video and download buttons
+	$( 'audio' ).audioPlayer({
+		classPrefix: 'player', // default value: 'audioplayer'
+		strPlay: 'Play', // default value: 'Play'
+		strPause: 'Pause', // default value: 'Pause'
+		strVolume: 'Volume'
+	}); 
+	// To handle the click event of music , video and download buttons
 	$(".sermon-content").on("click","a",function(e){
 		var item = $(this);
 		if(item.attr("id") != "sermon-download"){
@@ -29,10 +35,12 @@ $(document).ready(function() {
 				$(".video-section .player iframe").attr("src",null);
 				$(".sermons-player-section .video-section").css("display","none");
 				$(".sermons-player-section .audio-section").css("display","block");
-				updateAudioPlayer(title,src);
+				$("audio").attr("src",null);
+				$("audio").attr("src",src);
 				$("html, body").animate({ scrollTop: 0 }, "slow");
 			} else if(item.attr("id") == "sermon-video"){
-				$("#audio_jplayer_1").jPlayer( "stop" );
+				//$("#audio_jplayer_1").jPlayer( "stop" );
+				$("audio").attr("src",null);
 				$(".sermons-player-section .audio-section").css("display","none");
 				$(".sermons-player-section .video-section").css("display","block");
 				$(".video-section .player iframe").attr("src",src);
@@ -49,10 +57,12 @@ $(document).ready(function() {
 	          $(this).jPlayer("setMedia", {
 	            title: title,
 	            mp3: src
-	          });
-	           $(this).jPlayer("play", 0);
+	          }).jPlayer("play", 0);
 	        },
-	         cssSelectorAncestor: "#jp_container_1",
+			ended: function (event) {
+				$(this).jPlayer("play");
+			},
+	         cssSelectorAncestor: "#jp_audio_container",
 	         swfPath: "/js",
 	         supplied: "mp3",
 	         useStateClassSkin: true,
@@ -61,7 +71,10 @@ $(document).ready(function() {
 	         keyEnabled: true,
 	         remainingDuration: true,
 	         toggleDuration: true
-	       });
+	       })
+		   .bind($.jPlayer.event.play, function() { // pause other instances of player when current one play
+				$(this).jPlayer("pauseOthers");
+			});
 	}
 
 	/* var recordsPerPage = 5;
