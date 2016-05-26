@@ -892,6 +892,9 @@ footer {
 	.audio-section {
 		margin-left: 0;
 	}
+	.jp-audio {
+		width: 100% !important;
+	}
 	.jp-details, .jp-playlist {
 		width: 90% !important;
 		margin-left: 0px;
@@ -967,10 +970,17 @@ footer {
 	}
 	.jp-volume-controls {
 		    position: relative !important;
-			top: -65px !important;
+			top: -10px !important;
+			left: 20% !important;
 	}
 	.jp-current-time, .jp-duration {
 		margin: 5px 0px 0px 5px !important;
+	}
+	.jp-audio .jp-progress {
+		top: 65px !important;
+	}
+	.jp-audio .jp-type-single .jp-progress {
+		left: 20px !important;
 	}
 }
 
