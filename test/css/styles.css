@@ -669,16 +669,7 @@ figure.inner-image {
 th {
 	cursor:pointer;
 }
-.videogular-container {
-    width: 100%;
-    height: 320px;
-    margin: auto;
-    overflow: hidden;
-}
 
-.videogular-container.audio {
-    height: 50px;
-}
 /* Maps page stylings*/
 .contact-map iframe {
 	width: 550px;
@@ -896,7 +887,7 @@ footer {
 		width: 100% !important;
 	}
 	.jp-details, .jp-playlist {
-		width: 90% !important;
+		width: 100% !important;
 		margin-left: 0px;
 	}
 	.jp-volume-controls {
