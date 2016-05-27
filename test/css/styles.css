@@ -944,7 +944,9 @@ footer {
 	   line-height: 1.5;
 	}
 	.footer-container {
-    height: 350pt;
+     min-height: 350pt;
+	 height: auto;
+	 max-height: 400pt;
   }
   .cfcc-bottom-footer {
       font-size: 14px;
