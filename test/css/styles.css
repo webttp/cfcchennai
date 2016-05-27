@@ -954,7 +954,7 @@ footer {
 /* For all mobile devices common styles */
 @media ( min-width :320px) and (max-width: 516px) {
 	.jp-controls{
-		padding: 20px 0px !important;
+		padding: 20px 15px !important;
 	}
 	.jp-audio .jp-interface {
 		height: 125px !important;
@@ -972,6 +972,9 @@ footer {
 	}
 	.jp-audio .jp-type-single .jp-progress {
 		left: 20px !important;
+	}
+	.jp-controls .jp-stop {
+		float: right !important;
 	}
 }
 
