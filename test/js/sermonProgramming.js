@@ -4,7 +4,7 @@ $(document).ready(function() {
 	var date = new Date();
 	$("#messagedate" ).datepicker({
 	  maxDate:new Date(date.setDate(date.getDate() )),
-      dateFormat: "dd-mm-yy",
+      dateFormat: "yyyy-mm-dd",
 	  showOn: "button",
       buttonImage: "../images/calendar.gif",
       buttonImageOnly: true,
