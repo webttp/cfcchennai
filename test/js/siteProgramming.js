@@ -78,7 +78,7 @@ $(function(){
 	});
 	
 	// To close the menu items on mouse out
-	$(".mobile-menu-items").on("mouseout",function(e){
+	/*$(".mobile-menu-items").on("mouseout",function(e){
 		$(this).hide();	
-	});
+	}); */
 });
