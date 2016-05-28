@@ -749,6 +749,9 @@ footer {
 
 /* For all mobile devices common styles */
 @media ( min-width :300px) and (max-width: 768px) {
+	.container {
+		width: 97% !important;
+	}
 	.main-logo {
 	   margin-left: 0;
 	}
@@ -1042,7 +1045,7 @@ footer {
 }
 
 @media ( min-width : 700px) {
-	.container,.container .row,.menu-container,.menu-nav-container,.footer-menu
+	.container, .container .row,.menu-container,.menu-nav-container,.footer-menu
 		{
 		width: 100% !important;
 	}
