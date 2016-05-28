@@ -266,16 +266,16 @@
                               <div class='sermon-col col-md-3 col-sm-3 col-xs-3'> {{ message.speaker }} </div>
                               <div class='sermon-col col-md-3 col-sm-3 col-xs-3' ng-if="message.messagetype == 'audio'">
                                  <a id='sermon-audio' class="{{message.audiokey}}" title="{{message.title}}"></a>
-                                 <a id='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
+                                 <a id='sermon-download' href="{{message.audiokey}}" title="Sermon mp3 audio download" download="{{message.audiokey}}"></a>
                               </div>
                               <div class='sermon-col col-md-3 col-sm-3 col-xs-3' ng-if="message.messagetype == 'video'">
                                  <a id='sermon-video' class="{{message.videokey}}" title="{{message.title}}"></a>
-                                 <a id='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
+                                 <a id='sermon-download' href="{{message.audiokey}}" title="Sermon mp3 audio download" download="{{message.audiokey}}"></a>
                               </div>
                               <div class='sermon-col col-md-3 col-sm-3 col-xs-3' ng-if="message.messagetype == 'both'">
                                  <a id='sermon-audio' class="{{message.audiokey}}" title="{{message.title}}"></a>
                                  <a id='sermon-video' class="{{message.videokey}}" title="{{message.title}}"></a>
-                                 <a id='sermon-download' href="{{message.audiokey}}" download="{{message.audiokey}}"></a>
+                                 <a id='sermon-download' href="{{message.audiokey}}" title="Sermon mp3 audio download" download="{{message.audiokey}}"></a>
                               </div>
                            </div>
                         </div>
