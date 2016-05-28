@@ -45,10 +45,10 @@ $(function(){
 	});
 	
 	// To close the menu items on mouse out
-	$(".content-page-section").on("focus mouseenter",function(e){
+	/*$(".content-page-section").on("focus mouseenter",function(e){
 		if(".mobile-menu-items").is(":visible"){
 			$(".mobile-menu-items").hide();		
 		}
 		
-	}); 
+	}); */ 
 });
