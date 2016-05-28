@@ -730,18 +730,17 @@ footer {
 /* Media queries */
 /* For smaller mobile devices */
 @media ( min-width :300px) and (max-width: 499px) {
-	.xs-banner-text {
-		top: 10px;
-		color: #ffffff;
-		font: 12px Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
-	}
-	
 	.carousel-inner {
 	   height: 9em;
 	} 
 }
 
-@media ( min-width :500px) and (max-width: 768px) { 
+@media (min-width: 300px) and (max-width: 450px) {
+	.xs-banner-text {
+		font: 12px Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+	}
+}
+@media ( min-width :451px) and (max-width: 768px) { 
 	.xs-banner-text { 
 		font: 14px Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
 	}
@@ -751,6 +750,10 @@ footer {
 @media ( min-width :300px) and (max-width: 768px) {
 	.container {
 		width: 97% !important;
+	}
+	.xs-banner-text {
+		top: 10px;
+		color: #ffffff;
 	}
 	.main-logo {
 	   margin-left: 0;
