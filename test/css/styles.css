@@ -980,8 +980,6 @@ footer {
   }
 }
 
-@media (min-width: 76)
-
 /* For all mobile devices common styles */
 @media ( min-width :300px) and (max-width: 516px) {
 	.jp-controls{
