@@ -785,6 +785,7 @@ footer {
 		line-height: 16px;
 		border: none;
 		color: #A74043;
+		font: Bold 16px Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
 	}
 	#menu_items_bar a#menu_btn {
 		width: 28px;
