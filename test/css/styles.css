@@ -1044,6 +1044,9 @@ footer {
 }
 
 @media ( min-width : 769px) and (max-width: 992px) {
+	.banner-text {
+		font: Bold 26px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
+	}
 	#menu_items_bar {
 		width: 100%;
 		padding-left: 0px;
@@ -1051,9 +1054,19 @@ footer {
 	
 	#menu_items_bar a {
 		padding: 5px 30px;
+		font: Bold 16px Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+	}
+	#menu_items_bar .has-sub ul li a {
+		font-size: 14px;
 	}
 	#menu_items_bar .has-sub ul {
 		width: 135%;
+	}
+}
+
+@media ( min-width : 769px) and (max-width: 865px) { 
+	#menu_items_bar a {
+		padding: 5px 20px;
 	}
 }
 
