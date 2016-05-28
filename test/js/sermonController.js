@@ -1,4 +1,4 @@
-var sermonApp = angular.module('sermonApp', ['angular-toArrayFilter']);
+var sermonApp = angular.module('sermonApp', ['angular-toArrayFilter', 'angular-underscore']);
 
 sermonApp.controller('sermonController',function($scope, $http, $timeout){
    // setting the number of records per page
@@ -18,8 +18,13 @@ sermonApp.controller('sermonController',function($scope, $http, $timeout){
    }
    
    $scope.messagetriggerbydate = function(date) {
-			$http.get('admin/getMessages.php?action='+'locate&'+'date='+date).success(function(data){
-			$scope.messages = data;
+	   var messageDateArray = [];
+			$http.get('admin/getMessages.php?action=start').success(function(data){
+			angular.forEach(data, function(item) {
+				if(item.date == date)
+					messageDateArray.push(item);
+			});
+			$scope.messages = messageDateArray;
 			$scope.pageLimit = 5; // setting the number of records per page
 	});
    }
@@ -54,7 +59,7 @@ sermonApp.controller('sermonController',function($scope, $http, $timeout){
 	 	$scope.pageSize = 5;
 	 
 	  	$scope.numberOfPages = function() {
-					return Math.ceil($scope.messages.length / $scope.pageSize);
+			return Math.ceil($scope.messages.length / $scope.pageSize);
 		};
 	    }
 	});
