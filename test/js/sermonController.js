@@ -1,4 +1,4 @@
-var sermonApp = angular.module('sermonApp', ['angular-toArrayFilter', 'angular-underscore']);
+var sermonApp = angular.module('sermonApp', ['angular-toArrayFilter']);
 
 sermonApp.controller('sermonController',function($scope, $http, $timeout){
    // setting the number of records per page
@@ -59,7 +59,7 @@ sermonApp.controller('sermonController',function($scope, $http, $timeout){
 	 	$scope.pageSize = 5;
 	 
 	  	$scope.numberOfPages = function() {
-			return Math.ceil($scope.messages.length / $scope.pageSize);
+					return Math.ceil($scope.messages.length / $scope.pageSize);
 		};
 	    }
 	});
