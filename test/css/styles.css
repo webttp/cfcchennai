@@ -580,6 +580,7 @@ figure.inner-image {
 .empty-message {
 	width: 100%;
 	text-align: center;
+	height: 200px;
 }
 .pagination-div {
 	float: right;
@@ -599,6 +600,7 @@ figure.inner-image {
 }
 	.sermon-content {
 		width: 100%;
+		min-height: 200px;
 	}
 	.sermon-header a , .sermon-header a:hover{
 		color: #ffffff;
