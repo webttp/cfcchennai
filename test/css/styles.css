@@ -751,7 +751,7 @@ footer {
 /* For all mobile devices common styles */
 @media ( min-width :300px) and (max-width: 768px) {
 	.container {
-		width: 97% !important;
+		width: 95% !important;
 	}
 	.xs-banner-text {
 		top: 10px;
