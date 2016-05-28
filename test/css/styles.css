@@ -729,7 +729,7 @@ footer {
 
 /* Media queries */
 /* For smaller mobile devices */
-@media ( min-width :320px) and (max-width: 499px) {
+@media ( min-width :300px) and (max-width: 499px) {
 	.xs-banner-text {
 		top: 10px;
 		color: #ffffff;
@@ -740,8 +740,15 @@ footer {
 	   height: 9em;
 	} 
 }
+
+@media ( min-width :500px) and (max-width: 768px) { 
+	.xs-banner-text { 
+		font: 14px Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+	}
+}
+
 /* For all mobile devices common styles */
-@media ( min-width :320px) and (max-width: 768px) {
+@media ( min-width :300px) and (max-width: 768px) {
 	.main-logo {
 	   margin-left: 0;
 	}
@@ -954,7 +961,7 @@ footer {
 }
 
 /* For all mobile devices common styles */
-@media ( min-width :320px) and (max-width: 516px) {
+@media ( min-width :300px) and (max-width: 516px) {
 	.jp-controls{
 		padding: 20px 15px !important;
 	}
