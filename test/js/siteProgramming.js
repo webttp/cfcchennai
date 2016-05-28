@@ -29,39 +29,6 @@ $(function(){
 		$(".mobile-menu-items").hide();
 	});
 	
-	/*var imgFolderName = "admin/getImages.php";
-	var dataTargetList = [] , dataImageItem = [];
-	var pageName = document.location.pathname;
-	
-	if(pageName.indexOf("cfcc-home") != -1) {
-		$(".home-page-spinner").css("display","block");
-		$(".loading-spinner").css("display","block");
-		// To read the images for Home page banner slider
-		$.ajax({
-			 url : imgFolderName,
-			 dataType: "json",
-			 success: function (data) {
-				 
-				 $.each(data,function(index,item){
-					if(index == 0) {
-						dataTargetList += "<li data-target='#homeCarousel' data-slide-to='"+index+"' class='active'></li>";
-						dataImageItem += "<div class='item image-viewier active'><a href='"+item.redirectlink+"'><img src='admin/imagebank/"+item.imgsrc+"'>";
-						dataImageItem += "<div class='sLeft whiteText'><mytitle>"+item.imagename+"</mytitle></div></a></div>";
-					}else{
-						dataTargetList += "<li data-target='#homeCarousel' data-slide-to='"+index+"'></li>";
-						dataImageItem += "<div class='item image-viewier'><a href='"+item.redirectlink+"'><img src='admin/imagebank/"+item.imgsrc+"'>";
-						dataImageItem += "<div class='sLeft whiteText'><mytitle>"+item.imagename+"</mytitle></div></a></div>";
-					}
-				});
-				
-				$("#homeCarousel .carousel-indicators").html(dataTargetList);
-				$("#homeCarousel .carousel-inner").html(dataImageItem);
-			}
-		});
-		setTimeout(function(){
-			$(".home-page-spinner").css("display","none");
-			$(".loading-spinner").css("display","none");},2000);
-	} */
 	lightbox.option({
 	      'resizeDuration': 200,
 	      'left': '300px',
@@ -78,7 +45,7 @@ $(function(){
 	});
 	
 	// To close the menu items on mouse out
-	/*$(".mobile-menu-items").on("mouseout",function(e){
+	$(".mobile-menu-items").on("focusout",function(e){
 		$(this).hide();	
-	}); */
+	}); 
 });
