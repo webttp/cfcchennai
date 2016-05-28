@@ -45,7 +45,10 @@ $(function(){
 	});
 	
 	// To close the menu items on mouse out
-	$(".mobile-menu-items").on("focusout",function(e){
-		$(this).hide();	
+	$(".content-page-section").on("focus mouseenter",function(e){
+		if(".mobile-menu-items").is(":visible"){
+			$(".mobile-menu-items").hide();		
+		}
+		
 	}); 
 });
