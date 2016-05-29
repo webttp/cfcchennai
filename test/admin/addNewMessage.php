@@ -10,7 +10,6 @@
 	  var d = new Date();
     $( "#messagedate" ).datepicker({
       maxDate:new Date(d.setDate(d.getDate() )),
-      dateformat: "yy-mm-dd",
       showOn: "button",
       buttonImage: "../../images/calendar.gif",
       buttonImageOnly: true,
