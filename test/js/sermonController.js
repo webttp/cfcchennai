@@ -8,6 +8,16 @@ sermonApp.controller('sermonController',function($scope, $http, $timeout){
    		$scope.loaded = true;
    		$scope.messages = data;
    		$scope.pageLimit = 5; // setting the number of records per page
+		var messageflag = true;
+		$scope.messageVideoSrc ;
+		angular.forEach(data, function(item) {
+			if(messageflag){
+				if(item.messagetype == 'video'){
+					$scope.messageVideoSrc = item.videokey;
+					messageflag = false;
+				}
+			}
+		});
    });
    
    $scope.locationtrigger = function(place) {
