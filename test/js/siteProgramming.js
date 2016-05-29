@@ -14,7 +14,7 @@ $(function(){
 	$("#menu_items_bar > ul > li a").on("click",function(e){
 		var self, url, oldpath, path, newpath; 
 		self = $(this);
-		if(self.attr("id") != 'menu_btn') {
+		if(self.attr("id") != 'menu_btn' && self.attr("class") != 'locateUs') {
 			url = self.attr("href");
 			// To read the href and change the path
 			oldpath = document.location.pathname;
