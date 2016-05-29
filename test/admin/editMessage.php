@@ -148,7 +148,6 @@ if(isset($_POST['submit'])!=""){
 <script>
   $(function(){
     $( "#messagedate").datepicker({
-      dateformat: "yy-mm-dd",
       showOn: "button",
       buttonImage: "../../images/calendar.gif",
       buttonImageOnly: true,
