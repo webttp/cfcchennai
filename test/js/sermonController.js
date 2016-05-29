@@ -23,9 +23,17 @@ sermonApp.controller('sermonController',function($sce, $scope, $http, $timeout){
 		});
    });
    
-   $scope.locationtrigger = function(place) {
+   $scope.locationtrigger = function(place,date) {
 			$http.get('admin/getMessages.php?action='+'locate&'+'location='+place).success(function(data){
-			$scope.messages = data;
+			if(date != "" && date != null && date != undefined){
+				angular.forEach(data, function(item) {
+					if(item.date == date)
+						messageDateArray.push(item);
+				});
+				$scope.messages = messageDateArray;
+			}else {
+				$scope.messages = data;
+			}
 			$scope.pageLimit = 5; // setting the number of records per page
 	});
    }
