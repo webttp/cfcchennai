@@ -341,6 +341,11 @@ a:hover {
 .home-page-section .content-section  {
 	border-right: 1px solid #83CFCB;
 }
+.stand-on-money , .eldership {
+	line-height: 1.5;
+	color: #4d4d4d;
+	font: normal 16px Arial;
+}
 .timings-section {
 	margin-left: 10px !important;
 	margin-top: 10px;
@@ -430,7 +435,7 @@ a:hover {
 	font: normal 14px Arial;
 	color: #585d60;
 	clear: both;
-	line-height: 20px;
+	line-height: 22px;
 }
 .language-content {
 	font: normal 14px Arial;
