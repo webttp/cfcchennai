@@ -24,10 +24,11 @@ sermonApp.controller('sermonController',function($sce, $scope, $http, $timeout){
    });
    
    $scope.locationtrigger = function(place,date) {
+   	var messageDateArray = [];
 			$http.get('admin/getMessages.php?action='+'locate&'+'location='+place).success(function(data){
 			if(date != "" && date != null && date != undefined){
 				angular.forEach(data, function(item) {
-					if(item.date == date)
+					if(item.date == date && item.location == place)
 						messageDateArray.push(item);
 				});
 				$scope.messages = messageDateArray;
