@@ -14,6 +14,7 @@ sermonApp.controller('sermonController',function($scope, $http, $timeout){
 			if(messageflag){
 				if(item.messagetype == 'video'){
 					$scope.messageVideoSrc = item.videokey;
+					$scope.messageTitle = item.title;
 					messageflag = false;
 				}
 			}
