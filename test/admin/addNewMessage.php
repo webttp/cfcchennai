@@ -9,7 +9,7 @@
   $(function() {
 	  var d = new Date();
     $( "#messagedate" ).datepicker({
-		maxDate:new Date(d.setDate(d.getDate() )),
+      maxDate:new Date(d.setDate(d.getDate() )),
       showOn: "button",
       buttonImage: "../../images/calendar.gif",
       buttonImageOnly: true,
@@ -139,7 +139,7 @@
 				$loginid=$_SESSION['loginid'];
 				$currentdt=date('Y-m-d H:i:s',time());
 				include("../config/Class.Crud.Php"); 		
-				$InsColumnVal = array("date"=>$date,"location"=>$location,"title"=>$messagetitle,"speaker"=>$speaker,"messagetype"=>$messagetype,"videokey"=>$videokey."?rel=0&autoplay=1&enablejsapi=1&origin=http://cfcchennai.church","audiokey"=>$audiokey.".mp3","uploadedby"=>$loginid,"uploadeddate"=>	                    $currentdt);
+				$InsColumnVal = array("date"=>$date,"location"=>$location,"title"=>$messagetitle,"speaker"=>$speaker,"messagetype"=>$messagetype,"videokey"=>$videokey."?rel=0&autoplay=1&enablejsapi=1&origin=http://cfcchennai.church","audiokey"=>$audiokey.".mp3","uploadedby"=>$loginid,"uploadeddate"=>$currentdt);
 				if($obj->insert($tablename, $InsColumnVal)=="New record has been inserted successfully!")
 				{
 					?>
