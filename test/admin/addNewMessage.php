@@ -57,7 +57,7 @@
 					<select class="form-control" ng-model="speaker.type" id="speaker"  name="speaker" required>
 						<option ng-option value="">Select Speaker</option>
 						<option ng-option value="Prakasam">Prakasam</option>
-						<option ng-option value="Micheal">Micheal</option>
+						<option ng-option value="Michael">Michael</option>
 						<option ng-option value="Jesudoss">Jesudoss</option>
 						<option ng-option value="Johnrajan">Johnrajan</option>
 						<option ng-option value="others">others</option>
