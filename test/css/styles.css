@@ -514,9 +514,6 @@ figure.inner-image {
 }
 
 /* sermons page stylings */
-.sermons-table {
-	
-}
 .sermons-cotainer {
 	width: 100%;
 }
@@ -752,7 +749,7 @@ footer {
 		height: 100px;
 	}
 	.xs-banner-text {
-		top: 25px;
+		top: 15px;
 		color: #ffffff;
 		font: 14px Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
 	}
@@ -896,6 +893,9 @@ footer {
 	.xs-banner-text{
 	   text-align: left;
 	}
+	.sermons-table {
+		margin-top: 40px;
+	}
 	.sermon-row .sermon-col {
 		padding: 0px;
 		padding-left: 5px;
@@ -985,6 +985,9 @@ footer {
 
 /* For all mobile devices common styles */
 @media ( min-width :300px) and (max-width: 516px) {
+	.cfcc-logo{
+		margin-top: 10px;
+	}
 	.jp-controls{
 		padding: 20px 15px !important;
 	}
@@ -1017,14 +1020,14 @@ footer {
 		margin: 0px;
 		max-width: 40px !important;
 	}
+	.cfcc-logo {
+		margin-top: 18px;
+	}
 	.xs-banner-text {
 	   font: 18px Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
 	}
 	.content-section {
 		border-right: none;
-	}
-	.menu-container {
-		height: auto;
 	}
 	.carousel-inner {
 		height: 11em;
