@@ -816,7 +816,7 @@ footer {
 	}
 	#menu_items_bar>ul>li {
 		display: block;
-		height: calc(100%/ 5);
+		height: calc(100%/ 6);
 		min-height: 50px;
 		clear: both;
 		float: right;
@@ -987,6 +987,9 @@ footer {
 @media ( min-width :300px) and (max-width: 516px) {
 	.cfcc-logo{
 		margin-top: 10px;
+	}
+	#menu_items_bar>ul>li {
+		height: calc(100%/ 4);
 	}
 	.jp-controls{
 		padding: 20px 15px !important;
