@@ -982,15 +982,25 @@ footer {
       font-size: 14px;
   }
 }
+/* For all mobile devices common styles */
+@media ( min-width :300px) and (max-width: 350px) { 
+	#menu_items_bar>ul>li {
+		height: calc(100%/ 4);
+		min-height: 45px;
+	}
+}
 
+/* For all mobile devices common styles */
+@media ( min-width :351px) and (max-width: 500px) { 
+	#menu_items_bar>ul>li {
+		height: calc(100%/ 5);
+		min-height: 45px;
+	}
+}
 /* For all mobile devices common styles */
 @media ( min-width :300px) and (max-width: 516px) {
 	.cfcc-logo{
 		margin-top: 10px;
-	}
-	#menu_items_bar>ul>li {
-		height: calc(100%/ 4);
-		min-height: 45px;
 	}
 	.jp-controls{
 		padding: 20px 15px !important;
