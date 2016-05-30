@@ -990,6 +990,7 @@ footer {
 	}
 	#menu_items_bar>ul>li {
 		height: calc(100%/ 4);
+		min-height: 45px;
 	}
 	.jp-controls{
 		padding: 20px 15px !important;
