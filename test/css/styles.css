@@ -740,15 +740,6 @@ footer {
 	} 
 }
 
-/* For portrait and landscape styles */
-@media ( min-width :300px) and (max-width: 768px) and (orientation: landscape) { 
-	#menu_items_bar{
-		height: 85% !important;
-		width: 65%;	
-	}
-	
-}
-
 /* For all mobile devices common styles */
 @media ( min-width :300px) and (max-width: 768px) {
 	.container {
@@ -774,7 +765,7 @@ footer {
 	
 	#menu_items_bar {
 		position: fixed;
-		height: 65% !important;
+		height: 100% !important;
 		width: 75%;
 		margin: 0;
 		padding: 0;
