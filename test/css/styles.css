@@ -751,6 +751,9 @@ footer {
 	.container {
 		width: 95% !important;
 	}
+	.content-page-section{
+		overflow-x: hidden;
+	}
 	.menu-container {
 		height: 100px;
 	}
@@ -876,7 +879,7 @@ footer {
 	}
 	.fb-share-button {
 	  right: 30px;
-    top: 8px;
+    	  top: 8px;
 	}
 	.home-page-slider {
 	   margin-top: 10px;
@@ -888,8 +891,8 @@ footer {
 	   border-right: 0;
 	}
 	.content .field-items {
-     font: normal 14px Arial;
-  }
+        	font: normal 14px Arial;
+  	}
 	.cfcc-timings {
 	   font: normal 14px Arial;
 	}
