@@ -513,6 +513,11 @@ figure.inner-image {
 	display: inline-block;
 	margin: 10px !important;
 }
+.inner-image figcaption {
+	font-weight: bold;
+	margin: 5px;
+	text-align: center;
+}
 
 /* sermons page stylings */
 .sermons-cotainer {
