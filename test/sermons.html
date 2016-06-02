@@ -171,7 +171,7 @@
                <div class="col-md-12 col-sm-12 col-xs-12 home-page">
                   <div class="col-md-8 col-sm-12 col-xs-12 sermons content-section" id="content_section">
                      <div class="col-md-12 col-sm-12 col-xs-12 sermons-player-section">
-                        <div id="sermon_section_title" class="sermon-section-title"> {{messageTitle}} </div>
+                        <div id="sermon_section_title" class="sermon-section-title" ng-bind="messageTitle"></div>
                         <div class="audio-section" style="display:none;">
                            <!-- <audio id="audioPlayer" src="http://www.cfcindia.org/resources/en/study-series/basic-christian-teachings/37-jesus-valued-all-people.mp3"></audio> -->
                            <div id="audio_jplayer_1" class="jp-jplayer"></div>
@@ -261,9 +261,9 @@
                         </div>
                         <div class="sermon-content">
                            <div class="paginationclass sermon-row index{{::$index}}" ng-repeat="message in filtered = ( messages | filter:query : messagedate | orderBy : predicate :reverse |  pagination: curPage * pageSize | limitTo: pageSize )  track by $index">
-                              <div class='sermon-col col-md-2 col-sm-2 col-xs-2'> {{ message.date | date:'dd-MM-yyyy'}} </div>
-                              <div class='sermon-col col-md-4 col-sm-4 col-xs-4'> {{ message.title }} </div>
-                              <div class='sermon-col col-md-3 col-sm-3 col-xs-3'> {{ message.speaker }} </div>
+                              <div class='sermon-col col-md-2 col-sm-2 col-xs-2' ng-bind="message.date | date:'dd-MM-yyyy'"> </div>
+                              <div class='sermon-col col-md-4 col-sm-4 col-xs-4' ng-bind="message.title"></div>
+                              <div class='sermon-col col-md-3 col-sm-3 col-xs-3' ng-bind="message.speaker"></div>
                               <div class='sermon-col col-md-3 col-sm-3 col-xs-3' ng-if="message.messagetype == 'audio'">
                                  <a id='sermon-audio' class="{{message.audiokey}}" title="{{message.title}}"></a>
                                  <a id='sermon-download' href="{{message.audiokey}}" title="Sermon mp3 audio download" download="{{message.audiokey}}"></a>
