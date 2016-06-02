@@ -297,6 +297,12 @@ a:hover {
 	height: auto;
 	max-height: 720px;
 }
+.sermons.content-page-section {
+	min-height: 1080px;
+	height: auto;
+    max-height: 1200px;
+}
+
 .home-page-spinner {
 	width: 100%;
 }
@@ -341,6 +347,14 @@ a:hover {
     border-right: 1px solid #83CFCB;
     max-height: 700px;
 }
+.sermons.content-section {
+	min-height: 950px !important;
+    height: auto;
+    margin-top: 10px;
+    border-right: 1px solid #83CFCB;
+    max-height: 1100px;
+}
+
 .home-page-section .content-section  {
 	border-right: 1px solid #83CFCB;
 }
