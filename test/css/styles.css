@@ -293,8 +293,9 @@ a:hover {
 	clear: both;
 }
 .content-page-section {
-	min-height: 450px;
+	min-height: 550px;
 	height: auto;
+	max-height: 720px;
 }
 .home-page-spinner {
 	width: 100%;
@@ -334,10 +335,11 @@ a:hover {
 	width: 100%;
 }
 .content-section {
-	min-height: 450px !important;
-	height: auto;
-	margin-top: 10px;
-	border-right: 1px solid #83CFCB;
+	min-height: 525px !important;
+    height: auto;
+    margin-top: 10px;
+    border-right: 1px solid #83CFCB;
+    max-height: 700px;
 }
 .home-page-section .content-section  {
 	border-right: 1px solid #83CFCB;
@@ -548,8 +550,8 @@ figure.inner-image {
 	height: auto;
 	width: 100%;
 	background: #f3f3f3;
-	min-height: 380px !important;
-	max-height: 410px !important;
+	min-height: 470px !important;
+	max-height: 500px !important;
 }
 .mejs-container.mejs-video{
 	margin-left: 5%;
@@ -584,7 +586,7 @@ figure.inner-image {
 }
 .video-section, .player {
 	width: 100%;
-	height: 380px;
+	height: 425px;
 }
 .empty-message {
 	width: 100%;
@@ -740,19 +742,22 @@ footer {
 
 /* Media queries */
 /* For smaller mobile devices */
-@media ( min-width :300px) and (max-width: 499px) {
+@media ( min-width :285px) and (max-width: 499px) {
 	.carousel-inner {
 	   height: 9em;
 	} 
 }
 
 /* For all mobile devices common styles */
-@media ( min-width :300px) and (max-width: 768px) {
+@media ( min-width :285px) and (max-width: 768px) {
 	.container {
 		width: 95% !important;
 	}
 	.content-page-section{
 		overflow-x: hidden;
+		min-height: 900px;
+		height: auto;
+		max-height: 1300px;
 	}
 	.menu-container {
 		height: 100px;
@@ -992,7 +997,7 @@ footer {
   }
 }
 /* For all mobile devices common styles */
-@media ( min-width :300px) and (max-width: 350px) { 
+@media ( min-width :285px) and (max-width: 350px) { 
 	#menu_items_bar>ul>li {
 		height: calc(100%/ 4);
 		min-height: 45px;
@@ -1007,7 +1012,7 @@ footer {
 	}
 }
 /* For all mobile devices common styles */
-@media ( min-width :300px) and (max-width: 516px) {
+@media ( min-width :285px) and (max-width: 516px) {
 	.cfcc-logo{
 		margin-top: 10px;
 	}
