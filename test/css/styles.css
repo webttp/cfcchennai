@@ -593,6 +593,11 @@ figure.inner-image {
 	width: 100%;
 	text-align: center;
 	height: 200px;
+	margin-top: 100px;
+	color: #20787B;
+}
+.empty-message h4 {
+	font-size: 20px;
 }
 .pagination-div {
 	float: right;
@@ -612,7 +617,7 @@ figure.inner-image {
 }
 	.sermon-content {
 		width: 100%;
-		min-height: 360px;
+		min-height: 250px;
 	}
 	.sermon-header a , .sermon-header a:hover{
 		color: #ffffff;
