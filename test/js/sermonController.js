@@ -30,6 +30,8 @@ sermonApp.controller('sermonController',function($sce, $scope, $http, $timeout){
 				angular.forEach(data, function(item) {
 					if(item.date == date && item.location == place)
 						messageDateArray.push(item);
+					else if(item.date == date && item.location == 'CFC-both')
+						messageDateArray.push(item);
 				});
 				$scope.messages = messageDateArray;
 			}else {
