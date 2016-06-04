@@ -32,6 +32,8 @@ sermonApp.controller('sermonController',function($sce, $scope, $http, $timeout){
 						messageDateArray.push(item);
 					else if(item.date == date && place == 'CFC-both')
 						messageDateArray.push(item);
+					else if((item.date == ''|| item.date == null ) && item.location == place)
+						messageDateArray.push(item);
 				});
 				$scope.messages = messageDateArray;
 			}else {
