@@ -82,7 +82,7 @@ sermonApp.controller('sermonController',function($sce, $scope, $http, $timeout){
 	$scope.showData = function( ){
 	
 		 $scope.curPage = 0;
-	 	$scope.pageSize = 5;
+	 	$scope.pageSize = 8;
 	 
 	  	$scope.numberOfPages = function() {
 					return Math.ceil($scope.messages.length / $scope.pageSize);
