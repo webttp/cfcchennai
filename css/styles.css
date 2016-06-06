@@ -630,7 +630,7 @@ figure.inner-image {
 		color: #ffffff;
 		text-decoration: none;
 	}
-	.sermon-section-title {
+	.sermon-audio-section-title , .sermon-video-section-title{
 		font: Bold 18px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
 		margin: 10px 0;
 	}
