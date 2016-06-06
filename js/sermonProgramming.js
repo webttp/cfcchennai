@@ -16,18 +16,20 @@ $(document).ready(function() {
 		if(item.attr("id") != "sermon-download"){
 			e.preventDefault();
 			var title = item.attr("title");
-			$(".sermon-section-title").html(title);
+			
 			var src =  item.attr("class");
 			if(item.attr("id") == "sermon-audio"){
+				$(".sermon-audio-section-title").html(title);
 				$(".video-section .player iframe").attr("src",null);
-				$(".sermons-player-section .video-section").css("display","none");
-				$(".sermons-player-section .audio-section").css("display","block");
+				$(".sermons-video-player-section .video-section").css("display","none");
+				$(".sermons-audio-player-section .audio-section").css("display","block");
 				updateAudioPlayer(title, src);
 				$("html, body").animate({ scrollTop: 0 }, "slow");
 			} else if(item.attr("id") == "sermon-video"){
 				$("#audio_jplayer_1").jPlayer( "stop" );
-				$(".sermons-player-section .audio-section").css("display","none");
-				$(".sermons-player-section .video-section").css("display","block");
+				$(".sermon-video-section-title").html(title);
+				$(".sermons-audio-player-section .audio-section").css("display","none");
+				$(".sermons-video-player-section .video-section").css("display","block");
 				$(".video-section .player iframe").attr("src",src);
 				$("html, body").animate({ scrollTop: 0 }, "slow");
 			}
