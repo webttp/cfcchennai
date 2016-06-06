@@ -577,6 +577,9 @@ figure.inner-image {
 	min-height: 250px;
 	margin-left: 20%;
 }
+.video-section iframe{
+	height: 420px;
+}
 .jp-audio, .jp-audio-stream, .jp-video {
 	margin-top: 10%;
 }
@@ -766,9 +769,13 @@ footer {
 	.container {
 		width: 95% !important;
 	}
-	.col-xs-12 {
-		padding-left: 12px !important;
+	.container.body-container {
+		padding-left: 0px !important;
 		padding-right: 0px !important;
+	}
+	.col-xs-12 {
+		padding-left: 5px !important;
+		padding-right: 5px !important;
 	}
 	.content-page-section{
 		overflow-x: hidden;
@@ -931,10 +938,10 @@ footer {
 		min-height: 400px !important;
 	}
 	.video-section, .player {
-		height: 300px !important;
+		height: 370px !important;
 	}
 	.sermons-table {
-		margin-top: 90px;
+		margin-top: 30px;
 	}
 	.sermon-row .sermon-col {
 		padding: 0px;
@@ -945,6 +952,9 @@ footer {
 	}
 	.sermon-row .sermon-col:last-child {
 		padding-left: 20px;
+	}
+	.video-section iframe{
+		height: 360px;
 	}
 	.pagination .btn {
 		margin-bottom: 10px;
