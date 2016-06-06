@@ -759,6 +759,10 @@ footer {
 	.container {
 		width: 95% !important;
 	}
+	.col-xs-12 {
+		padding-left: 12px !important;
+		padding-right: 0px !important;
+	}
 	.content-page-section{
 		overflow-x: hidden;
 		min-height: 100%;
@@ -913,8 +917,14 @@ footer {
 	.xs-banner-text{
 	   text-align: left;
 	}
+	.sermons-player-section {
+		min-height: 420px !important;
+	}
+	.video-section, .player {
+		height: 330px !important;
+	}
 	.sermons-table {
-		margin-top: 40px;
+		margin-top: 90px;
 	}
 	.sermon-row .sermon-col {
 		padding: 0px;
