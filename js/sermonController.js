@@ -8,7 +8,7 @@ sermonApp.controller('sermonController',function($sce, $scope, $http, $timeout){
    $http.get('admin/getMessages.php?action=start').success(function(data){
    		$scope.loaded = true;
    		$scope.messages = data;
-   		$scope.pageLimit = 5; // setting the number of records per page
+   		$scope.pageLimit = 8; // setting the number of records per page
 		var messageflag = true;
 		$scope.messageVideoSrc ;
 		angular.forEach(data, function(item) {
@@ -39,7 +39,7 @@ sermonApp.controller('sermonController',function($sce, $scope, $http, $timeout){
 			}else {
 				$scope.messages = data;
 			}
-			$scope.pageLimit = 5; // setting the number of records per page
+			$scope.pageLimit = 8; // setting the number of records per page
 	});
    }
    
@@ -51,7 +51,7 @@ sermonApp.controller('sermonController',function($sce, $scope, $http, $timeout){
 					messageDateArray.push(item);
 			});
 			$scope.messages = messageDateArray;
-			$scope.pageLimit = 5; // setting the number of records per page
+			$scope.pageLimit = 8; // setting the number of records per page
 	});
    }
    
@@ -75,7 +75,7 @@ sermonApp.controller('sermonController',function($sce, $scope, $http, $timeout){
 	$scope.loadByDate = function(date) {
 			$http.get('admin/getMessages.php?action='+'locate&'+'date='+date).success(function(data){
 			$scope.messages = data;
-			$scope.pageLimit = 5; // setting the number of records per page
+			$scope.pageLimit = 8; // setting the number of records per page
 		});
 	};
 
