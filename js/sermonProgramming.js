@@ -23,6 +23,7 @@ $(document).ready(function() {
 				$(".video-section .player iframe").attr("src",null);
 				$(".sermons-video-player-section").css("display","none");
 				$(".sermons-video-player-section .video-section").css("display","none");
+				$(".sermons-audio-player-section").css("display","block");
 				$(".sermons-audio-player-section .audio-section").css("display","block");
 				updateAudioPlayer(title, src);
 				$("html, body").animate({ scrollTop: 0 }, "slow");
@@ -31,6 +32,7 @@ $(document).ready(function() {
 				$(".sermon-video-section-title").html(title);
 				$(".sermons-audio-player-section").css("display","none");
 				$(".sermons-audio-player-section .audio-section").css("display","none");
+				$(".sermons-video-player-section").css("display","block");
 				$(".sermons-video-player-section .video-section").css("display","block");
 				$(".video-section .player iframe").attr("src",src);
 				$("html, body").animate({ scrollTop: 0 }, "slow");
