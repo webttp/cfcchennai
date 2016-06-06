@@ -170,8 +170,8 @@
             <div class="row" id="full-width">
                <div class="col-md-12 col-sm-12 col-xs-12 home-page">
                   <div class="col-md-8 col-sm-12 col-xs-12 sermons content-section" id="content_section">
-                     <div class="col-md-12 col-sm-12 col-xs-12 sermons-player-section">
-                        <div id="sermon_section_title" class="sermon-section-title" ng-bind="messageTitle"></div>
+                     <div class="col-md-12 col-sm-12 col-xs-12 sermons-audio-player-section">
+                        <div id="sermon_audio_section_title" class="sermon-audio-section-title" ng-bind="messageTitle"></div>
                         <div class="audio-section" style="display:none;">
                            <!-- <audio id="audioPlayer" src="http://www.cfcindia.org/resources/en/study-series/basic-christian-teachings/37-jesus-valued-all-people.mp3"></audio> -->
                            <div id="audio_jplayer_1" class="jp-jplayer"></div>
@@ -213,6 +213,9 @@
                               </div>
                            </div>
                         </div>
+                     </div>
+					 <div class="col-md-12 col-sm-12 col-xs-12 sermons-video-player-section">
+                        <div id="sermon_video_section_title" class="sermon-video-section-title" ng-bind="messageTitle"></div>
                         <div class="video-section">
                            <div class="player">
                               <iframe width="720" height="420" ng-src="{{trustAsResourceUrl(messageVideoSrc)}}" frameborder="0" allowfullscreen> 
