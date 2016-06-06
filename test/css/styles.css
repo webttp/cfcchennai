@@ -918,10 +918,10 @@ footer {
 	   text-align: left;
 	}
 	.sermons-player-section {
-		min-height: 420px !important;
+		min-height: 400px !important;
 	}
 	.video-section, .player {
-		height: 330px !important;
+		height: 300px !important;
 	}
 	.sermons-table {
 		margin-top: 90px;
