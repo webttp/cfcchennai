@@ -547,12 +547,19 @@ figure.inner-image {
 	font: normal 15px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
 }
 
-.sermons-player-section {
+.sermons-video-player-section {
 	height: auto;
 	width: 100%;
 	background: #f3f3f3;
 	min-height: 470px !important;
 	max-height: 500px !important;
+}
+.sermons-audio-player-section {
+	height: auto;
+	width: 100%;
+	background: #f3f3f3;
+	min-height: 300px !important;
+	max-height: 350px !important;
 }
 .mejs-container.mejs-video{
 	margin-left: 5%;
@@ -917,7 +924,10 @@ footer {
 	.xs-banner-text{
 	   text-align: left;
 	}
-	.sermons-player-section {
+	.sermons-audio-player-section {
+		min-height: 400px !important;
+	}
+	.sermons-video-player-section {
 		min-height: 400px !important;
 	}
 	.video-section, .player {
