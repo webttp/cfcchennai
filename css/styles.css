@@ -767,7 +767,7 @@ footer {
 /* For all mobile devices common styles */
 @media ( min-width :285px) and (max-width: 768px) {
 	.container {
-		width: 100% !important;
+		width: 98% !important;
 	}
 	.body-container {
 		margin: 0 0 20px 5% !important;
