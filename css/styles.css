@@ -639,10 +639,19 @@ figure.inner-image {
 	}
 	#sermon-audio {
 		background: url(../images/music-icon.png);
+		background-position: -5px -5px;
+	}
+	#sermon-audio:hover {
+		background-position: -43px -5px;
 	}
 	#sermon-video {
 		background: url(../images/youtube-icon.png);
+		background-position: -5px -5px;
 	}
+	#sermon-video:hover {
+		background-position: -43px -5px;
+	}
+	
 	.query-section {
 		width: 100%;
 		margin-bottom: 10px;
@@ -674,7 +683,11 @@ figure.inner-image {
 		font: normal 14px Arial Rounded MT Bold, Helvetica Rounded, Arial,sans-serif;
 	}
    #sermon-download {
-		background: url(../images/download-2-icon.png);
+		background: url(../images/download-icon.png);
+		background-position: -5px -5px;
+	}
+	#sermon-download:hover {
+		background-position: -43px -5px;
 	}
 
 	.pagination {
