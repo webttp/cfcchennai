@@ -13,7 +13,7 @@ sermonApp.controller('sermonController',function($sce, $scope, $http, $timeout){
 		$scope.messageVideoSrc ;
 		angular.forEach(data, function(item) {
 			if(messageflag){
-				if(item.messagetype == 'video'){
+				if(item.messagetype == 'video' || item.messagetype == 'both'){
 					$scope.messageVideoSrc = item.videokey;
 					$scope.trustAsResourceUrl = $sce.trustAsResourceUrl;	
 					$scope.messageTitle = item.title;
