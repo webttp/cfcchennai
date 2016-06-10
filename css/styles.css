@@ -1,5 +1,8 @@
 @CHARSET "ISO-8859-1";
 
+html {
+	overflow-x: hidden;
+}
 body {
 	font-family: 'HelveticaNeueLT-Light';
 	font-weight: 100;
@@ -592,8 +595,8 @@ figure.inner-image {
 .jp-controls-holder {
 	width: 70% !important;
 }
-.jp-progress , .jp-seek-bar {
-	
+.jp-state-no-volume .jp-volume-controls, .jp-volume-bar-value , .jp-volume-controls button, .jp-volume-bar  {
+	display: block !important;
 }
 .video-section, .player {
 	width: 100%;
@@ -948,7 +951,7 @@ footer {
 	   text-align: left;
 	}
 	.sermons-audio-player-section {
-		min-height: 400px !important;
+		min-height: 330px !important;
 	}
 	.sermons-video-player-section {
 		min-height: 400px !important;
@@ -983,6 +986,7 @@ footer {
 	}
 	.jp-details, .jp-playlist {
 		width: 100% !important;
+		margin-top: 25px;
 		margin-left: 0px;
 	}
 	.jp-volume-controls {
@@ -1075,8 +1079,7 @@ footer {
 		height: 125px !important;
 	}
 	.jp-volume-controls {
-		    position: relative !important;
-			top: -10px !important;
+		    top: 110px !important;
 			left: 20% !important;
 	}
 	.jp-current-time, .jp-duration {
